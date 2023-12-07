@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LobbyCommonInfo</class>
+ <widget class="QWidget" name="LobbyCommonInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>346</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>396</width>
+    <height>346</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>396</width>
+    <height>346</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+    outline: 0;
+}
+
+QTableView, QTableView::item, QTableView * {
+    outline: 0;
+}
+
+QTableView
+{
+    background-color: #222a30;
+    alternate-background-color: #37474f;
+    gridline-color: rgba(0, 220, 0, 10);
+}
+
+QHeaderView::section
+{
+     border-top: 1px solid #455a64;
+border-left: 1px solid #455a64;
+border-bottom: 1px solid #191919;
+border-right: 1px solid #191919;
+
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+}
+
+QHeaderView::section:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QHeaderView::section:pressed{
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(1, 1, 1, 255), stop:0.162011 rgba(45, 45, 45, 255), stop:0.49162 rgba(19, 19, 19, 255), stop:1 rgba(37, 37, 37, 255));
+} *{outline: 0;}
+</string>
+  </property>
+  <widget class="ns_page::Qualifiers" name="qualifiers_frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>330</y>
+     <width>396</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>396</width>
+     <height>150</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>396</width>
+     <height>150</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>@Tooltip_Lobby_tourn_sattelites_open_61</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QFrame {
+    background-color: #191919;
+    border: none;
+}
+.QLabel {
+    background-color: #37474f;
+    border: none;
+    border-top: 1px solid #455a64;
+    border-bottom: 1px solid #191919;
+    font: 11px &quot;Open Sans&quot;;
+    color: #b0bec5;
+    padding-bottom: 1px;
+    margin: 0px;
+}</string>
+   </property>
+   <widget class="QToolButton" name="bttn_openQualifiers">
+    <property name="geometry">
+     <rect>
+      <x>378</x>
+      <y>0</y>
+      <width>16</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>16</width>
+      <height>14</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16</width>
+      <height>14</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>@Tooltip_Lobby_tourn_sattelites_open_61</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QAbstractButton {
+    background-color: #37474f;
+    font: 11px &quot;Open Sans&quot;;
+    color: #b0bec5;
+    border: none;
+    subcontrol-position: right;
+    background-clip: margin;
+	background-position: center bottom;
+	background-attachment: fixed;
+    background-origin: content;
+    background-repeat: no-repeat;
+    background-image: url(:/textures/Common/Tournament/bttn1x2_satellite_arrow.png);
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+QAbstractButton:!checked:pressed {
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+QAbstractButton:checked:pressed {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+QAbstractButton:checked {
+    background-color: transparent;
+    color: transparent;
+}
+QAbstractButton:checked {
+    background-position: center top;
+    margin-top: 1px;
+    margin-bottom: 3px;
+}
+</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="mainLayer" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>396</width>
+     <height>346</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>396</width>
+     <height>346</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>396</width>
+     <height>346</height>
+    </size>
+   </property>
+   <layout class="QVBoxLayout" name="layout_mainLayer" stretch="0,1">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="TextWidget" name="header">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    font: 11px &quot;Open Sans&quot;;
+    color: #b0bec5;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border: none;
+border-bottom: 1px solid #191919;
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="strings">
+       <stringlist notr="true">
+        <string>status</string>
+        <string>date</string>
+        <string>time</string>
+       </stringlist>
+      </property>
+      <property name="text">
+       <string notr="true">%0 %1 %2</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableView" name="tableView_info">
+      <property name="styleSheet">
+       <string notr="true">QTableView {
+    border: none;
+    border-bottom: 1px solid #191919;    
+	background-color: #222a30;
+	selection-background-color: rgb(207, 216, 220);
+    font: 11px &quot;Open Sans&quot;;
+    text-align: center;
+}
+
+QTableView::item {
+    border: none;
+    border-bottom: 1px solid #191919;    
+	background-color: #222a30;
+    border-top: 1px solid #34424a;
+}</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::NoPen</enum>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>90</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>30</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>16</number>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>16</number>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>mainLayer</zorder>
+  <zorder>qualifiers_frame</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TextWidget</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::Qualifiers</class>
+   <extends>QFrame</extends>
+   <header>pages/lobbyTournament/page_Qualifiers.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bttn_openQualifiers</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LobbyCommonInfo</receiver>
+   <slot>popupQualifiers(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>386</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>popupQualifiers(bool)</slot>
+ </slots>
+</ui>

@@ -1,0 +1,1693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VipStatusDescription</class>
+ <widget class="QWidget" name="VipStatusDescription">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>516</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>516</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>516</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#VipStatusDescription {
+    background-color: #191919;
+}
+.QFrame {
+    background-color: #37474f;
+border-top: none;
+}
+QLabel {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+    border: none;
+    border-bottom: 1px solid #191919;
+    color: #b0bec5;
+    font: 600 16px &quot;Open Sans&quot;;
+}</string>
+  </property>
+  <widget class="QFrame" name="frame_progress">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>220</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>480</width>
+     <height>220</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>480</width>
+     <height>220</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QFrame {
+    border-right: 1px solid #191919;
+    border-bottom: 1px solid #191919;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="title_progress">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>33</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>33</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>@title_progress</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="body_progress" native="true">
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    background-color: transparent;
+    border-top: 1px solid #455a64;
+}
+QLabel {
+    border: none;
+    background-color: transparent;
+}
+
+
+
+QPushButton[status=&quot;0&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #A46019, stop:1 #FEC791);
+}
+QPushButton[status=&quot;1&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(85, 85, 85, 255), stop:1 rgba(136, 136, 136, 255));
+}
+QPushButton[status=&quot;2&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #b57119, stop:1 #ffd891);
+}
+QPushButton[status=&quot;3&quot;] {
+    	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #626A80, stop:1 #969CAE);
+}
+QPushButton[status=&quot;4&quot;] {
+    	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #4A739A, stop:1 #8BAAC1);
+}
+QPushButton[status=&quot;5&quot;] {
+    	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #4A739A, stop:1 #8BAAC1);
+}
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <property name="leftMargin">
+        <number>23</number>
+       </property>
+       <property name="topMargin">
+        <number>8</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1,0">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="FramedButton" name="current_status">
+           <property name="minimumSize">
+            <size>
+             <width>84</width>
+             <height>90</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>84</width>
+             <height>90</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+     margin-top: 0px;
+	padding: 27px 0px 13px 4px;
+border-top: 1px solid rgba(244, 244, 244, 204);
+border-bottom: 1px solid rgba(25, 25, 25, 204);
+border-radius: 5px;
+
+	background-image: url(:/textures/vip_system_page/shadow.png);
+	background-position: bottom;
+	background-repeat: no-repeat;
+margin-bottom: 0px;
+	background-clip: margin;
+	background-origin: content;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #A46019, stop:1 #FEC791);
+}
+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../resources.qrc">
+             <normaloff>:/textures/vip_system_page/icon_elite.png</normaloff>:/textures/vip_system_page/icon_elite.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="status" stdset="0">
+            <number>2</number>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>1</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>3</number>
+            </property>
+            <item alignment="Qt::AlignTop">
+             <widget class="QLabel" name="current_status_title">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font: 600 10px &quot;Open Sans&quot;;
+    color: #363636;
+}</string>
+              </property>
+              <property name="text">
+               <string>@Current
+VIP-status</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignBottom">
+             <widget class="QLabel" name="current_status_name">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font: 600 10px &quot;Open Sans&quot;;
+    color: #252525;
+}</string>
+              </property>
+              <property name="text">
+               <string>BEGGINER</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0">
+           <property name="spacing">
+            <number>2</number>
+           </property>
+           <property name="leftMargin">
+            <number>1</number>
+           </property>
+           <property name="topMargin">
+            <number>20</number>
+           </property>
+           <property name="rightMargin">
+            <number>1</number>
+           </property>
+           <property name="bottomMargin">
+            <number>38</number>
+           </property>
+           <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+            <widget class="TextWidget" name="msg_progress">
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    font: 11px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+}</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="strings">
+              <stringlist notr="true">
+               <string>$100,00</string>
+               <string>31 февраля</string>
+              </stringlist>
+             </property>
+             <property name="text">
+              <string>@need_more_%0_till_%1</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignBottom">
+            <widget class="QProgressBar" name="progress_rakeback">
+             <property name="minimumSize">
+              <size>
+               <width>240</width>
+               <height>14</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>14</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QFrame {
+    background-color: #37474f;
+    border: none;
+    border-top: 1px solid #455a64;
+}
+
+QLabel {
+    color: #b0bec5;
+    font: 11px &quot;Open Sans&quot;;
+    background-color: transparent;
+    border: none;
+}
+
+QProgressBar {
+    color: #fafafa;
+    font:600  14px &quot;Open Sans&quot;;
+    text-align: left;
+    border: none;
+    border-radius: 4px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 50, 56, 255), stop:1 rgba(25, 25, 25, 255));
+    margin: 3px 0px 3px 0px;
+}
+
+QProgressBar::chunk {
+	border: 1px solid #263238;
+    border-radius: 4px;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(1, 87, 155, 255), stop:1 rgba(0, 174, 239, 255));
+}
+</string>
+             </property>
+             <property name="maximum">
+              <number>10000</number>
+             </property>
+             <property name="value">
+              <number>3280</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignHCenter|Qt::AlignTop</set>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+             <property name="format">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="FramedButton" name="next_status">
+           <property name="minimumSize">
+            <size>
+             <width>84</width>
+             <height>90</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>84</width>
+             <height>90</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#next_status {
+margin-top: 0px;
+	padding: 27px 0px 13px 4px;
+border-top: 1px solid rgba(244, 244, 244, 204);
+border-bottom: 1px solid rgba(25, 25, 25, 204);
+border-radius: 5px;
+	background-image: url(:/textures/vip_system_page/shadow.png);
+	background-position: bottom;
+	background-repeat: no-repeat;
+margin-bottom: 0px;
+	background-clip: margin;
+	background-origin: content;
+}</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../resources.qrc">
+             <normaloff>:/textures/vip_system_page/master.png</normaloff>:/textures/vip_system_page/master.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="status" stdset="0">
+            <UInt>4</UInt>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>1</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>3</number>
+            </property>
+            <item alignment="Qt::AlignTop">
+             <widget class="QLabel" name="next_status_title">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font: 600 10px &quot;Open Sans&quot;;
+    color: #363636;
+}</string>
+              </property>
+              <property name="text">
+               <string>@Next
+VIP-status</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignBottom">
+             <widget class="QLabel" name="next_status_name">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font: 600 10px &quot;Open Sans&quot;;
+    color: #252525;
+}</string>
+              </property>
+              <property name="text">
+               <string>SEMI-PRO</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QWidget" name="progress_section_info" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>431</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget {
+    border: none;
+}
+
+QLabel {
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #b0bec5;
+}</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,1" columnstretch="0,0">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>17</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>50</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_rakeback_thisMonth">
+            <property name="text">
+             <string>@rakeback_thisMonth:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="value_rakeback_thisMonth">
+            <property name="styleSheet">
+             <string notr="true">QLabel { color: #ffb74d; }</string>
+            </property>
+            <property name="text">
+             <string notr="true">$7.00</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_rakeback_prevMonth">
+            <property name="text">
+             <string>@rakeback_prevMonth:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="value_rakeback_prevMonth">
+            <property name="styleSheet">
+             <string notr="true">QLabel { color: #ffb74d; }</string>
+            </property>
+            <property name="text">
+             <string notr="true">$200.00</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_rakeback_thisYear">
+            <property name="text">
+             <string>@msg_rakeback_thisYear:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="value_rakeback_thisYear">
+            <property name="styleSheet">
+             <string notr="true">QLabel { color: #ffb74d; }</string>
+            </property>
+            <property name="text">
+             <string notr="true">$1285.00</string>
+            </property>
+            <property name="textInteractionFlags">
+             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QFrame" name="frame_calendar">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>0</y>
+     <width>480</width>
+     <height>220</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>480</width>
+     <height>220</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>480</width>
+     <height>220</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QFrame {
+    border-left: 1px solid #455a64;
+    border-bottom: 1px solid #191919;
+    border-bottom-left-radius: 0px 1px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="title_calendar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>33</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>33</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>@title_calendar</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="body_calendar" native="true">
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    background-color: transparent;
+    border-top: 1px solid #455a64;
+}
+
+QLabel {
+    border: none;
+    background-color: transparent;
+    color: #546e7a;
+    font: 600 10px &quot;Open Sans&quot;;
+    padding-bottom: 1px;
+}
+</string>
+      </property>
+      <widget class="QWidget" name="calendar_section_info" native="true">
+       <property name="geometry">
+        <rect>
+         <x>23</x>
+         <y>102</y>
+         <width>431</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>431</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+    border: none;
+}
+
+QLabel {
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #b0bec5;
+}</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,1" columnstretch="0,0">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>17</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>50</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="QLabel" name="msg_rakeback_daysLeft">
+          <property name="text">
+           <string>@msg_rakeback_daysLeft:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="QLabel" name="value_rakeback_daysLeft">
+          <property name="styleSheet">
+           <string notr="true">QLabel { color: #ffb74d; }</string>
+          </property>
+          <property name="text">
+           <string notr="true">4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="TextWidget" name="msg_rakeback_current">
+          <property name="strings">
+           <stringlist notr="true">
+            <string>35</string>
+           </stringlist>
+          </property>
+          <property name="text">
+           <string>@msg_rakeback_current(%0%):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="QLabel" name="value_rakeback_current">
+          <property name="styleSheet">
+           <string notr="true">QLabel { color: #ffb74d; }</string>
+          </property>
+          <property name="text">
+           <string notr="true">$100.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="QLabel" name="msg_next_payment">
+          <property name="text">
+           <string>@msg_next_payment:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="QLabel" name="value_next_payment">
+          <property name="styleSheet">
+           <string notr="true">QLabel { color: #ffb74d; }</string>
+          </property>
+          <property name="text">
+           <string notr="true">dayOfWeek, 09.03.17</string>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="week" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>478</width>
+         <height>102</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#week {
+border: none;
+background-color: none;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>25</number>
+        </property>
+        <property name="topMargin">
+         <number>9</number>
+        </property>
+        <property name="rightMargin">
+         <number>23</number>
+        </property>
+        <property name="bottomMargin">
+         <number>3</number>
+        </property>
+        <item alignment="Qt::AlignVCenter">
+         <widget class="CalendarItem" name="day_1">
+          <property name="minimumSize">
+           <size>
+            <width>94</width>
+            <height>90</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>94</width>
+            <height>90</height>
+           </size>
+          </property>
+          <property name="date" stdset="0">
+           <date>
+            <year>2016</year>
+            <month>12</month>
+            <day>31</day>
+           </date>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignVCenter">
+         <widget class="CalendarItem" name="day_2">
+          <property name="minimumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="date" stdset="0">
+           <date>
+            <year>2016</year>
+            <month>12</month>
+            <day>31</day>
+           </date>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignVCenter">
+         <widget class="CalendarItem" name="day_3">
+          <property name="minimumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="date" stdset="0">
+           <date>
+            <year>2016</year>
+            <month>12</month>
+            <day>31</day>
+           </date>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignVCenter">
+         <widget class="CalendarItem" name="day_4">
+          <property name="minimumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="date" stdset="0">
+           <date>
+            <year>2016</year>
+            <month>12</month>
+            <day>31</day>
+           </date>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignVCenter">
+         <widget class="CalendarItem" name="day_5">
+          <property name="minimumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="date" stdset="0">
+           <date>
+            <year>2016</year>
+            <month>12</month>
+            <day>31</day>
+           </date>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignVCenter">
+         <widget class="CalendarItem" name="day_6">
+          <property name="minimumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="date" stdset="0">
+           <date>
+            <year>2016</year>
+            <month>12</month>
+            <day>31</day>
+           </date>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignVCenter">
+         <widget class="CalendarItem" name="day_7">
+          <property name="minimumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>58</height>
+           </size>
+          </property>
+          <property name="date" stdset="0">
+           <date>
+            <year>2016</year>
+            <month>12</month>
+            <day>31</day>
+           </date>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>290</y>
+     <width>960</width>
+     <height>155</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>155</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>155</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView {
+     border-top: none/*1px solid #455a64*/;
+     background-color: #222a30;
+    alternate-background-color: #37474f;
+    border-bottom: 1px solid #191919;
+    color: #fafafa;
+}
+
+QHeaderView::section {
+    font: 11px &quot;Open Sans Semibold&quot;;
+    color: #b0bec5;
+}
+
+QHeaderView::section:hover {
+border-top-color: #667b8a;
+}
+QHeaderView::section:pressed {
+border-top-color: #37474f;
+color: rgba(176, 190, 197, 150);
+}
+
+QScrollBar:vertical {
+     border: none;
+     background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+     width: 16px;
+     margin: 2px 0 2px 0;
+padding-top: 35px;
+padding-bottom: 13px;
+    /*border-top: 36px solid #191919;*/
+
+ }
+QScrollBar::handle:vertical {
+    min-width: 12px;
+    min-height: 32px;
+    max-width: 12px;
+    max-height: 32px;
+    margin: 0px 2px 1px 2px;
+    
+	image: url(:/textures/Common/points.png);
+    image-position: center;
+   
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(69, 90, 100, 255), stop:0.483304 rgba(34, 42, 48, 255), stop:0.560633 rgba(34, 42, 48, 255), stop:1 rgba(64, 84, 93, 255));
+    border-radius: 3px 3px; 
+    border-top: 1px solid #678694;
+    border-bottom: 2px qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(36, 47, 52, 255), stop:0.256598 rgba(37, 48, 54, 255), stop:0.629032 rgba(25, 25, 25, 237), stop:1 rgba(25, 25, 25, 137));
+}
+ QScrollBar::handle:hover:vertical {
+    border-top: 1px solid #A9B6BA;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(121, 130, 133, 255), stop:0.483304 rgba(51, 58, 62, 255), stop:0.560633 rgba(51, 58, 62, 255), stop:1 rgba(113, 122, 125, 255));
+	image: url(:/textures/Common/points_hover.png);
+
+}
+ QScrollBar::add-line:vertical {
+     border: none;
+    background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+    height: 16px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    bottom: 2px;
+
+	background-image: url(:/textures/Common/scroll_footer.png);
+background-repeat: no-repeat;
+background-position: bottom right;
+background-clip: margin;
+background-origin: border;
+ }
+
+QScrollBar::add-page:vertical {
+	background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+ }
+ QScrollBar::sub-page:vertical {
+     background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+}
+
+ QScrollBar::sub-line:vertical {
+    border: none;
+	background-repeat: repeat-y;
+    height: 16px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+margin-top: 23px;
+	background-image: url(:/textures/Common/scroll_header.png);
+background-repeat: no-repeat;
+background-position: top;
+background-clip: margin;
+background-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical {
+background-image: url(:/textures/tmp_up1.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border;
+    height: 12px;
+
+ }
+
+QScrollBar::down-arrow:vertical {
+	background-image: url(:/textures/tmp_down1.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border;
+    height: 12px;
+
+}
+
+QScrollBar::add-line:vertical:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #222a30, stop: 0.1 #37473f, stop:0.5 #222a30, stop:1 rgba(14, 27, 28, 225));
+}
+QScrollBar::sub-line:vertical:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #222a30, stop: 0.9 #37473f, stop:0.5 #222a30, stop:0 rgba(14, 27, 28, 225));
+}
+
+QScrollBar::add-line:vertical:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(24, 13, 39, 255), stop:1 rgba(25, 25, 25, 255));
+     border: 1px ridge #191919;
+    border-bottom: none;
+}
+QScrollBar::sub-line:vertical:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(24, 13, 39, 255), stop:1 rgba(25, 25, 25, 255));
+    border: 1px ridge #191919;
+    border-top: none;
+}</string>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustToContents</enum>
+   </property>
+   <property name="autoScrollMargin">
+    <number>0</number>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <property name="showGrid">
+    <bool>false</bool>
+   </property>
+   <property name="cornerButtonEnabled">
+    <bool>false</bool>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>192</number>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>80</number>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>16</number>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>16</number>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="title_rewardHistory">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>224</y>
+     <width>961</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>34</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>34</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    border: none;
+    border-top: 1px solid #455a64;
+    border-bottom: 1px solid #191919;
+}</string>
+   </property>
+   <property name="text">
+    <string>@title_rewardHistory</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_filters">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>258</y>
+     <width>960</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QFrame {
+    background-color: #37474f;
+    border-top: 1px solid #455a64;
+    border-bottom: 1px solid #191919;
+}
+
+QAbstractButton, QLabel {
+    background-color: transparent;
+    border: none;
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+}
+
+QAbstractButton::indicator {
+    min-width: 14px;
+    min-height: 14px;
+    max-width: 14px;
+    max-height: 14px;
+    border: 1px solid #191919;
+    border-radius: 7px;
+    background-color: #fafafa;
+}
+
+QAbstractButton::indicator:checked {
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:0.244009 rgba(251, 251, 251, 251), stop:0.48366 rgba(69, 90, 100, 255), stop:1 rgba(34, 42, 48, 255));
+}
+
+QAbstractButton::indicator:checked:pressed {
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:0.112069 rgba(255, 255, 255, 255), stop:0.340517 rgba(69, 90, 100, 255), stop:1 rgba(34, 42, 48, 255));
+}
+
+QAbstractButton::indicator:!checked:pressed {
+    
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:0.701389 rgba(69, 90, 100, 255), stop:1 rgba(34, 42, 48, 255));
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>50</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>50</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QLabel" name="msg_filterPrefix">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>@last</string>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QRadioButton" name="bttn_filterDays_0">
+      <property name="text">
+       <string>@days_%0</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">bttnGrp_daysFilters</string>
+      </attribute>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QRadioButton" name="bttn_filterDays_1">
+      <property name="text">
+       <string>@days_%0</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">bttnGrp_daysFilters</string>
+      </attribute>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QRadioButton" name="bttn_filterDays_2">
+      <property name="text">
+       <string>@days_%0</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">bttnGrp_daysFilters</string>
+      </attribute>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QRadioButton" name="bttn_filterDays_3">
+      <property name="text">
+       <string>@days_%0</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">bttnGrp_daysFilters</string>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="title_displayOptions">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>450</y>
+     <width>961</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>34</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>34</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    border: none;
+    border-top: 1px solid #455a64;
+    border-bottom: 1px solid #191919;
+}</string>
+   </property>
+   <property name="text">
+    <string>@title_displayOptions</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_displayOptions">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>484</y>
+     <width>960</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>33</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>33</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QFrame {
+    background-color: #37474f;
+    border-top: 1px solid #455a64;
+    border-bottom: 1px solid #191919;
+}
+
+QAbstractButton, QLabel {
+    background-color: transparent;
+    border: none;
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+}
+/*
+QAbstractButton::indicator {
+    min-width: 14px;
+    min-height: 14px;
+    max-width: 14px;
+    max-height: 14px;
+    border: 1px solid #191919;
+    border-radius: 7px;
+    background-color: #fafafa;
+}
+
+QAbstractButton::indicator:checked {
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:0.244009 rgba(251, 251, 251, 251), stop:0.48366 rgba(69, 90, 100, 255), stop:1 rgba(34, 42, 48, 255));
+}
+
+QAbstractButton::indicator:checked:pressed {
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:0.112069 rgba(255, 255, 255, 255), stop:0.340517 rgba(69, 90, 100, 255), stop:1 rgba(34, 42, 48, 255));
+}
+
+QAbstractButton::indicator:!checked:pressed {
+    
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:0.701389 rgba(69, 90, 100, 255), stop:1 rgba(34, 42, 48, 255));
+}
+*/</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>50</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>50</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QCheckBox" name="opt_showStatusToOtherPlayers">
+      <property name="text">
+       <string>@opt_showStatusToOtherPlayers</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">bttnGrp_displayOptions</string>
+      </attribute>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QCheckBox" name="opt_showStatusAtTheTable">
+      <property name="text">
+       <string>@opt_showStatusAtTheTable</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">bttnGrp_displayOptions</string>
+      </attribute>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QCheckBox" name="opt_showOtherPlayersStatuses">
+      <property name="text">
+       <string>@opt_showOtherPlayersStatuses</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">bttnGrp_displayOptions</string>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FramedButton</class>
+   <extends>QPushButton</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FramedEntity</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TextWidget</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CalendarItem</class>
+   <extends>FramedEntity</extends>
+   <header>widgets/CalendarItem.h</header>
+   <container>1</container>
+   <slots>
+    <signal>dateChanged(QDate)</signal>
+    <slot>setDate(QDate)</slot>
+    <slot>setTomorrowDate(QDate)</slot>
+    <slot>setYesterdayDate(QDate)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>day_7</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>week</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>896</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>916</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>day_1</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>day_2</receiver>
+   <slot>setTomorrowDate(QDate)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>564</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>day_2</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>day_3</receiver>
+   <slot>setTomorrowDate(QDate)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>616</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>678</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>day_3</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>day_4</receiver>
+   <slot>setTomorrowDate(QDate)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>703</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>735</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>day_4</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>day_5</receiver>
+   <slot>setTomorrowDate(QDate)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>733</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>797</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>day_5</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>day_6</receiver>
+   <slot>setTomorrowDate(QDate)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>789</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>839</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>day_6</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>day_7</receiver>
+   <slot>setTomorrowDate(QDate)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>872</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>897</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="bttnGrp_daysFilters"/>
+  <buttongroup name="bttnGrp_displayOptions"/>
+ </buttongroups>
+</ui>

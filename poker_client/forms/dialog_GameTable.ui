@@ -1,0 +1,2415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameTable</class>
+ <widget class="QDialog" name="GameTable">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1242</width>
+    <height>806</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1020</width>
+    <height>660</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1242</width>
+    <height>806</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ActionsContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string notr="true" comment="%title $%smallBlind/%bigBlind %Limit %gameType">%0 $%1/$%2 %3 %4</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/textures/game/icon_dealer.png</normaloff>:/textures/game/icon_dealer.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	border: 1px outset #3f6e61;
+	background:none;
+}
+
+QDialog:hover {border: 1px solid #3f6e62;}
+
+#header_frame {
+	background-color: #0f2a23;
+ min-height: 60px;
+ max-height: 60px;
+    border:none;
+}
+#header {
+    color: #ffffff;
+	font: 600 20px &quot;Open Sans&quot;;
+}
+
+QAbstractButton {
+    color: #012345;
+	font: 60 14px &quot;Open Sans&quot;;
+}
+
+QAbstractButton:checked {
+    color: #543210;
+	font: 600 15px &quot;Open Sans&quot;;
+}</string>
+  </property>
+  <property name="editorOpenedByDefault" stdset="0">
+   <bool>false</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
+   <item alignment="Qt::AlignLeft|Qt::AlignTop">
+    <widget class="QGroupBox" name="editor_1">
+     <property name="maximumSize">
+      <size>
+       <width>1400</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <property name="horizontalSpacing">
+       <number>0</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="0" column="11" rowspan="2">
+       <widget class="ColorMatrixEditor" name="colorTransformEditor">
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7" colspan="2">
+       <layout class="QGridLayout" name="gridLayout_9">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="2" column="2">
+         <widget class="QLabel" name="roll_2">
+          <property name="text">
+           <string notr="true">roll</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QSpinBox" name="obj_roll">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-360</number>
+          </property>
+          <property name="maximum">
+           <number>360</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="5" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="obj_z">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-999</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="obj_y">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-999</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="obj_x">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-999</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="z_2">
+          <property name="text">
+           <string notr="true">z</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="y_2">
+          <property name="text">
+           <string notr="true">y</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="x_2">
+          <property name="text">
+           <string notr="true">x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="pitch_2">
+          <property name="text">
+           <string notr="true">pitch</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QSpinBox" name="obj_pitch">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-360</number>
+          </property>
+          <property name="maximum">
+           <number>360</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QSpinBox" name="obj_yaw">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-360</number>
+          </property>
+          <property name="maximum">
+           <number>360</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="yaw_2">
+          <property name="text">
+           <string notr="true">yaw</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="sx">
+          <property name="text">
+           <string notr="true">sx</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="obj_sz">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <double>-10.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.020000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="obj_sy">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <double>-10.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.020000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="obj_sx">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <double>-10.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.020000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="pitch_6">
+          <property name="text">
+           <string notr="true">sy</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="sz">
+          <property name="text">
+           <string notr="true">sz</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="10" alignment="Qt::AlignBottom">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string notr="true">reset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2" alignment="Qt::AlignBottom">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string notr="true">reset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <layout class="QGridLayout" name="gridLayout_7">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="x">
+          <property name="text">
+           <string notr="true">x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="y">
+          <property name="text">
+           <string notr="true">y</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="z">
+          <property name="text">
+           <string notr="true">z</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="spinBox_x">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-999</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="spinBox_y">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-999</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="spinBox_z">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-999</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+          <property name="value">
+           <number>-300</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="6" alignment="Qt::AlignRight|Qt::AlignBottom">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string notr="true">Object:   </string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7" colspan="3" alignment="Qt::AlignBottom">
+       <widget class="QComboBox" name="comboBox">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="pitch">
+          <property name="text">
+           <string notr="true">pitch</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="yaw">
+          <property name="text">
+           <string notr="true">yaw</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="spinBox_pitch">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-360</number>
+          </property>
+          <property name="maximum">
+           <number>360</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="roll">
+          <property name="text">
+           <string notr="true">roll</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="spinBox_yaw">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-360</number>
+          </property>
+          <property name="maximum">
+           <number>360</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="spinBox_roll">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="minimum">
+           <number>-360</number>
+          </property>
+          <property name="maximum">
+           <number>360</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="3" rowspan="2" colspan="2">
+       <widget class="Line" name="line_2">
+        <property name="minimumSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5" alignment="Qt::AlignLeft|Qt::AlignBottom">
+       <widget class="Transform3DMapper" name="mapper_3">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>70</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="9" colspan="2">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="2" column="6" rowspan="2" colspan="2" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="green">
+          <property name="text">
+           <string notr="true">Green</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="10" rowspan="2" colspan="3" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="alpha">
+          <property name="text">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="10" rowspan="2" colspan="3" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="obj_alpha">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="value">
+           <number>255</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="6">
+         <widget class="QLabel" name="opacity">
+          <property name="text">
+           <string notr="true">Opacity</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="8" colspan="5">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="6" colspan="2" alignment="Qt::AlignVCenter">
+         <widget class="QDoubleSpinBox" name="obj_opacity">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="maximum">
+           <double>1.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.020000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" rowspan="2" colspan="6">
+         <widget class="QSpinBox" name="obj_red">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="value">
+           <number>255</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" rowspan="2" colspan="6">
+         <widget class="QLabel" name="red">
+          <property name="text">
+           <string notr="true">Red</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="8" rowspan="2" colspan="2" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="blue">
+          <property name="text">
+           <string notr="true">Blue</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="6" rowspan="2" colspan="2" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="obj_green">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="value">
+           <number>255</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="8" rowspan="2" colspan="2" alignment="Qt::AlignBottom">
+         <widget class="QSpinBox" name="obj_blue">
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="value">
+           <number>255</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6" colspan="7">
+         <widget class="QComboBox" name="comboBox_2">
+          <item>
+           <property name="text">
+            <string notr="true">Quad</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/quad.png</normaloff>:/quad.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Cube</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/cube.png</normaloff>:/cube.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Pyramid</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/pyramid.png</normaloff>:/pyramid.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Surface</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="6">
+         <widget class="QLabel" name="opacity_2">
+          <property name="text">
+           <string notr="true">Geomety</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="6" alignment="Qt::AlignLeft|Qt::AlignBottom">
+       <widget class="Transform3DMapper" name="mapper_4">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>70</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2" alignment="Qt::AlignBottom">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string notr="true">Camera</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5" alignment="Qt::AlignLeft|Qt::AlignBottom">
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="1" alignment="Qt::AlignBottom">
+         <widget class="QDoubleSpinBox" name="spinBox_zNear">
+          <property name="minimum">
+           <double>-10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.010000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="zFar">
+          <property name="text">
+           <string notr="true">zFar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="zNear">
+          <property name="text">
+           <string notr="true">zNear</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignBottom">
+         <widget class="QDoubleSpinBox" name="spinBox_fov">
+          <property name="singleStep">
+           <double>0.050000000000000</double>
+          </property>
+          <property name="value">
+           <double>45.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignBottom">
+         <widget class="QLabel" name="fov">
+          <property name="text">
+           <string notr="true">fov</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" alignment="Qt::AlignBottom">
+         <widget class="QDoubleSpinBox" name="spinBox_zFar">
+          <property name="minimum">
+           <double>100.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>9999.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>1000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="12" rowspan="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignTop">
+    <widget class="Line" name="line_1">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>10</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>10</height>
+      </size>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,1">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item alignment="Qt::AlignLeft|Qt::AlignTop">
+      <widget class="QFrame" name="gameSceneContainer">
+       <property name="minimumSize">
+        <size>
+         <width>1002</width>
+         <height>626</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>1002</width>
+         <height>626</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <widget class="GLWidget" name="glwidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>1000</width>
+          <height>624</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>1000</width>
+          <height>624</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1000</width>
+          <height>624</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="resourcePathes" stdset="0">
+         <stringlist/>
+        </property>
+        <widget class="SpriteBuilder" name="bg" native="true">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1000</width>
+           <height>624</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>1000</width>
+           <height>624</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>1000</width>
+           <height>624</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#bg {
+    
+	background-image: url(:/textures/game/bg.png);
+}</string>
+         </property>
+         <property name="vertexShaderUrl" stdset="0">
+          <url>
+           <string>qrc:/shaders/vertex.glsl</string>
+          </url>
+         </property>
+         <property name="fragmentShaderUrl" stdset="0">
+          <url>
+           <string>qrc:/shaders/frag2.glsl</string>
+          </url>
+         </property>
+         <property name="meshTypeName" stdset="0">
+          <string notr="true">Quad</string>
+         </property>
+         <property name="textureUrl" stdset="0">
+          <url>
+           <string>qrc:/textures/game/bg.png</string>
+          </url>
+         </property>
+         <widget class="SpriteBuilder" name="ro_table" native="true">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1000</width>
+            <height>624</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>1000</width>
+            <height>624</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>1000</width>
+            <height>624</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">.QWidget {
+    
+	background-image: url(:/textures/game/TableShadow.png);
+}</string>
+          </property>
+          <property name="vertexShaderUrl" stdset="0">
+           <url>
+            <string>qrc:/shaders/vertex.glsl</string>
+           </url>
+          </property>
+          <property name="fragmentShaderUrl" stdset="0">
+           <url>
+            <string>qrc:/shaders/frag2.glsl</string>
+           </url>
+          </property>
+          <property name="meshTypeName" stdset="0">
+           <string notr="true">RoundedRect</string>
+          </property>
+          <property name="borderRadius" stdset="0">
+           <number>170</number>
+          </property>
+          <property name="textureUrl" stdset="0">
+           <url>
+            <string>qrc:/textures/game/TableShadow.png</string>
+           </url>
+          </property>
+          <widget class="SpriteBuilder" name="table_2" native="true">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1000</width>
+             <height>624</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>1000</width>
+             <height>624</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>624</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">.QWidget {
+    
+background-image: url(:/textures/game/TableBorder.png);
+}</string>
+           </property>
+           <property name="vertexShaderUrl" stdset="0">
+            <url>
+             <string>qrc:/shaders/vertex.glsl</string>
+            </url>
+           </property>
+           <property name="fragmentShaderUrl" stdset="0">
+            <url>
+             <string>qrc:/shaders/frag2.glsl</string>
+            </url>
+           </property>
+           <property name="meshTypeName" stdset="0">
+            <string notr="true">RoundedRect</string>
+           </property>
+           <property name="borderRadius" stdset="0">
+            <number>170</number>
+           </property>
+           <property name="textureUrl" stdset="0">
+            <url>
+             <string>qrc:/textures/game/TableBorder.png</string>
+            </url>
+           </property>
+           <widget class="SpriteBuilder" name="under" native="true">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>1000</width>
+              <height>624</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>1000</width>
+              <height>624</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>624</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">.QWidget {
+	
+	background-image: url(:/textures/game/TableColor.png);
+}</string>
+            </property>
+            <property name="vertexShaderUrl" stdset="0">
+             <url>
+              <string>qrc:/shaders/vertex.glsl</string>
+             </url>
+            </property>
+            <property name="fragmentShaderUrl" stdset="0">
+             <url>
+              <string>qrc:/shaders/frag2.glsl</string>
+             </url>
+            </property>
+            <property name="meshTypeName" stdset="0">
+             <string notr="true">RoundedRect</string>
+            </property>
+            <property name="borderRadius" stdset="0">
+             <number>205</number>
+            </property>
+            <property name="textureUrl" stdset="0">
+             <url>
+              <string>qrc:/textures/game/TableColor.png</string>
+             </url>
+            </property>
+           </widget>
+          </widget>
+          <widget class="SpriteBuilder" name="logo" native="true">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1000</width>
+             <height>624</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>1000</width>
+             <height>624</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>624</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">.QWidget {
+background-image: url(:/textures/game/LogoRed.png);
+}</string>
+           </property>
+           <property name="vertexShaderUrl" stdset="0">
+            <url>
+             <string>qrc:/shaders/vertex.glsl</string>
+            </url>
+           </property>
+           <property name="fragmentShaderUrl" stdset="0">
+            <url>
+             <string>qrc:/shaders/frag2.glsl</string>
+            </url>
+           </property>
+           <property name="meshTypeName" stdset="0">
+            <string notr="true">Quad</string>
+           </property>
+           <property name="textureUrl" stdset="0">
+            <url>
+             <string>qrc:/textures/game/LogoRed.png</string>
+            </url>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="TableOver" name="layers" native="true">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>1000</width>
+          <height>624</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>1000</width>
+          <height>624</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1000</width>
+          <height>624</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignLeft|Qt::AlignTop">
+      <widget class="QGroupBox" name="editor_2">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <property name="horizontalSpacing">
+         <number>2</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="5" column="0" colspan="3">
+         <widget class="QWidget" name="animedit_2" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>4</number>
+           </property>
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <property name="rightMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QDoubleSpinBox" name="anim_1">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="plus_1">
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string notr="true">+</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="anim_4">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.050000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string notr="true">=</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="anim_7">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.050000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="3" alignment="Qt::AlignTop">
+         <widget class="QWidget" name="animedit_1" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>4</number>
+           </property>
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <property name="rightMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>4</number>
+           </property>
+           <item alignment="Qt::AlignLeft">
+            <widget class="QDoubleSpinBox" name="anim_0">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignLeft">
+            <widget class="QLabel" name="plus_0">
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string notr="true">+</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignLeft">
+            <widget class="QDoubleSpinBox" name="anim_3">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.050000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignLeft">
+            <widget class="QLabel" name="label_10">
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string notr="true">=</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="anim_6">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.050000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0" rowspan="3">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignTop">
+           <widget class="QRadioButton" name="bttn_move">
+            <property name="text">
+             <string notr="true">Move</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttngroup_anim_type</string>
+            </attribute>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QRadioButton" name="bttn_rotate">
+            <property name="text">
+             <string notr="true">Rotate</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttngroup_anim_type</string>
+            </attribute>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QRadioButton" name="bttn_scale">
+            <property name="text">
+             <string notr="true">Scale</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttngroup_anim_type</string>
+            </attribute>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QRadioButton" name="bttn_fade">
+            <property name="text">
+             <string notr="true">Fade</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttngroup_anim_type</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="bttn_colorize">
+            <property name="text">
+             <string notr="true">Colorize</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttngroup_anim_type</string>
+            </attribute>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1" colspan="2">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string notr="true">Duration</string>
+          </property>
+          <property name="indent">
+           <number>2</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="3">
+         <widget class="QWidget" name="animedit_3" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>4</number>
+           </property>
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <property name="rightMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QDoubleSpinBox" name="anim_2">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="plus_2">
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string notr="true">+</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="anim_5">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.050000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string notr="true">=</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="anim_8">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+             <property name="minimum">
+              <double>-999999999999999.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>99999999999999.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.050000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="EasingCurveComboBox" name="obj_EasingCurveComboBox">
+          <property name="currentText">
+           <string notr="true">Linear</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0" colspan="3" alignment="Qt::AlignLeft">
+         <widget class="QPushButton" name="bttn_depthTest">
+          <property name="text">
+           <string notr="true">Depth test</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0" colspan="3" alignment="Qt::AlignLeft">
+         <widget class="QPushButton" name="bttn_playanim">
+          <property name="text">
+           <string notr="true">PLAY</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>118</width>
+            <height>38</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="12" column="0" colspan="3" alignment="Qt::AlignLeft">
+         <widget class="QPushButton" name="bttn_visible">
+          <property name="text">
+           <string notr="true">Visible</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" rowspan="2" colspan="3" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="QTreeWidget" name="treeWidget">
+          <property name="minimumSize">
+           <size>
+            <width>180</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string notr="true">root</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="11" column="0" colspan="3" alignment="Qt::AlignLeft">
+         <widget class="QPushButton" name="bttn_cullFace">
+          <property name="text">
+           <string notr="true">Cull face</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="0" colspan="3" alignment="Qt::AlignLeft">
+         <widget class="QPushButton" name="bttn_fbo">
+          <property name="text">
+           <string notr="true">FBO</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="2">
+         <widget class="QSpinBox" name="duration">
+          <property name="suffix">
+           <string notr="true"> ms</string>
+          </property>
+          <property name="minimum">
+           <number>100</number>
+          </property>
+          <property name="maximum">
+           <number>1000000</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <action name="actionShowEditor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">show/hide editor</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">show/hide editor</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">show/hide editor</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Return</string>
+   </property>
+  </action>
+  <action name="actionUpdateGameSettings">
+   <property name="text">
+    <string notr="true">UpdateGameSettings</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">UpdateGameSettings</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">UpdateGameSettings</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F5</string>
+   </property>
+  </action>
+ </widget>
+ <pixmapfunction>ns_utildb::cached</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>Transform3DMapper</class>
+   <extends>QWidget</extends>
+   <header>transform3dmapper.h</header>
+  </customwidget>
+  <customwidget>
+   <class>EasingCurveComboBox</class>
+   <extends>QComboBox</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets/GLWidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>renderedToImage(QImage)</signal>
+    <slot>setFov(double)</slot>
+    <slot>setNearPlane(double)</slot>
+    <slot>setFarPlane(double)</slot>
+    <slot>setCameraRotation(QQuaternion)</slot>
+    <slot>setCameraTranslation(QVector3D)</slot>
+    <slot>setColor(QColor)</slot>
+    <slot>setOpacity(double)</slot>
+    <slot>glEnableDepthTest(bool)</slot>
+    <slot>glEnableCullFace(bool)</slot>
+    <slot>setRenderToFrameBuffer(bool)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>SpriteBuilder</class>
+   <extends>QWidget</extends>
+   <header location="global">render/spritebuilder.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setColor(QColor)</slot>
+    <slot>setRotation(QQuaternion)</slot>
+    <slot>setPosition(QVector3D)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>TableOver</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/widget_TableOver.h</header>
+   <container>1</container>
+   <slots>
+    <signal>setBackground(QImage)</signal>
+    <slot>backgroundChanged(QImage)</slot>
+    <slot>applyCurrentGameSettings()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>ColorMatrixEditor</class>
+   <extends>QGroupBox</extends>
+   <header>editors/ColorMatrixEditor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>spinBox_zNear</tabstop>
+  <tabstop>spinBox_zFar</tabstop>
+  <tabstop>spinBox_fov</tabstop>
+  <tabstop>spinBox_pitch</tabstop>
+  <tabstop>spinBox_yaw</tabstop>
+  <tabstop>spinBox_roll</tabstop>
+  <tabstop>spinBox_x</tabstop>
+  <tabstop>spinBox_y</tabstop>
+  <tabstop>spinBox_z</tabstop>
+  <tabstop>obj_opacity</tabstop>
+  <tabstop>obj_red</tabstop>
+  <tabstop>obj_green</tabstop>
+  <tabstop>obj_blue</tabstop>
+  <tabstop>obj_alpha</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>spinBox_z</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_3</receiver>
+   <slot>setZ(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_y</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_3</receiver>
+   <slot>setY(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>318</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_x</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_3</receiver>
+   <slot>setX(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>285</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_pitch</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_3</receiver>
+   <slot>setPitchDeg(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_yaw</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_3</receiver>
+   <slot>setYawDeg(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_roll</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_3</receiver>
+   <slot>setRollDeg(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>204</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_sx</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setScaleX(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>560</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_sy</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setScaleY(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>560</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_sz</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setScaleZ(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>560</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_pitch</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setPitchDeg(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>648</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_yaw</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setYawDeg(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>648</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_roll</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setRollDeg(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>648</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>440</x>
+     <y>95</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_z</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setZ(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>719</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_y</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setY(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>719</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_x</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setX(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>719</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_opacity</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GameTable</receiver>
+   <slot>updateCurrentItemOpacity(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>828</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>788</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_red</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setRed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>773</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_green</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setGreen(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>828</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_blue</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setBlue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>879</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>obj_alpha</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mapper_4</receiver>
+   <slot>setAlpha(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>930</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mapper_4</sender>
+   <signal>scaleChanged(QVector3D)</signal>
+   <receiver>GameTable</receiver>
+   <slot>updateCurrentItemScale(QVector3D)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>970</x>
+     <y>34</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mapper_4</sender>
+   <signal>rotationChanged(QQuaternion)</signal>
+   <receiver>GameTable</receiver>
+   <slot>updateCurrentItemRotation(QQuaternion)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>973</x>
+     <y>88</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mapper_4</sender>
+   <signal>positionChanged(QVector3D)</signal>
+   <receiver>GameTable</receiver>
+   <slot>updateCurrentItemPosition(QVector3D)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1015</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowEditor</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>GameTable</receiver>
+   <slot>setEditorVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>619</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_fov</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>glwidget</receiver>
+   <slot>setFov(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>517</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_depthTest</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>glwidget</receiver>
+   <slot>glEnableDepthTest(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1089</x>
+     <y>654</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>551</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_zFar</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>glwidget</receiver>
+   <slot>setFarPlane(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>517</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cullFace</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>glwidget</receiver>
+   <slot>glEnableCullFace(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1088</x>
+     <y>681</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>551</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_visible</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>glwidget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1088</x>
+     <y>708</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>551</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_zNear</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>glwidget</receiver>
+   <slot>setNearPlane(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>517</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_fbo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>glwidget</receiver>
+   <slot>setRenderToFrameBuffer(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1088</x>
+     <y>735</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>480</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mapper_3</sender>
+   <signal>positionChanged(QVector3D)</signal>
+   <receiver>glwidget</receiver>
+   <slot>setCameraTranslation(QVector3D)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>344</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>517</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mapper_3</sender>
+   <signal>rotationChanged(QQuaternion)</signal>
+   <receiver>glwidget</receiver>
+   <slot>setCameraRotation(QQuaternion)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>344</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>517</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateCurrentItemColor(QColor)</slot>
+  <slot>updateCurrentItemOpacity(double)</slot>
+  <slot>updateCurrentItemRotation(QQuaternion)</slot>
+  <slot>updateCurrentItemPosition(QVector3D)</slot>
+  <slot>updateCurrentItemScale(QVector3D)</slot>
+  <slot>setEditorVisible(bool)</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bttngroup_anim_type"/>
+ </buttongroups>
+</ui>

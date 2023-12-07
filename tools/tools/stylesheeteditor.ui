@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StyleSheetEditor</class>
+ <widget class="QWidget" name="StyleSheetEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>496</width>
+    <height>322</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame, .QFrame * {
+    font: 600 11px &quot;Open Sans&quot;;
+    color: #fafafa;
+    background-color: qlineargradient(spread:reflect, x1:0.485, y1:0.9375, x2:0.483, y2:0, stop:0.323864 rgba(0, 0, 0, 250), stop:0.897727 rgba(37, 37, 37, 255));
+    border: 1px inset gray;
+}
+
+QTextBrowser {
+    background-color: rgba(32, 23, 22, 250);
+    border: 1px ridge white;
+    border-radius: 1px;
+}
+
+QTextBrowser:focus {
+    border-color: blue;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="opaqueResize">
+      <bool>true</bool>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>true</bool>
+     </property>
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+       <property name="spacing">
+        <number>20</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,1,1">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>2</number>
+         </property>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="bttn_search">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 40, 93, 55), stop:0.949153 rgba(0, 113, 206, 49), stop:1 rgba(58, 136, 255, 24));
+border: 1px outset #134463;
+border-radius: 3px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 40, 93, 155), stop:0.949153 rgba(0, 113, 206, 149), stop:1 rgba(58, 136, 255, 124));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 4, 9, 155), stop:0.949153 rgba(0, 13, 26, 149), stop:1 rgba(8, 36, 55, 124));
+border: 1px inset #132433;
+color: rgba(250, 250, 250, 100);
+padding-top: 1px;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">search</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="bttn_setTarget">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 110, 43, 55), stop:0.95 rgba(0, 153, 106, 49), stop:1 rgba(58, 236, 255, 24));
+border: 1px outset #136344;
+border-radius: 3px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 110, 43, 155), stop:0.95 rgba(0, 153, 106, 149), stop:1 rgba(58, 236, 255, 124));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 4, 9, 155), stop:0.949153 rgba(0, 13, 26, 149), stop:1 rgba(8, 36, 55, 124));
+border: 1px inset #133324;
+color: rgba(250, 250, 250, 100);
+padding-top: 1px;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">set target</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="status">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: green;
+    background-color: transparent;
+border: none;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">Found</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="status_2">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: red;
+    background-color: transparent;
+border: none;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">Not found</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(227, 227, 227, 113), stop:0.0190996 rgba(255, 255, 255, 135), stop:0.882445 rgba(255, 255, 255, 235), stop:0.959248 rgba(202, 196, 196, 232), stop:1 rgba(97, 95, 95, 235));
+color: black;
+}</string>
+           </property>
+           <property name="placeholderText">
+            <string notr="true">find by name...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    background-color: transparent;
+    border: none;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">widgets</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="listWidget">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QListView {
+    
+	background-color: rgba(255, 255, 255, 222);
+    
+	alternate-background-color: rgb(255, 255, 255);
+    color: rgba(2, 5, 5, 225);
+}</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+           <property name="sortingEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextBrowser" name="textEditor">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="detail">
+     <property name="text">
+      <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; color:#efefef;&quot;&gt;hierarch...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>bttn_search</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>114</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_search</sender>
+   <signal>clicked()</signal>
+   <receiver>status</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>41</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_search</sender>
+   <signal>clicked()</signal>
+   <receiver>status_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>17</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>13</x>
+     <y>86</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>bttn_search</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>bttn_setTarget</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>186</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_setTarget</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_setTarget</sender>
+   <signal>clicked()</signal>
+   <receiver>status</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>45</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>bttn_setTarget</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>bttn_setTarget</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>301</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>45</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <slot>toggleTableView()</slot>
+  <slot>init()</slot>
+ </slots>
+</ui>

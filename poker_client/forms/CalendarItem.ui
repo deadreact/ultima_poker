@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalendarItem</class>
+ <widget class="FramedEntity" name="CalendarItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>76</width>
+    <height>90</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>76</width>
+    <height>90</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+    border: none;
+    font: 600 40px &quot;Open Sans&quot;;
+    color: rgba(25, 25, 25, 255);
+    margin: 0px;
+    padding: 0px;
+}</string>
+  </property>
+  <property name="parentPainting">
+   <enum>E::PaintParentBefore</enum>
+  </property>
+  <property name="sizeOfFrame">
+   <size>
+    <width>76</width>
+    <height>90</height>
+   </size>
+  </property>
+  <widget class="QLabel" name="dayOfWeek">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>1</y>
+     <width>76</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font: 600 16px &quot;Open Sans&quot;;
+    color: rgba(250, 250, 250, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">##</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dayOfMonth">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>26</y>
+     <width>52</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    padding-top: 6px;
+    padding-left: 6px;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">31</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="month">
+   <property name="geometry">
+    <rect>
+     <x>6</x>
+     <y>66</y>
+     <width>63</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+font: 600 12px &quot;Open Sans&quot;;
+color: rgba(84, 110, 122, 255);
+padding: 2px;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">####</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FramedEntity</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

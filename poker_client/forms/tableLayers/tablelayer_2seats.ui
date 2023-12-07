@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>layer_2seats</class>
+ <widget class="QWidget" name="layer_2seats">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>346</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#layer_2seats {
+	background-position: center;    
+border: 2px outset red;
+margin: 14px;
+border-radius: 310px 158px;
+}
+QWidget {
+    background-color: transparent;
+}                                                                                                                                          </string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="EntityWidget" name="layer_gameTable">
+     <property name="minimumSize">
+      <size>
+       <width>648</width>
+       <height>344</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>648</width>
+       <height>344</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="respondable">
+      <bool>true</bool>
+     </property>
+     <widget class="QLabel" name="icon_dealer">
+      <property name="geometry">
+       <rect>
+        <x>257</x>
+        <y>247</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../../resources.qrc">:/textures/game/icon_dealer.png</pixmap>
+      </property>
+     </widget>
+     <widget class="BetItem" name="bet_0" native="true">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>280</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>91</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>91</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget  {
+    image: url(:/textures/mockups/bet_right.png);
+}</string>
+      </property>
+     </widget>
+     <widget class="BetItem" name="bet_1" native="true">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>30</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>91</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>91</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget  {
+    image: url(:/textures/mockups/bet_left.png);
+}</string>
+      </property>
+     </widget>
+     <widget class="EntityWidget" name="boxes_pos">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>650</width>
+        <height>346</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>650</width>
+        <height>346</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>650</width>
+        <height>346</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="respondable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="pos_0" native="true">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>325</y>
+         <width>64</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">.QWidget {
+    
+	border-image: url(:/textures/profiler/placeholder.png) 11 14 12 10;
+}</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="pos_1" native="true">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>-50</y>
+         <width>64</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">.QWidget {
+    
+	border-image: url(:/textures/profiler/placeholder.png) 11 14 12 10;
+}</string>
+       </property>
+      </widget>
+      <zorder>pos_1</zorder>
+      <zorder>pos_0</zorder>
+     </widget>
+     <widget class="QWidget" name="cards_and_pots" native="true">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>70</y>
+        <width>382</width>
+        <height>169</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,1,0,0">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <property name="spacing">
+          <number>1</number>
+         </property>
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <property name="bottomMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_11">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0,0">
+         <property name="spacing">
+          <number>1</number>
+         </property>
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <property name="bottomMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_12">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="PotItem" name="table_pot_0" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>140</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>240</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">.QWidget, .QLabel {
+    color: rgba(255, 255, 255, 245);
+	font: 600 13px &quot;Arial&quot;;
+    border-radius: 10px;
+    background-image: url(:/textures/game/fishka.png);
+    
+    background-origin: border;
+    background-clip: border;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-color: rgba(0, 0, 0, 51);
+
+    
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.QWidget[mirrored=false] {
+    background-position: left bottom;
+ margin-left: 20px;
+    margin-right: 0px;
+}
+.QWidget[mirrored=true] {
+    background-position: right bottom;
+ margin-left: 0px;
+    margin-right: 20px;
+}</string>
+           </property>
+           <property name="text" stdset="0">
+            <string>@POT_%0</string>
+           </property>
+           <property name="mirrored" stdset="0">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_13">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QFrame" name="_table_cards">
+         <property name="minimumSize">
+          <size>
+           <width>380</width>
+           <height>110</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>380</width>
+           <height>110</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,0,0,0,0,0,1">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>19</number>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="CardWidget" name="card_0">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="sourceFile">
+             <url>
+              <string>qrc:/textures/svg/cards_01/2_diamonds.svg</string>
+             </url>
+            </property>
+            <property name="sourceCode">
+             <cstring>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;svg version=&quot;1.1&quot; baseProfile=&quot;tiny&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+	 x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 170 244&quot; xml:space=&quot;preserve&quot;&gt;
+&lt;metadata&gt;&lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?&gt;
+&lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c111 79.158366, 2015/09/25-01:12:00        &quot;&gt;
+   &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt;
+      &lt;rdf:Description rdf:about=&quot;&quot;/&gt;
+   &lt;/rdf:RDF&gt;
+&lt;/x:xmpmeta&gt;
+&lt;?xpacket end=&quot;w&quot;?&gt;&lt;/metadata&gt;
+&lt;g id=&quot;Layer_58&quot;&gt;
+	&lt;path fill=&quot;#FFFFFF&quot; d=&quot;M17,0h136c9.4,0,17,7.6,17,17.1v209.8c0,9.4-7.6,17.1-17,17.1H17c-9.4,0-17-7.6-17-17.1V17.1
+		C0,7.6,7.6,0,17,0z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M96.9,234.8c0,0,7.7-19.6,26.3-40.4s33.4-31.8,33.4-31.8s-19.4-11.9-33-30.1
+		c-13.5-18.3-26.2-41.6-26.2-41.6s-11.3,22.4-27.2,41.4c-14.6,17.4-32,30.3-32,30.3s14.8,11,33.4,31.8
+		C90.2,215.2,96.9,234.8,96.9,234.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M74.1,66.8c0,0,3.1-7.8,10.5-16.1C92.1,42.4,98,38,98,38s-7.8-4.7-13.2-12C79.4,18.7,74.4,9.4,74.4,9.4
+		s-4.5,9-10.9,16.5C57.7,32.9,50.7,38,50.7,38s5.9,4.4,13.3,12.7C71.5,59,74.1,66.8,74.1,66.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M26.6,12.6L26.6,12.6c-6.4,0-11.7,5.3-11.7,11.7l0,0h4.6c0.7-3.2,3.6-5.7,7.1-5.7l0,0c4,0,7.2,3.3,7.2,7.3
+		c0,2.1-0.6,3.1-1.5,4.9L14.9,67.2h1.9h0.5l16.3,0.1h4.5l0,0v-5.6l0,0v-6.5h-4.5v6.5H23.5l0,0l-0.7,0.1l13.7-28.1
+		c1.8-3.7,2.2-6.2,1.9-9.5c-0.1-1.2-0.3-2.4-0.6-3.4v-0.2l0,0C36.2,16,31.8,12.6,26.6,12.6z&quot;/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+</cstring>
+            </property>
+            <property name="shadowBlurRadius">
+             <double>18.000000000000000</double>
+            </property>
+            <property name="shadowOffset">
+             <pointf>
+              <x>0.000000000000000</x>
+              <y>6.000000000000000</y>
+             </pointf>
+            </property>
+            <property name="shadowColor">
+             <color alpha="120">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </property>
+            <property name="modelKey" stdset="0">
+             <cstring>[0,0[6,0,[0,0,0x0]]]</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CardWidget" name="card_1">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="sourceFile">
+             <url>
+              <string>qrc:/textures/svg/cards_01/2_diamonds.svg</string>
+             </url>
+            </property>
+            <property name="sourceCode">
+             <cstring>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;svg version=&quot;1.1&quot; baseProfile=&quot;tiny&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+	 x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 170 244&quot; xml:space=&quot;preserve&quot;&gt;
+&lt;metadata&gt;&lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?&gt;
+&lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c111 79.158366, 2015/09/25-01:12:00        &quot;&gt;
+   &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt;
+      &lt;rdf:Description rdf:about=&quot;&quot;/&gt;
+   &lt;/rdf:RDF&gt;
+&lt;/x:xmpmeta&gt;
+&lt;?xpacket end=&quot;w&quot;?&gt;&lt;/metadata&gt;
+&lt;g id=&quot;Layer_58&quot;&gt;
+	&lt;path fill=&quot;#FFFFFF&quot; d=&quot;M17,0h136c9.4,0,17,7.6,17,17.1v209.8c0,9.4-7.6,17.1-17,17.1H17c-9.4,0-17-7.6-17-17.1V17.1
+		C0,7.6,7.6,0,17,0z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M96.9,234.8c0,0,7.7-19.6,26.3-40.4s33.4-31.8,33.4-31.8s-19.4-11.9-33-30.1
+		c-13.5-18.3-26.2-41.6-26.2-41.6s-11.3,22.4-27.2,41.4c-14.6,17.4-32,30.3-32,30.3s14.8,11,33.4,31.8
+		C90.2,215.2,96.9,234.8,96.9,234.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M74.1,66.8c0,0,3.1-7.8,10.5-16.1C92.1,42.4,98,38,98,38s-7.8-4.7-13.2-12C79.4,18.7,74.4,9.4,74.4,9.4
+		s-4.5,9-10.9,16.5C57.7,32.9,50.7,38,50.7,38s5.9,4.4,13.3,12.7C71.5,59,74.1,66.8,74.1,66.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M26.6,12.6L26.6,12.6c-6.4,0-11.7,5.3-11.7,11.7l0,0h4.6c0.7-3.2,3.6-5.7,7.1-5.7l0,0c4,0,7.2,3.3,7.2,7.3
+		c0,2.1-0.6,3.1-1.5,4.9L14.9,67.2h1.9h0.5l16.3,0.1h4.5l0,0v-5.6l0,0v-6.5h-4.5v6.5H23.5l0,0l-0.7,0.1l13.7-28.1
+		c1.8-3.7,2.2-6.2,1.9-9.5c-0.1-1.2-0.3-2.4-0.6-3.4v-0.2l0,0C36.2,16,31.8,12.6,26.6,12.6z&quot;/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+</cstring>
+            </property>
+            <property name="shadowBlurRadius">
+             <double>18.000000000000000</double>
+            </property>
+            <property name="shadowOffset">
+             <pointf>
+              <x>0.000000000000000</x>
+              <y>6.000000000000000</y>
+             </pointf>
+            </property>
+            <property name="shadowColor">
+             <color alpha="120">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </property>
+            <property name="modelKey" stdset="0">
+             <cstring>[0,1[6,0,[0,0,0x0]]]</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CardWidget" name="card_2">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="sourceFile">
+             <url>
+              <string>qrc:/textures/svg/cards_01/2_diamonds.svg</string>
+             </url>
+            </property>
+            <property name="sourceCode">
+             <cstring>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;svg version=&quot;1.1&quot; baseProfile=&quot;tiny&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+	 x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 170 244&quot; xml:space=&quot;preserve&quot;&gt;
+&lt;metadata&gt;&lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?&gt;
+&lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c111 79.158366, 2015/09/25-01:12:00        &quot;&gt;
+   &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt;
+      &lt;rdf:Description rdf:about=&quot;&quot;/&gt;
+   &lt;/rdf:RDF&gt;
+&lt;/x:xmpmeta&gt;
+&lt;?xpacket end=&quot;w&quot;?&gt;&lt;/metadata&gt;
+&lt;g id=&quot;Layer_58&quot;&gt;
+	&lt;path fill=&quot;#FFFFFF&quot; d=&quot;M17,0h136c9.4,0,17,7.6,17,17.1v209.8c0,9.4-7.6,17.1-17,17.1H17c-9.4,0-17-7.6-17-17.1V17.1
+		C0,7.6,7.6,0,17,0z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M96.9,234.8c0,0,7.7-19.6,26.3-40.4s33.4-31.8,33.4-31.8s-19.4-11.9-33-30.1
+		c-13.5-18.3-26.2-41.6-26.2-41.6s-11.3,22.4-27.2,41.4c-14.6,17.4-32,30.3-32,30.3s14.8,11,33.4,31.8
+		C90.2,215.2,96.9,234.8,96.9,234.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M74.1,66.8c0,0,3.1-7.8,10.5-16.1C92.1,42.4,98,38,98,38s-7.8-4.7-13.2-12C79.4,18.7,74.4,9.4,74.4,9.4
+		s-4.5,9-10.9,16.5C57.7,32.9,50.7,38,50.7,38s5.9,4.4,13.3,12.7C71.5,59,74.1,66.8,74.1,66.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M26.6,12.6L26.6,12.6c-6.4,0-11.7,5.3-11.7,11.7l0,0h4.6c0.7-3.2,3.6-5.7,7.1-5.7l0,0c4,0,7.2,3.3,7.2,7.3
+		c0,2.1-0.6,3.1-1.5,4.9L14.9,67.2h1.9h0.5l16.3,0.1h4.5l0,0v-5.6l0,0v-6.5h-4.5v6.5H23.5l0,0l-0.7,0.1l13.7-28.1
+		c1.8-3.7,2.2-6.2,1.9-9.5c-0.1-1.2-0.3-2.4-0.6-3.4v-0.2l0,0C36.2,16,31.8,12.6,26.6,12.6z&quot;/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+</cstring>
+            </property>
+            <property name="shadowBlurRadius">
+             <double>18.000000000000000</double>
+            </property>
+            <property name="shadowOffset">
+             <pointf>
+              <x>0.000000000000000</x>
+              <y>6.000000000000000</y>
+             </pointf>
+            </property>
+            <property name="shadowColor">
+             <color alpha="120">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </property>
+            <property name="modelKey" stdset="0">
+             <cstring>[0,2[6,0,[0,0,0x0]]]</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CardWidget" name="card_3">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="sourceFile">
+             <url>
+              <string>qrc:/textures/svg/cards_01/2_diamonds.svg</string>
+             </url>
+            </property>
+            <property name="sourceCode">
+             <cstring>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;svg version=&quot;1.1&quot; baseProfile=&quot;tiny&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+	 x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 170 244&quot; xml:space=&quot;preserve&quot;&gt;
+&lt;metadata&gt;&lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?&gt;
+&lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c111 79.158366, 2015/09/25-01:12:00        &quot;&gt;
+   &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt;
+      &lt;rdf:Description rdf:about=&quot;&quot;/&gt;
+   &lt;/rdf:RDF&gt;
+&lt;/x:xmpmeta&gt;
+&lt;?xpacket end=&quot;w&quot;?&gt;&lt;/metadata&gt;
+&lt;g id=&quot;Layer_58&quot;&gt;
+	&lt;path fill=&quot;#FFFFFF&quot; d=&quot;M17,0h136c9.4,0,17,7.6,17,17.1v209.8c0,9.4-7.6,17.1-17,17.1H17c-9.4,0-17-7.6-17-17.1V17.1
+		C0,7.6,7.6,0,17,0z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M96.9,234.8c0,0,7.7-19.6,26.3-40.4s33.4-31.8,33.4-31.8s-19.4-11.9-33-30.1
+		c-13.5-18.3-26.2-41.6-26.2-41.6s-11.3,22.4-27.2,41.4c-14.6,17.4-32,30.3-32,30.3s14.8,11,33.4,31.8
+		C90.2,215.2,96.9,234.8,96.9,234.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M74.1,66.8c0,0,3.1-7.8,10.5-16.1C92.1,42.4,98,38,98,38s-7.8-4.7-13.2-12C79.4,18.7,74.4,9.4,74.4,9.4
+		s-4.5,9-10.9,16.5C57.7,32.9,50.7,38,50.7,38s5.9,4.4,13.3,12.7C71.5,59,74.1,66.8,74.1,66.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M26.6,12.6L26.6,12.6c-6.4,0-11.7,5.3-11.7,11.7l0,0h4.6c0.7-3.2,3.6-5.7,7.1-5.7l0,0c4,0,7.2,3.3,7.2,7.3
+		c0,2.1-0.6,3.1-1.5,4.9L14.9,67.2h1.9h0.5l16.3,0.1h4.5l0,0v-5.6l0,0v-6.5h-4.5v6.5H23.5l0,0l-0.7,0.1l13.7-28.1
+		c1.8-3.7,2.2-6.2,1.9-9.5c-0.1-1.2-0.3-2.4-0.6-3.4v-0.2l0,0C36.2,16,31.8,12.6,26.6,12.6z&quot;/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+</cstring>
+            </property>
+            <property name="shadowBlurRadius">
+             <double>18.000000000000000</double>
+            </property>
+            <property name="shadowOffset">
+             <pointf>
+              <x>0.000000000000000</x>
+              <y>6.000000000000000</y>
+             </pointf>
+            </property>
+            <property name="shadowColor">
+             <color alpha="120">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </property>
+            <property name="modelKey" stdset="0">
+             <cstring>[0,3[6,0,[0,0,0x0]]]</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CardWidget" name="card_4">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>84</height>
+             </size>
+            </property>
+            <property name="sourceFile">
+             <url>
+              <string>qrc:/textures/svg/cards_01/2_diamonds.svg</string>
+             </url>
+            </property>
+            <property name="sourceCode">
+             <cstring>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;svg version=&quot;1.1&quot; baseProfile=&quot;tiny&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+	 x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 170 244&quot; xml:space=&quot;preserve&quot;&gt;
+&lt;metadata&gt;&lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?&gt;
+&lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c111 79.158366, 2015/09/25-01:12:00        &quot;&gt;
+   &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt;
+      &lt;rdf:Description rdf:about=&quot;&quot;/&gt;
+   &lt;/rdf:RDF&gt;
+&lt;/x:xmpmeta&gt;
+&lt;?xpacket end=&quot;w&quot;?&gt;&lt;/metadata&gt;
+&lt;g id=&quot;Layer_58&quot;&gt;
+	&lt;path fill=&quot;#FFFFFF&quot; d=&quot;M17,0h136c9.4,0,17,7.6,17,17.1v209.8c0,9.4-7.6,17.1-17,17.1H17c-9.4,0-17-7.6-17-17.1V17.1
+		C0,7.6,7.6,0,17,0z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M96.9,234.8c0,0,7.7-19.6,26.3-40.4s33.4-31.8,33.4-31.8s-19.4-11.9-33-30.1
+		c-13.5-18.3-26.2-41.6-26.2-41.6s-11.3,22.4-27.2,41.4c-14.6,17.4-32,30.3-32,30.3s14.8,11,33.4,31.8
+		C90.2,215.2,96.9,234.8,96.9,234.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M74.1,66.8c0,0,3.1-7.8,10.5-16.1C92.1,42.4,98,38,98,38s-7.8-4.7-13.2-12C79.4,18.7,74.4,9.4,74.4,9.4
+		s-4.5,9-10.9,16.5C57.7,32.9,50.7,38,50.7,38s5.9,4.4,13.3,12.7C71.5,59,74.1,66.8,74.1,66.8z&quot;/&gt;
+	&lt;path fill=&quot;#C80813&quot; d=&quot;M26.6,12.6L26.6,12.6c-6.4,0-11.7,5.3-11.7,11.7l0,0h4.6c0.7-3.2,3.6-5.7,7.1-5.7l0,0c4,0,7.2,3.3,7.2,7.3
+		c0,2.1-0.6,3.1-1.5,4.9L14.9,67.2h1.9h0.5l16.3,0.1h4.5l0,0v-5.6l0,0v-6.5h-4.5v6.5H23.5l0,0l-0.7,0.1l13.7-28.1
+		c1.8-3.7,2.2-6.2,1.9-9.5c-0.1-1.2-0.3-2.4-0.6-3.4v-0.2l0,0C36.2,16,31.8,12.6,26.6,12.6z&quot;/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+</cstring>
+            </property>
+            <property name="shadowBlurRadius">
+             <double>18.000000000000000</double>
+            </property>
+            <property name="shadowOffset">
+             <pointf>
+              <x>0.000000000000000</x>
+              <y>6.000000000000000</y>
+             </pointf>
+            </property>
+            <property name="shadowColor">
+             <color alpha="120">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </property>
+            <property name="modelKey" stdset="0">
+             <cstring>[0,4[6,0,[0,0,0x0]]]</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,0">
+         <property name="spacing">
+          <number>2</number>
+         </property>
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_16">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_17">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <zorder>boxes_pos</zorder>
+     <zorder>icon_dealer</zorder>
+     <zorder>bet_0</zorder>
+     <zorder>bet_1</zorder>
+     <zorder>cards_and_pots</zorder>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SvgWidget</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CardWidget</class>
+   <extends>SvgWidget</extends>
+   <header>widgets/CardWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PotItem</class>
+   <extends>QWidget</extends>
+   <header>game/tableItems/potitem.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BetItem</class>
+   <extends>QWidget</extends>
+   <header>game/tableItems/betitem.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,2000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Cashier</class>
+ <widget class="QDialog" name="Cashier">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #191919;
+}
+QLabel {
+    font: 600 18px &quot;Open Sans&quot;;
+color: #b0bec5;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+    border: none;
+    border-bottom: 1px solid #191919;
+}
+
+QHeaderView  {
+    font: 11px &quot;Open Sans&quot;;
+    color: #b0bec5;
+}</string>
+  </property>
+  <widget class="QStackedWidget" name="stackOfPages">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QStackedWidget, QStackedWidget &gt; QWidget {
+    border: none;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page_homepage">
+    <widget class="QFrame" name="page_operations">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>0</y>
+       <width>400</width>
+       <height>194</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>194</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>400</width>
+       <height>194</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+    background-color: #37474f;
+    border-left: 1px solid #455a64;
+    border-bottom: 1px solid #191919;
+border-bottom-left-radius: 0xp 1px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,1">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="title_operations">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>33</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>33</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px;</string>
+        </property>
+        <property name="text">
+         <string>@title_operations</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="content_operations" native="true">
+        <property name="styleSheet">
+         <string notr="true">.QWidget {
+    background: transparent;
+    border-top: 1px solid #455a64;
+}
+
+QLabel {
+    background: transparent;
+border: none;
+font: 14px &quot;Open Sans&quot;;
+color: #b0bec5;
+}</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout" rowstretch="0,1" columnstretch="0,1">
+         <property name="leftMargin">
+          <number>14</number>
+         </property>
+         <property name="topMargin">
+          <number>23</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>50</number>
+         </property>
+         <property name="spacing">
+          <number>15</number>
+         </property>
+         <item row="0" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QWidget" name="container_bttn_getMoney" native="true">
+           <property name="styleSheet">
+            <string notr="true">.QWidget {
+    background-color: #455a64;
+    border-radius: 4px;
+}
+QAbstractButton {
+    border: 1px solid #191919;
+border-radius: 3px;
+font: 14px &quot;Open Sans Semibold&quot;;
+color: #fafafa;
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="bttn_getMoney">
+              <property name="minimumSize">
+               <size>
+                <width>178</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>178</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>@Tooltip_Cashier_Withdraw_88</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 93, 98, 255), stop:1 rgba(69, 89, 99, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(1, 1, 1, 255), stop:0.162011 rgba(45, 45, 45, 255), stop:0.49162 rgba(19, 19, 19, 255), stop:1 rgba(37, 37, 37, 255));
+}
+</string>
+              </property>
+              <property name="text">
+               <string>@bttn_getMoney</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">bttnGrp_pages</string>
+              </attribute>
+              <widget class="EntityWidget" name="solid_2" native="true">
+               <property name="geometry">
+                <rect>
+                 <x>2</x>
+                 <y>1</y>
+                 <width>175</width>
+                 <height>2</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>2</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>1</height>
+                </size>
+               </property>
+               <property name="backgroundColor" stdset="0">
+                <color alpha="242">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QWidget" name="container_bttn_history" native="true">
+           <property name="styleSheet">
+            <string notr="true">.QWidget {
+    background-color: #455a64;
+    border-radius: 4px;
+}
+QAbstractButton {
+    border: 1px solid #191919;
+border-radius: 3px;
+font: 14px &quot;Open Sans Semibold&quot;;
+color: #fafafa;
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="bttn_history">
+              <property name="minimumSize">
+               <size>
+                <width>178</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>178</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>@Tooltip_Cashier_History_87</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 93, 98, 255), stop:1 rgba(69, 89, 99, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(1, 1, 1, 255), stop:0.162011 rgba(45, 45, 45, 255), stop:0.49162 rgba(19, 19, 19, 255), stop:1 rgba(37, 37, 37, 255));
+}
+</string>
+              </property>
+              <property name="text">
+               <string>@bttn_history</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">bttnGrp_pages</string>
+              </attribute>
+              <widget class="EntityWidget" name="solid_3" native="true">
+               <property name="geometry">
+                <rect>
+                 <x>2</x>
+                 <y>1</y>
+                 <width>175</width>
+                 <height>2</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>2</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>1</height>
+                </size>
+               </property>
+               <property name="backgroundColor" stdset="0">
+                <color alpha="242">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QWidget" name="container_bttn_waitMoney" native="true">
+           <property name="styleSheet">
+            <string notr="true">.QWidget {
+    background-color: #455a64;
+    border-radius: 4px;
+}
+QAbstractButton {
+    border: 1px solid #191919;
+border-radius: 3px;
+font: 14px &quot;Open Sans Semibold&quot;;
+color: #fafafa;
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="bttn_pendingWithdrawal">
+              <property name="minimumSize">
+               <size>
+                <width>178</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>178</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>@Tooltip_Cashier_Pending_89</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 93, 98, 255), stop:1 rgba(69, 89, 99, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(1, 1, 1, 255), stop:0.162011 rgba(45, 45, 45, 255), stop:0.49162 rgba(19, 19, 19, 255), stop:1 rgba(37, 37, 37, 255));
+}
+</string>
+              </property>
+              <property name="text">
+               <string>@bttn_waitMoney</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">bttnGrp_pages</string>
+              </attribute>
+              <widget class="EntityWidget" name="solid_4" native="true">
+               <property name="geometry">
+                <rect>
+                 <x>2</x>
+                 <y>1</y>
+                 <width>175</width>
+                 <height>2</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>2</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>1</height>
+                </size>
+               </property>
+               <property name="backgroundColor" stdset="0">
+                <color alpha="242">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QWidget" name="container_bttn_addMoney" native="true">
+           <property name="styleSheet">
+            <string notr="true">.QWidget {
+    background-color: #455a64;
+    border-radius: 4px;
+}
+QAbstractButton {
+    border: 1px solid #191919;
+border-radius: 3px;
+font: 14px &quot;Open Sans Semibold&quot;;
+color: #fafafa;
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="bttn_addMoney">
+              <property name="minimumSize">
+               <size>
+                <width>178</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>178</width>
+                <height>34</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>@Tooltip_Cashier_Deposit_86</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(176, 77, 1, 255), stop:0.95 rgba(254, 181, 76, 255), stop:1 rgba(255, 248, 146, 255));
+}
+
+QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(236, 147, 111, 255), stop:0.95 rgba(254, 181, 76, 255), stop:1 rgba(255, 248, 146, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(1, 1, 1, 255), stop:0.162011 rgba(45, 45, 45, 255), stop:0.49162 rgba(19, 19, 19, 255), stop:1 rgba(37, 37, 37, 255));
+}
+</string>
+              </property>
+              <property name="text">
+               <string>@bttn_addMoney</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">bttnGrp_pages</string>
+              </attribute>
+              <widget class="EntityWidget" name="solid" native="true">
+               <property name="geometry">
+                <rect>
+                 <x>2</x>
+                 <y>1</y>
+                 <width>175</width>
+                 <height>2</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>2</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>1</height>
+                </size>
+               </property>
+               <property name="backgroundColor" stdset="0">
+                <color alpha="242">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QFrame" name="page_account">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>400</width>
+       <height>194</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>194</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>400</width>
+       <height>194</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+    background-color: #37474f;
+border:none;
+    border-right: 1px solid #191919;
+    border-bottom: 1px solid #191919;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="avatar_frame">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>198</width>
+          <height>145</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>222</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>190</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+#avatar_frame {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+ border: none;
+    border-top: none;
+    border-right: 1px solid #191919;
+}
+
+QLabel
+{
+    max-height: 20px;
+    color: #fafafa;
+background-color: transparent;
+border: none;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0,1">
+         <property name="spacing">
+          <number>2</number>
+         </property>
+         <property name="leftMargin">
+          <number>30</number>
+         </property>
+         <property name="topMargin">
+          <number>19</number>
+         </property>
+         <property name="rightMargin">
+          <number>30</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+          <widget class="QPushButton" name="profile_picture">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>120</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#profile_picture
+{
+	background-repeat: no-repeat;
+    background-clip: margin;
+	background-position: top;
+	background-attachment: fixed;
+    background-origin: content;
+    border-radius: 60px;
+    margin-bottom: 14px;
+background-image: url(:/textures/__avatars/Harly_120.png);
+border: 0px solid;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+          <widget class="QLabel" name="value_nickname">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    font: 600 16px &quot;Open Sans&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">nicknamde</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+          <widget class="QWidget" name="widget" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item alignment="Qt::AlignLeft">
+             <widget class="FramedEntity" name="icon_vip_status" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="pixmap" stdset="0">
+               <pixmap>:/textures/Common/icons/icon3x7_menubar.png</pixmap>
+              </property>
+              <property name="frameIndex" stdset="0">
+               <number>9</number>
+              </property>
+              <property name="sizeOfFrame" stdset="0">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft">
+             <widget class="QLabel" name="label_status">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+color: #00aeef;
+	font: 550 12px &quot;Open Sans&quot;;
+}</string>
+              </property>
+              <property name="text">
+               <string notr="true">BEGGINER</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="accountpart" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="title_account">
+           <property name="minimumSize">
+            <size>
+             <width>198</width>
+             <height>33</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>33</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 16px;</string>
+           </property>
+           <property name="text">
+            <string>@title_money_account</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="content_account" native="true">
+           <property name="styleSheet">
+            <string notr="true">.QWidget {
+    background: transparent;
+    border-top: 1px solid #455a64;
+}
+QLabel {
+    background: transparent;
+border: none;
+font: 14px &quot;Open Sans&quot;;
+color: #b0bec5;
+}</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,1">
+            <property name="leftMargin">
+             <number>17</number>
+            </property>
+            <property name="topMargin">
+             <number>19</number>
+            </property>
+            <property name="rightMargin">
+             <number>17</number>
+            </property>
+            <property name="bottomMargin">
+             <number>23</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>0</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>6</number>
+            </property>
+            <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QLabel" name="msg_cash_total">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #90a4ae;
+}</string>
+              </property>
+              <property name="text">
+               <string>@msg_cash_total:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QLabel" name="money_cash_total">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #ffb74d;
+}</string>
+              </property>
+              <property name="text">
+               <string notr="true">$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QLabel" name="msg_cash_available">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #90a4ae;
+}</string>
+              </property>
+              <property name="text">
+               <string>@msg_available:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QLabel" name="msg_cash_ingame">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #90a4ae;
+}</string>
+              </property>
+              <property name="text">
+               <string>@msg_cash_ingame:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QLabel" name="money_cash_ingame">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+color: #fafafa;
+}</string>
+              </property>
+              <property name="text">
+               <string notr="true">$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QLabel" name="money_cash_available">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+color: #fafafa;
+}</string>
+              </property>
+              <property name="text">
+               <string notr="true">$0.00</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QFrame" name="page_sendMoney">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>198</y>
+       <width>400</width>
+       <height>282</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>282</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>400</width>
+       <height>282</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+    background-color: #222a30;
+    border-left: 1px solid #34424a;
+    border-top: 1px solid #445a64;
+border-top-left-radius: 1px 0px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="title_sendMoney">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>33</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>33</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>@title_sendMoney</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="content_sendMoney" native="true">
+        <property name="styleSheet">
+         <string notr="true">.QWidget {
+    background: transparent;
+    border-top: 1px solid #34423a;
+}
+QLabel {
+    background: transparent;
+border: none;
+font: 11px &quot;Open Sans&quot;;
+color: #b0bec5;
+}
+
+
+QSpinBox, QLineEdit {
+    border-radius: 2px;
+font: 12px &quot;Open Sans&quot;;
+}
+
+QLineEdit:disabled {
+   background-color: rgba(250, 250, 250, 166);
+}
+
+QLineEdit, QAbstractSpinBox {
+   color: #000000;
+}
+
+</string>
+        </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>371</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+color: #fafafa;
+}</string>
+         </property>
+         <property name="text">
+          <string>@text_sendMoney_1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="InfoMessage" name="infomessage">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>79</y>
+           <width>361</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="messages" stdset="0">
+          <stringlist>
+           <string> </string>
+           <string>@msg_not_enough_money</string>
+           <string>@msg_overlimit</string>
+           <string>@msg_status_ok</string>
+           <string>@msg_user_not_found</string>
+           <string>@msg_unknown_error</string>
+           <string>@msg_invalid_nickname</string>
+           <string>@msg_narkoman_navernoe</string>
+           <string>@msg_payment_error</string>
+          </stringlist>
+         </property>
+         <property name="styles" stdset="0">
+          <stringlist>
+           <string> </string>
+           <string>QLabel { color: #e53935; }</string>
+           <string>QLabel { color: #e53935; }</string>
+           <string>QLabel { color: #33dd11; }</string>
+           <string>QLabel { color: #e53935; }</string>
+           <string>QLabel { color: #e53935; }</string>
+           <string>QLabel { color: #e53935; }</string>
+           <string>QLabel { color: #f53935; }</string>
+           <string>QLabel { color: #f53935; }</string>
+          </stringlist>
+         </property>
+         <property name="currentMsgIndex" stdset="0">
+          <number>0</number>
+         </property>
+         <property name="defaultMsgIndex" stdset="0">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="SvgWidget" name="svgwidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>192</x>
+           <y>60</y>
+           <width>14</width>
+           <height>14</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>12</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="sourceCode" stdset="0">
+          <cstring>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;
+&lt;svg version=&quot;1.1&quot; id=&quot;Capa_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 306 306&quot; style=&quot;enable-background:new 0 0 306 306;&quot; xml:space=&quot;preserve&quot;&gt;
+&lt;metadata&gt;&lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?&gt;
+&lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c111 79.158366, 2015/09/25-01:12:00        &quot;&gt;
+   &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt;
+      &lt;rdf:Description rdf:about=&quot;&quot;/&gt;
+   &lt;/rdf:RDF&gt;
+&lt;/x:xmpmeta&gt;
+&lt;?xpacket end=&quot;w&quot;?&gt;&lt;/metadata&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+	.st0{fill:#37474F;}
+&lt;/style&gt;
+&lt;g&gt;
+&lt;g id=&quot;chevron-right&quot;&gt;
+&lt;polygon class=&quot;st0&quot; points=&quot;94.3,0 22.9,0 175.9,153 22.9,306 94.3,306 247.4,153&quot;/&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+</cstring>
+         </property>
+         <property name="shadowBlurRadius" stdset="0">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="shadowOffset" stdset="0">
+          <pointf>
+           <x>0.000000000000000</x>
+           <y>-1.000000000000000</y>
+          </pointf>
+         </property>
+         <property name="shadowColor" stdset="0">
+          <color>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </property>
+        </widget>
+        <widget class="ValidatedLineEdit" name="input_reciever">
+         <property name="geometry">
+          <rect>
+           <x>235</x>
+           <y>54</y>
+           <width>148</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="expressions" stdset="0">
+          <stringlist notr="true">
+           <string>.+</string>
+           <string>^\w*$</string>
+           <string>(^[a-zA-Z_]\w{3,11}$)</string>
+          </stringlist>
+         </property>
+         <property name="styles" stdset="0">
+          <stringlist notr="true">
+           <string>QLineEdit { border: 1px solid red; }</string>
+           <string>QLineEdit { border: 1px solid black; }</string>
+           <string>QLineEdit { border-color: green; }</string>
+          </stringlist>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>16</x>
+           <y>94</y>
+           <width>360</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>@text_sendMoney_2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QWidget" name="container_bttn_send" native="true">
+         <property name="geometry">
+          <rect>
+           <x>125</x>
+           <y>197</y>
+           <width>148</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#container_bttn_send {
+    background-color: #455a64;
+    border-radius: 4px;
+border-bottom: 1px solid #34424a;
+}
+QAbstractButton {
+    border: 1px solid #191919;
+border-radius: 3px;
+font: 14px &quot;Open Sans Semibold&quot;;
+color: #fafafa;
+}</string>
+         </property>
+         <widget class="QPushButton" name="bttn_send">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>148</width>
+            <height>34</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>148</width>
+            <height>34</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>148</width>
+            <height>34</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 255), stop:0.95 rgb(0, 199, 82), stop:1 rgba(0, 250, 158, 255));
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(8, 140, 48, 255), stop:0.949153 rgba(10, 222, 92, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 41, 255), stop:0.95 rgb(0, 19, 22), stop:1 rgba(0, 60, 48, 255));
+padding-top: 2px;
+color: rgba(250, 250, 250, 128);
+}
+
+
+QPushButton:disabled {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 100), stop:0.95 rgba(0, 199, 82, 100), stop:1 rgba(0, 250, 158, 100));
+color: rgba(250, 250, 250, 100);
+
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>@bttn_send</string>
+          </property>
+          <widget class="EntityWidget" name="solid_5" native="true">
+           <property name="geometry">
+            <rect>
+             <x>1</x>
+             <y>1</y>
+             <width>146</width>
+             <height>2</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>146</width>
+             <height>2</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>146</width>
+             <height>1</height>
+            </size>
+           </property>
+           <property name="backgroundColor" stdset="0">
+            <color alpha="100">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="EntityWidget" name="entitywidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>54</y>
+           <width>150</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">EntityWidget {
+    border-radius: 2px;
+    font: 14px &quot;Open Sans&quot;;
+    color: #191919;
+    background-color: rgba(250, 250, 250, 250);
+}
+EntityWidget:hover {
+ border: 1px inset rgba(50, 50, 50, 200);
+}
+EntityWidget:focus {
+ border: 1px solid rgb(0, 170, 255);
+}
+
+EntityWidget:disabled {
+    background-color: rgba(255, 255, 255, 100);
+    color: rgba(0, 0, 0, 100);
+}
+
+QSpinBox {
+    padding: 0px;
+margin: 0px;
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>5</number>
+          </property>
+          <property name="topMargin">
+           <number>1</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>1</number>
+          </property>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QSpinBox" name="input_sendMoney">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>22</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>54</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">margin-right: -4px;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="accelerated">
+             <bool>true</bool>
+            </property>
+            <property name="suffix">
+             <string>.</string>
+            </property>
+            <property name="prefix">
+             <string>$</string>
+            </property>
+            <property name="maximum">
+             <number>999999</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QSpinBox" name="input_sendCoins">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">margin-left: -2px;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="accelerated">
+             <bool>true</bool>
+            </property>
+            <property name="prefix">
+             <string/>
+            </property>
+            <property name="minimum">
+             <number>-1</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QFrame" name="page_personalInfo">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>198</y>
+       <width>400</width>
+       <height>282</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>282</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>400</width>
+       <height>282</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+    background-color: #222a30;
+    border-right: 1px solid #191919;
+    border-top: 1px solid #445a64;
+border-top-right-radius: 1px 0px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="title_personalInfo">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>33</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>33</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>@title_personalinfo</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="content_personal_info" native="true">
+        <property name="styleSheet">
+         <string notr="true">.QWidget {
+    background: transparent;
+    border-top: 1px solid #34423a;
+}
+QLabel {
+    background: transparent;
+border: none;
+font: 14px &quot;Open Sans&quot;;
+color: #b0bec5;
+}</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,0,0,0,0,0,0,2" columnstretch="0,1">
+         <property name="leftMargin">
+          <number>16</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>15</number>
+         </property>
+         <property name="bottomMargin">
+          <number>15</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>20</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>7</number>
+         </property>
+         <item row="8" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="info_index">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">Index</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="info_birthdate">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">dd.mm.yyyy</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="msg_index">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@msg_index:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="msg_address">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@msg_address:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="info_country">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">Country</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="msg_phone">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@msg_birthdate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="info_city">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">City</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="info_address">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">Address</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="msg_country">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@msg_country:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="msg_city">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@msg_city:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="msg_email">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@msg_email:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="info_email">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">email@example.com</string>
+           </property>
+           <property name="verified" stdset="0">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="info_name">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">name</string>
+           </property>
+           <property name="verified" stdset="0">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="msg_name">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@msg_name:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" rowspan="2" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="info_surname">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">surname</string>
+           </property>
+           <property name="verified" stdset="0">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" rowspan="2" alignment="Qt::AlignLeft|Qt::AlignTop">
+          <widget class="QLabel" name="msg_surname">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@msg_surname:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="ns_page::Deposit" name="page_deposit"/>
+   <widget class="ns_page::Withdrawal" name="page_withdrawal"/>
+   <widget class="ns_page::PendingWithdrawals" name="page_pendingWithdrawals"/>
+   <widget class="ns_page::Transactions" name="page_transactions"/>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InfoMessage</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>FramedEntity</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SvgWidget</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::Deposit</class>
+   <extends>QWidget</extends>
+   <header>page_deposit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::Withdrawal</class>
+   <extends>QWidget</extends>
+   <header>page_withdrawal.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::PendingWithdrawals</class>
+   <extends>QWidget</extends>
+   <header>page_pendingwithdrawals.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::Transactions</class>
+   <extends>QWidget</extends>
+   <header>page_transactions.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../../poker_client/data/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>input_reciever</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>Cashier</receiver>
+   <slot>updateSendRequestAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>738</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>768</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_reciever</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>input_reciever</receiver>
+   <slot>updateAcceptedExpression()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>701</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateSendRequestAvailability()</slot>
+  <slot>requestSendMoney()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bttnGrp_pages"/>
+ </buttongroups>
+</ui>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MiniTable</class>
+ <widget class="QWidget" name="MiniTable">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>168</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>320</width>
+    <height>168</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>320</width>
+    <height>232</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="minitbl_container" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>320</width>
+     <height>168</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>320</width>
+     <height>168</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>320</width>
+     <height>168</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#minitbl_container {
+    background-repeat: no-repeat;
+	background-image: url(:/textures/game/minitable2.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #222a30;
+}
+
+.QFrame {
+    border: 1px solid red;
+}</string>
+   </property>
+   <widget class="ns_widget::MinitableItem" name="item_0">
+    <property name="geometry">
+     <rect>
+      <x>114</x>
+      <y>133</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="ns_widget::MinitableItem" name="item_6">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>52</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="ns_widget::MinitableItem" name="item_7">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>86</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="waiters_count">
+    <property name="geometry">
+     <rect>
+      <x>148</x>
+      <y>69</y>
+      <width>26</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>26</width>
+      <height>26</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>26</width>
+      <height>26</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: #b0bec5;
+	font: 500 11px &quot;Open Sans&quot;;
+	background-image: url(:/textures/Common/icons/icon_waiting.png);
+	background-position: left;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}</string>
+    </property>
+    <property name="text">
+     <string notr="true">0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="indent">
+     <number>2</number>
+    </property>
+   </widget>
+   <widget class="ns_widget::MinitableItem" name="item_1">
+    <property name="geometry">
+     <rect>
+      <x>26</x>
+      <y>120</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="buttonOffset" stdset="0">
+     <number>29</number>
+    </property>
+    <property name="pos_players_9" stdset="0">
+     <point>
+      <x>26</x>
+      <y>120</y>
+     </point>
+    </property>
+    <property name="pos_players_6" stdset="0">
+     <point>
+      <x>215</x>
+      <y>90</y>
+     </point>
+    </property>
+    <property name="pos_players_2" stdset="0">
+     <point>
+      <x>114</x>
+      <y>3</y>
+     </point>
+    </property>
+    <property name="buttonOffset_2" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="buttonOffset_6" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="buttonOffset_9" stdset="0">
+     <number>29</number>
+    </property>
+   </widget>
+   <widget class="ns_widget::MinitableItem" name="item_8">
+    <property name="geometry">
+     <rect>
+      <x>202</x>
+      <y>120</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="buttonOffset" stdset="0">
+     <number>-29</number>
+    </property>
+   </widget>
+   <widget class="ns_widget::MinitableItem" name="item_2">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>86</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="buttonOffset" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="pos_players_9" stdset="0">
+     <point>
+      <x>13</x>
+      <y>86</y>
+     </point>
+    </property>
+    <property name="pos_players_6" stdset="0">
+     <point>
+      <x>215</x>
+      <y>47</y>
+     </point>
+    </property>
+    <property name="buttonOffset_6" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="buttonOffset_9" stdset="0">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="ns_widget::MinitableItem" name="item_3">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>52</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="buttonOffset" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="pos_players_9" stdset="0">
+     <point>
+      <x>13</x>
+      <y>52</y>
+     </point>
+    </property>
+    <property name="pos_players_6" stdset="0">
+     <point>
+      <x>114</x>
+      <y>3</y>
+     </point>
+    </property>
+    <property name="buttonOffset_6" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="buttonOffset_9" stdset="0">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="ns_widget::MinitableItem" name="item_4">
+    <property name="geometry">
+     <rect>
+      <x>51</x>
+      <y>18</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="buttonOffset" stdset="0">
+     <number>29</number>
+    </property>
+    <property name="pos_players_9" stdset="0">
+     <point>
+      <x>51</x>
+      <y>18</y>
+     </point>
+    </property>
+    <property name="pos_players_6" stdset="0">
+     <point>
+      <x>13</x>
+      <y>47</y>
+     </point>
+    </property>
+    <property name="buttonOffset_6" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="buttonOffset_9" stdset="0">
+     <number>29</number>
+    </property>
+   </widget>
+   <widget class="ns_widget::MinitableItem" name="item_5">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>18</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="buttonOffset" stdset="0">
+     <number>-29</number>
+    </property>
+    <property name="pos_players_9" stdset="0">
+     <point>
+      <x>177</x>
+      <y>18</y>
+     </point>
+    </property>
+    <property name="pos_players_6" stdset="0">
+     <point>
+      <x>13</x>
+      <y>90</y>
+     </point>
+    </property>
+    <property name="buttonOffset_6" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="buttonOffset_9" stdset="0">
+     <number>-29</number>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ns_widget::MinitableItem</class>
+   <extends>QFrame</extends>
+   <header>widgets/widget_MiniTable.h</header>
+   <container>1</container>
+   <slots>
+    <signal>buttonClicked()</signal>
+    <signal>buttonMoved(int)</signal>
+    <slot>setBusy()</slot>
+    <slot>setBusy(bool)</slot>
+    <slot>setFree()</slot>
+    <slot>setFree(bool)</slot>
+    <slot>setCurrentIndex(int)</slot>
+    <slot>moveButton(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

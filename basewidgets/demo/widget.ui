@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>426</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1" colspan="2">
+    <widget class="TimeZoneBox" name="timezonebox"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QSpinBox" name="spinBox_2"/>
+   </item>
+   <item row="3" column="1" rowspan="3" colspan="2">
+    <widget class="EntityWidget" name="entitywidget">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>70</height>
+      </size>
+     </property>
+     <property name="backgroundColor">
+      <color alpha="242">
+       <red>12</red>
+       <green>13</green>
+       <blue>16</blue>
+      </color>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="InfoMessage" name="infomessage">
+        <property name="styleSheet">
+         <string notr="true">QLabel { font: 14px &quot;Open Sans Semibold&quot;; }</string>
+        </property>
+        <property name="text">
+         <string>basic text with common stylesheet</string>
+        </property>
+        <property name="messages">
+         <stringlist>
+          <string>basic text with common stylesheet</string>
+          <string>error string: &quot;bla bla bla!!!&quot;</string>
+          <string>something done successfull</string>
+          <string>loading...</string>
+         </stringlist>
+        </property>
+        <property name="styles">
+         <stringlist>
+          <string>QLabel { font: 14px &quot;Open Sans Semibold&quot;; }</string>
+          <string>QLabel { font: 14px &quot;Open Sans Semibold&quot;; color: red;}</string>
+          <string>QLabel { font: 600 14px &quot;Open Sans&quot;; color: green;}</string>
+          <string>QLabel { 
+font: 600 14px &quot;Open Sans&quot;;
+	font: 16px &quot;Cambria Math&quot;;
+border: none;
+	color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 255), stop:0.949153 rgba(0, 199, 82, 255), stop:1 rgba(0, 250, 158, 255));
+border-bottom: 2px solid qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0.6 rgba(66, 5, 5, 66), stop:0.5 rgba(210, 9, 9, 248), stop:0.4 rgba(161, 7, 7, 255));
+max-height: 18px;
+}</string>
+         </stringlist>
+        </property>
+        <property name="defaultMsgIndex">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QDoubleSpinBox" name="doubleSpinBox">
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="ClockWidget" name="clockWidget">
+     <property name="format">
+      <string>hh:mm AP</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="3">
+    <widget class="EasingCurveComboBox" name="easingcurvecombobox"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QSpinBox" name="spinBox"/>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="TextWidget" name="textwidget">
+     <property name="contextMenuPolicy">
+      <enum>Qt::ActionsContextMenu</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border: 1px solid ;
+}</string>
+     </property>
+     <property name="strings">
+      <stringlist>
+       <string>iostream</string>
+       <string>while</string>
+       <string>false</string>
+       <string>continue</string>
+       <string></string>
+       <string></string>
+      </stringlist>
+     </property>
+     <property name="text">
+      <string>#include &lt;%0&gt;
+
+int main() {
+    %1 (%2) {
+        %3;
+    }
+
+    return 0;
+</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ClockWidget</class>
+   <extends>QPushButton</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TextWidget</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>InfoMessage</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TimeZoneBox</class>
+   <extends>QComboBox</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EasingCurveComboBox</class>
+   <extends>QComboBox</extends>
+   <header>plugins.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>infomessage</receiver>
+   <slot>setCurrentMsgIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>entitywidget</receiver>
+   <slot>setBlending(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>entitywidget</receiver>
+   <slot>setOpacity(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>258</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

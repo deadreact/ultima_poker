@@ -1,0 +1,6 @@
+[submodule "common/yas"]
+	path = common/yas
+	url = git@109.236.85.111:tasheehoo/yas.git
+[submodule "common/hostinfo"]
+	path = common/hostinfo
+	url = git@109.236.85.111:tasheehoo/hostinfo.git

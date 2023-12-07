@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainScreen</class>
+ <widget class="QWidget" name="MainScreen">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>965</width>
+    <height>656</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>965</width>
+    <height>656</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>965</width>
+    <height>656</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>@application_name</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/textures/Logo.png</normaloff>:/textures/Logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">:pressed {
+    	color: rgba(217, 217, 217, 127);
+}
+
+#MainScreen {
+background-color: #191919;
+}
+
+QPushButton
+{
+	font: 550 12px &quot;Open Sans&quot;;
+    color: #dddddd;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="top" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>965</width>
+     <height>87</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>965</width>
+     <height>87</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>965</width>
+     <height>87</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#top {
+    background-color: #222a30;
+}
+
+QPushButton {
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #fafafa;
+    font: 550 16px &quot;Open Sans&quot;;
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>42</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item alignment="Qt::AlignVCenter">
+     <widget class="QLabel" name="logo">
+      <property name="minimumSize">
+       <size>
+        <width>208</width>
+        <height>76</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>208</width>
+        <height>76</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>:/textures/logo_ultima_poker.png</pixmap>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="zzz">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>38</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="minimumSize">
+       <size>
+        <width>390</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>390</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page_unlogged">
+       <property name="styleSheet">
+        <string notr="true">#page_unlogged {
+    
+	background-color: transparent;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item alignment="Qt::AlignRight">
+         <widget class="QPushButton" name="bttn_login">
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>120</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="toolTip">
+           <string>@tooltip_login_8</string>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.954802 rgba(0, 199, 83, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QPushButton:hover
+{     
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 101, 20, 255), stop:1 rgba(10, 222, 93, 255), stop:1 rgba(0, 250, 158, 255));
+}</string>
+          </property>
+          <property name="text">
+           <string>@BTTN_LOGIN</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignRight">
+         <widget class="QPushButton" name="bttn_logon">
+          <property name="minimumSize">
+           <size>
+            <width>180</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>180</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="toolTip">
+           <string>@tooltip_create_account_9</string>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(176, 76, 1, 255), stop:0.954802 rgba(254, 182, 76, 255), stop:1 rgba(255, 248, 146, 255));
+border: 1px solid black;
+border-radius: 5px;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(176, 76, 1, 255), stop:1 rgba(255, 185, 86, 255), stop:1 rgba(255, 249, 156, 255));
+}</string>
+          </property>
+          <property name="text">
+           <string>@BTTN_LOGON</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_logged">
+       <property name="minimumSize">
+        <size>
+         <width>390</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>390</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::ActionsContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#page_logged {
+	background-color: transparent;
+}
+QAbstractButton {
+    border: none;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
+        <item alignment="Qt::AlignRight">
+         <widget class="ns_widget::ProfilePicture" name="avatar">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>72</width>
+            <height>72</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>72</width>
+            <height>72</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="toolTip">
+           <string>@Tooltip_Main_Screen_Avatar_bttn_65</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget
+{
+	background-clip: margin;
+	background-position: center;
+	background-attachment: fixed;
+    background-origin: content;
+    border: 0px solid white;
+    border-radius: 50px;
+    
+border-image: url(:/textures/Common/icons/icon_avatar_cap.png);
+
+}</string>
+          </property>
+          <property name="viewport" stdset="0">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>72</width>
+            <height>72</height>
+           </rect>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignRight|Qt::AlignTop">
+         <widget class="QWidget" name="userInfo" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>72</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>72</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <property name="leftMargin">
+            <number>7</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>1</number>
+           </property>
+           <property name="bottomMargin">
+            <number>3</number>
+           </property>
+           <item alignment="Qt::AlignLeft|Qt::AlignTop">
+            <widget class="QPushButton" name="bttn_nickname">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="toolTip">
+              <string>@Tooltip_Main_Screen_username_65</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QAbstractButton {
+  	font: 600 18px &quot;Open Sans&quot; ;
+    color: #fafafa;
+}</string>
+             </property>
+             <property name="text">
+              <string notr="true">nickname</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignLeft|Qt::AlignTop">
+            <widget class="QPushButton" name="bttn_accountMoney">
+             <property name="toolTip">
+              <string>@Tooltip_Main_Screen_player_money_67</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QAbstractButton {
+    color: #ffb74d;
+	font: 600 12px &quot;Open Sans&quot;;
+}
+
+QPushButton {
+    text-align: left;
+}</string>
+             </property>
+             <property name="text">
+              <string notr="true">157 300.47</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>:/textures/Common/Tournament/icon_info_area_2_total_prize_money.png</normaloff>:/textures/Common/Tournament/icon_info_area_2_total_prize_money.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>14</width>
+               <height>14</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignLeft|Qt::AlignTop">
+            <widget class="QPushButton" name="bttn_status">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="toolTip">
+              <string>@Tooltip_Main_Screen_VIP_status_66</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QAbstractButton {
+color: #00aeef;	
+font: 600 12px &quot;Open Sans&quot;;
+}
+/*
+QAbstractButton[text=&quot;BEGINNER&quot;] {
+    color: #00aeef;
+}
+QAbstractButton[text=&quot;SEMI-PRO&quot;] {
+    color: #9B9B9B;
+}
+QAbstractButton[text=&quot;PROFESSIONAL&quot;] {
+    color: #D5A540;
+}
+QAbstractButton[text=&quot;ELITE&quot;] {
+    color: #A0A7BC;
+}
+QAbstractButton[text=&quot;MASTER&quot;] {
+    color: #8AB0C8;
+}
+QAbstractButton[text=&quot;LEGEND&quot;] {
+    color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.340909 rgba(98, 1, 1, 255), stop:0.659091 rgba(72, 73, 73, 255));
+
+}*/</string>
+             </property>
+             <property name="text">
+              <string notr="true">BEGINNER</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>:/textures/Common/icons/icon_crystall.psd</normaloff>:/textures/Common/icons/icon_crystall.psd</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>12</width>
+               <height>13</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>43</width>
+            <height>64</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>43</width>
+            <height>64</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">.QWidget {
+    border-right: 1px solid #37474f;
+    border-left: 1px solid #191919;
+    margin-right: 19px;
+    margin-left:22px;
+min-height: 64px;
+max-height: 64px;
+
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="container_bttn_cash" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>126</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>126</width>
+            <height>51</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">.QWidget {
+    background-color: #37474f;
+    border-radius: 6px;
+}
+QAbstractButton {
+    border: 1px solid #191919;
+border-radius: 3px;
+font: 14px &quot;Open Sans Semibold&quot;;
+color: #fafafa;
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>1</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="bttn_cash">
+             <property name="minimumSize">
+              <size>
+               <width>126</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>126</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="toolTip">
+              <string>@Tooltip_Main_Screen_cashier_bttn_68</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	font: 22px &quot;Open Sans&quot; ;
+    color: #fafafa;
+    border-radius: 5px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(176, 77, 1, 255), stop:0.95 rgba(254, 181, 76, 255), stop:1 rgba(255, 248, 146, 255));
+}
+
+QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(236, 147, 111, 255), stop:0.95 rgba(254, 181, 76, 255), stop:1 rgba(255, 248, 146, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(1, 1, 1, 255), stop:0.162011 rgba(45, 45, 45, 255), stop:0.49162 rgba(19, 19, 19, 255), stop:1 rgba(37, 37, 37, 255));
+}
+</string>
+             </property>
+             <property name="text">
+              <string>@BTTN_CASH</string>
+             </property>
+             <widget class="EntityWidget" name="solid">
+              <property name="geometry">
+               <rect>
+                <x>3</x>
+                <y>1</y>
+                <width>120</width>
+                <height>2</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>2</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="backgroundColor">
+               <color alpha="100">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>88</y>
+     <width>965</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>965</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>965</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QTabWidget {
+    background-color: #455a64;
+    border: none;
+}
+QTabWidget::pane {
+
+border-top: 1px solid #191919;
+border-left: 1px solid #455a64;
+border-right: 1px solid #191919;
+background-color: transparent;
+
+}
+
+QTabBar {
+   background-color: #191919;
+}
+
+QTabBar::tab {
+    height: 40px;
+    width: 191px;
+    font: 600 16px &quot;Open Sans&quot;;
+    color: rgba(250, 250, 250, 250);
+    margin-right: 1px;
+    border-top-left-radius: 1px 0px;
+ border-top-right-radius: 0px 1px;
+    border: none;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+
+border-top: 1px solid #83abbe;
+border-left: 1px solid #37474f;
+}
+
+QTabBar::tab:selected {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(171, 1, 1, 255), stop:1 rgba(254, 81, 81, 255));
+border-top-color: #ff9c9c;
+}
+QTabBar::tab:selected:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(171, 21, 21, 255), stop:1 rgba(254, 125, 125, 255));
+border-top-color: #ffcccc;
+}
+QTabBar::tab:!selected:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(31, 30, 39, 255), stop:1 rgba(75, 125, 145, 255));
+}
+
+QTabBar::tab:disabled {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 100), stop:1 rgba(69, 89, 99, 100));
+    color: rgba(250, 250, 250, 140);
+    border-top: 1px solid rgba(131, 171, 190, 100);
+}
+</string>
+   </property>
+   <widget class="ns_page::CashTables" name="tab_cashTables">
+    <property name="styleSheet">
+     <string notr="true">#tab_cashTables {
+    background-color: transparent;
+    border: none;
+}</string>
+    </property>
+    <attribute name="title">
+     <string>@Bttn_CashTables</string>
+    </attribute>
+    <attribute name="toolTip">
+     <string>@Tooltip_Main_Screen_bttn_cashtables</string>
+    </attribute>
+   </widget>
+   <widget class="ns_page::Tournaments" name="tab_tournaments">
+    <attribute name="title">
+     <string>@Bttn_Tournaments</string>
+    </attribute>
+    <attribute name="toolTip">
+     <string>@Tooltip_Main_Screen_Tourneys_bttn</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_flashPoker">
+    <attribute name="title">
+     <string>@Bttn_FlashPoker</string>
+    </attribute>
+    <attribute name="toolTip">
+     <string>@Tooltip_Main_Screen_NonStopPoker_bttn</string>
+    </attribute>
+   </widget>
+   <widget class="ns_page::SpinNGo" name="tab_spinNGo">
+    <attribute name="title">
+     <string>@Bttn_SpinNGo</string>
+    </attribute>
+    <attribute name="toolTip">
+     <string>@Tooltip_Main_Screen_TornadoSnG_bttn</string>
+    </attribute>
+   </widget>
+   <widget class="ns_page::SitNGo" name="tab_sitNGo">
+    <attribute name="title">
+     <string>@Bttn_SitNGo</string>
+    </attribute>
+    <attribute name="toolTip">
+     <string>@Tooltip_Main_Screen_SitnGo_bttn</string>
+    </attribute>
+   </widget>
+  </widget>
+  <action name="actionLogout">
+   <property name="text">
+    <string notr="true">Logout</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">Logout</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">Logout</string>
+   </property>
+  </action>
+  <action name="actionOpenCashier">
+   <property name="text">
+    <string notr="true">openCashier</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">openCashier</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">openCashier</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_widget::ProfilePicture</class>
+   <extends>EntityWidget</extends>
+   <header>widgets/widget_ProfilePicture.h</header>
+   <container>1</container>
+   <slots>
+    <signal>iconChanged(QIcon)</signal>
+    <signal>avatarChanged(Avatar)</signal>
+    <signal>avatarChanged(Avatar*)</signal>
+    <signal>iconChange(QIcon)</signal>
+    <signal>sourceChanged(QPixmap)</signal>
+    <slot>setIcon(QIcon)</slot>
+    <slot>setViewport(QRect)</slot>
+    <slot>setAvatar(Avatar*)</slot>
+    <slot>setSource(QPixmap)</slot>
+    <slot>setAlphaMask(QPixmap)</slot>
+    <slot>updateStyle()</slot>
+    <slot>setPixImage(QPixmap)</slot>
+    <slot>setAvatar(Avatar)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::CashTables</class>
+   <extends>QWidget</extends>
+   <header>pages/mainLobby/page_CashTables.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::Tournaments</class>
+   <extends>QWidget</extends>
+   <header>pages/mainLobby/page_Tournaments.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::SpinNGo</class>
+   <extends>QWidget</extends>
+   <header>pages/mainLobby/page_SpinNGo.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::SitNGo</class>
+   <extends>QWidget</extends>
+   <header>pages/mainLobby/page_SitNGo.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>bttn_login</tabstop>
+  <tabstop>bttn_logon</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionLogout</sender>
+   <signal>triggered()</signal>
+   <receiver>MainScreen</receiver>
+   <slot>onLogoutActionTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <slot>onTableItemDoubleClicked(QModelIndex)</slot>
+  <slot>onLogoutActionTriggered()</slot>
+ </slots>
+</ui>

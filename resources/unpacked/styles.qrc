@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/">
+    <file>styles/checkbox.css</file>
+    <file>styles/scrollbar.css</file>
+    <file>styles/tableview.css</file>
+  </qresource>
+</RCC>

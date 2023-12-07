@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon.ico</file>
+        <file>poker_client.rc</file>
+    </qresource>
+</RCC>

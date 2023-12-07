@@ -1,0 +1,2408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TournDescription</class>
+ <widget class="QWidget" name="TournDescription">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>169</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>958</width>
+    <height>169</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#TournDescription {
+border-top: 1px solid #455a64;
+	background-color: #191919;
+}
+* {outline: 0;}
+
+QLabel {
+	font: 13px &quot;Open Sans&quot;;
+color: #b0bec5;
+border: none;
+
+}
+
+QPushButton:pressed {
+ padding-top: 2px;
+color: rgba(250, 250, 250, 155)
+}
+
+#msg_status {
+	font: 550 10px &quot;Open Sans&quot;;
+     color: #fafafa;
+}
+</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,1,1">
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>8</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="leftPanelPart" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>319</width>
+       <height>169</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>482</width>
+       <height>169</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#leftPanelPart &gt; .QWidget {
+	background-color: #37474f;
+border-top: 1px solid #455a64;
+border-left: 1px solid #455a64;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,1">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <property name="leftMargin">
+       <number>1</number>
+      </property>
+      <property name="topMargin">
+       <number>1</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item alignment="Qt::AlignTop">
+       <widget class="QWidget" name="info_lefttop" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>319</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>482</width>
+          <height>60</height>
+         </size>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,1">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <property name="leftMargin">
+          <number>30</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="icon_lefttop">
+           <property name="minimumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../../resources.qrc">:/textures/Common/Tournament/icon_info_area_time.png</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="EntityWidget" name="texts_lefttop" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="respondable" stdset="0">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0,0,0,0,0,0,0,1">
+            <property name="spacing">
+             <number>1</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>4</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="_registration_start_time" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="zzz_8" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_registration_start_time">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_registration_start_time:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="value_registration_start_time">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">00:30 EET, 01 Feb</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="_start_time" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="zzz_4" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_start_time">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_start_time:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="value_start_time">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">00:30 EET, 01 Feb</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="hadStartedDate" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="zzz_9" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_hadStartedDate">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_hadStartedDate:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="value_hadStartedDate">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">00:30 EET, 01 Feb</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="hadFinishedDate" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="zzz_10" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_hadFinishedDate">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_hadFinishedDate:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="value_hadFinishedDate">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">00:30 EET, 01 Feb</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="active_time" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_active_time">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_active_time:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="value_active_time">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">@min_%0</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="level_and_blinds" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,1">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QWidget" name="_current_level" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="0,1">
+                  <property name="spacing">
+                   <number>5</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                   <widget class="QLabel" name="msg_current_levell">
+                    <property name="font">
+                     <font>
+                      <family>Open Sans</family>
+                      <pointsize>-1</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>@msg_current_level:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                   <widget class="QLabel" name="value_current_level">
+                    <property name="font">
+                     <font>
+                      <family>Open Sans</family>
+                      <pointsize>-1</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLabel {
+    font: 13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string notr="true">0</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QWidget" name="blinds" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="0,1">
+                  <property name="spacing">
+                   <number>5</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                   <widget class="QLabel" name="msg_blinds">
+                    <property name="font">
+                     <font>
+                      <family>Open Sans</family>
+                      <pointsize>-1</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>@msg_blinds:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                   <widget class="QLabel" name="value_blinds">
+                    <property name="font">
+                     <font>
+                      <family>Open Sans</family>
+                      <pointsize>-1</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="toolTip">
+                     <string notr="true">($$).($$)</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLabel {
+    font: 13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string notr="true">%0/%1</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="timebreak" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="zzz_11" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_timebreak">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_timebreak:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="TextWidget" name="value_timebreak">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>@timebreak_%0_min_every_%1_min</string>
+                 </property>
+                 <property name="strings" stdset="0">
+                  <stringlist notr="true">
+                   <string>5</string>
+                   <string>55</string>
+                  </stringlist>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="nextTimebreak" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="msg_nextTimebreak">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_nextTimebreak:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft">
+                <widget class="QLabel" name="value_nextTimebreak">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>@min_%0</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignTop">
+       <widget class="QWidget" name="info_leftcenter" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>319</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>482</width>
+          <height>60</height>
+         </size>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="0,1">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <property name="leftMargin">
+          <number>30</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="icon_leftcenter">
+           <property name="minimumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../../resources.qrc">:/textures/Common/Tournament/icon_info_area_info.png</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="EntityWidget" name="texts_leftcenter" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,0,1">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>4</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="blinds_growing" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_blinds_growing">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_blinds_growing:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="value_blinds_growing">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">@min_%0</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="start_stack" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_start_stack">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_start_stack:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="value_start_stack">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font: 12px &quot;Opan Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;img src=&quot;:/textures/chip.png&quot;/&gt;&lt;span style=&quot; font-size:12px;&quot;&gt; 2000 &lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="knockout_reward" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="msg_knockout_reward">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>@msg_knockout_reward:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="value_knockout_reward">
+                 <property name="font">
+                  <font>
+                   <family>Open Sans</family>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font:13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">$000</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignTop">
+       <widget class="QWidget" name="info_leftbottom" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>319</width>
+          <height>46</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>482</width>
+          <height>46</height>
+         </size>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,1">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <property name="leftMargin">
+          <number>30</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="icon_leftbottom">
+           <property name="minimumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../../resources.qrc">:/textures/Common/Tournament/icon_info_area_ticket.png</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="EntityWidget" name="texts_leftbottom" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="spacing">
+             <number>1</number>
+            </property>
+            <property name="leftMargin">
+             <number>1</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QWidget" name="main_event" native="true">
+              <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="0,1">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QLabel" name="msg_main_event">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>@msg_main_event:</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <widget class="QPushButton" name="value_main_event">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    border: none;
+    font: 12px &quot;Opan Sans&quot;;
+    color: #00c853;
+    text-decoration: underline;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">Sunday Million 100K Gtd</string>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignTop">
+             <widget class="QPushButton" name="qualifiersLink">
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    border: none;
+    font: 12px &quot;Opan Sans&quot;;
+    color: #00aeef;
+    text-decoration: underline;
+}</string>
+              </property>
+              <property name="text">
+               <string>@qualifiers_list</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="central_frame">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>169</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>169</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,1,1">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>1</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item alignment="Qt::AlignBottom">
+       <widget class="InfoMessage" name="msg_status">
+        <property name="minimumSize">
+         <size>
+          <width>319</width>
+          <height>14</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>482</width>
+          <height>14</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#msg_status { background-color: #dae7eb; color: #191919; }</string>
+        </property>
+        <property name="text">
+         <string notr="true">@title_waitRegistration</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="messages" stdset="0">
+         <stringlist>
+          <string>@title_waitRegistration</string>
+          <string>@title_registration</string>
+          <string>@title_lateRegistration</string>
+          <string>@title_started</string>
+          <string>@title_finished</string>
+         </stringlist>
+        </property>
+        <property name="styles" stdset="0">
+         <stringlist notr="true">
+          <string>#msg_status { background-color: #dae7eb; color: #191919; }</string>
+          <string>#msg_status { background-color: #00823f; }</string>
+          <string>#msg_status { background-color: #c62828; }</string>
+          <string>#msg_status { background-color: #1582c0; }</string>
+          <string>#msg_status { background-color: #37474f; }</string>
+         </stringlist>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignBottom">
+       <widget class="QWidget" name="header" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>319</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>482</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#header {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border-top: 1px solid #455a64;
+border-left: 1px solid #455a64;
+}</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout" rowstretch="0,1,0" columnstretch="0,1,0">
+         <property name="leftMargin">
+          <number>15</number>
+         </property>
+         <property name="topMargin">
+          <number>6</number>
+         </property>
+         <property name="rightMargin">
+          <number>4</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>10</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="1">
+          <widget class="TextWidget" name="title_1">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    font: 550 16px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+           </property>
+           <property name="text">
+            <string notr="true">%0</string>
+           </property>
+           <property name="strings" stdset="0">
+            <stringlist notr="true">
+             <string>title</string>
+            </stringlist>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" rowspan="2" alignment="Qt::AlignTop">
+          <widget class="TextWidget" name="title_2">
+           <property name="styleSheet">
+            <string notr="true">QLabel {  font: 11px &quot;Open Sans&quot;; color: #fafafa; }</string>
+           </property>
+           <property name="text">
+            <string notr="true">%0</string>
+           </property>
+           <property name="strings" stdset="0">
+            <stringlist>
+             <string>property</string>
+            </stringlist>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" rowspan="3">
+          <widget class="QLabel" name="icon">
+           <property name="minimumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../../resources.qrc">:/textures/Common/Tournament/icon_info_area_2_logo.png</pixmap>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="indent">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2" rowspan="3">
+          <widget class="QPushButton" name="bttn_showPlayersList">
+           <property name="minimumSize">
+            <size>
+             <width>34</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="toolTip">
+            <string>@Tooltip_Main_Tourney_Show_Hide_Players_32</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QAbstractButton {
+    
+	background-image: url(:/textures/Common/Tournament/bttn_1x2_players_tournament.png);
+border: 1px solid #191919;
+border-radius: 3px;
+border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(69, 90, 100, 255), stop:0.498 rgba(69, 90, 100, 255), stop:0.502 rgba(24, 24, 24, 255), stop:1 rgba(24, 24, 24, 255));
+background-position: top;
+background-repeat: no-repeat;
+background-attachment: fixed;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 42, 48, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+
+}
+QAbstractButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(74, 132, 148, 255), stop:0.502 #455a64, stop:1 #455a64);
+}
+QAbstractButton:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(4, 2, 4, 125), stop:0.9 rgba(6, 9, 10, 255), stop:1 rgba(32, 39, 37, 255));
+}
+
+QAbstractButton:checked {
+    background-position: bottom;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignBottom">
+       <widget class="QWidget" name="centralBottom" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>319</width>
+          <height>107</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>482</width>
+          <height>107</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#centralBottom {
+	background-color: #37474f;
+border-top: 1px solid #455a64;
+border-left: 1px solid #455a64;
+}
+QLabel {
+    margin-left: 2px;
+}
+</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <property name="leftMargin">
+          <number>15</number>
+         </property>
+         <property name="topMargin">
+          <number>2</number>
+         </property>
+         <property name="rightMargin">
+          <number>15</number>
+         </property>
+         <property name="bottomMargin">
+          <number>2</number>
+         </property>
+         <property name="spacing">
+          <number>1</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>2</number>
+           </property>
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <property name="rightMargin">
+            <number>2</number>
+           </property>
+           <property name="bottomMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="fond" native="true">
+             <layout class="QHBoxLayout" name="layout_fond" stretch="0,1">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item alignment="Qt::AlignLeft|Qt::AlignTop">
+               <widget class="QLabel" name="msg_fond">
+                <property name="font">
+                 <font>
+                  <family>Open Sans</family>
+                  <pointsize>-1</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string>@msg_fond</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+image: url(:/textures/Common/Tournament/icon_info_area_2_total_prize_money.png);
+image-position: left;
+color: #b0bec5;
+	font: 13px &quot;Open Sans&quot;;
+}</string>
+                </property>
+                <property name="text">
+                 <string>@msg_fond:</string>
+                </property>
+                <property name="indent">
+                 <number>20</number>
+                </property>
+                <property name="static" stdset="0">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignLeft|Qt::AlignTop">
+               <widget class="QLabel" name="value_fond">
+                <property name="font">
+                 <font>
+                  <family>Open Sans</family>
+                  <pointsize>-1</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string notr="true">($$).($$)</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+    font: 13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                </property>
+                <property name="text">
+                 <string notr="true">$000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="seats" native="true">
+             <layout class="QHBoxLayout" name="layout_seats" stretch="0,1">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item alignment="Qt::AlignLeft|Qt::AlignTop">
+               <widget class="QLabel" name="msg_seats">
+                <property name="font">
+                 <font>
+                  <family>Open Sans</family>
+                  <pointsize>-1</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+
+	image: url(:/textures/Common/Tournament/icon_info_area_2_prizes.png);
+image-position: left;
+color: #b0bec5;
+	font: 13px &quot;Open Sans&quot;;
+}</string>
+                </property>
+                <property name="text">
+                 <string>@prize_seats:</string>
+                </property>
+                <property name="indent">
+                 <number>20</number>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignLeft|Qt::AlignTop">
+               <widget class="QLabel" name="value_seats">
+                <property name="font">
+                 <font>
+                  <family>Open Sans</family>
+                  <pointsize>-1</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string notr="true">($$).($$)</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+    font: 13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                </property>
+                <property name="text">
+                 <string notr="true">%0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="players_registered" native="true">
+             <layout class="QHBoxLayout" name="layout_players_registered" stretch="0,1">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item alignment="Qt::AlignLeft|Qt::AlignTop">
+               <widget class="QLabel" name="msg_players_registered">
+                <property name="font">
+                 <font>
+                  <family>Open Sans</family>
+                  <pointsize>-1</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+
+image-position: left;
+	image: url(:/textures/Common/Tournament/icon_info_area_2_players.png);
+color: #b0bec5;
+	font: 13px &quot;Open Sans&quot;;
+}</string>
+                </property>
+                <property name="text">
+                 <string>@players_registered</string>
+                </property>
+                <property name="indent">
+                 <number>20</number>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignLeft|Qt::AlignTop">
+               <widget class="QLabel" name="value_players_registered">
+                <property name="font">
+                 <font>
+                  <family>Open Sans</family>
+                  <pointsize>-1</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string notr="true">($$).($$)</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+    font: 13px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+                </property>
+                <property name="text">
+                 <string notr="true">%0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <widget class="QWidget" name="buttons" native="true">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	font: 14px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,0,0,1">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>1</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>1</number>
+            </property>
+            <property name="bottomMargin">
+             <number>3</number>
+            </property>
+            <item>
+             <widget class="QStackedWidget" name="stackOfBttn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>1</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>136</width>
+                <height>33</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>202</width>
+                <height>33</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QStackedWidget, QStackedWidget &gt; * {
+    border: none;
+    background: transparent;
+}</string>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="page_bttn_register">
+               <layout class="QHBoxLayout" name="horizontalLayout_13">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="bttn_register">
+                  <property name="minimumSize">
+                   <size>
+                    <width>136</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>202</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Open Sans</family>
+                    <pointsize>-1</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="toolTip">
+                   <string>@Tooltip_Tourney_Register_28</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+border: 1px solid #191919;
+border-radius: 3px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.94 rgba(0, 199, 83, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+</string>
+                  </property>
+                  <property name="text">
+                   <string>@bttn_register</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_bttn_unregister">
+               <layout class="QHBoxLayout" name="horizontalLayout_15">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="bttn_unregister">
+                  <property name="minimumSize">
+                   <size>
+                    <width>136</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>202</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Open Sans</family>
+                    <pointsize>-1</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="toolTip">
+                   <string>@Tooltip_Tourney_Unregister_29</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+border: 1px solid #191919;
+border-radius: 3px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.94 rgba(0, 199, 83, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+
+QPushButton:pressed
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+</string>
+                  </property>
+                  <property name="text">
+                   <string>@bttn_unregister</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_bttn_backToGame">
+               <layout class="QHBoxLayout" name="horizontalLayout_16">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="bttn_backToGame">
+                  <property name="minimumSize">
+                   <size>
+                    <width>136</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>202</width>
+                    <height>33</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Open Sans</family>
+                    <pointsize>-1</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="toolTip">
+                   <string>@Tooltip_Tourney_Back_to_the_game_30</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+border: 1px solid #191919;
+border-radius: 3px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.94 rgba(0, 199, 83, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+
+QPushButton:pressed
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+</string>
+                  </property>
+                  <property name="text">
+                   <string>@bttn_backToGame</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>0</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>18</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="bttn_tolobby">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>1</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>136</width>
+                <height>33</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>202</width>
+                <height>33</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>@Tooltip_Tourney_Lobby_31</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.93 rgba(69, 89, 99, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+border: 1px solid black;
+border-radius: 3px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(205, 55, 33, 215), stop:0.33 rgba(69, 24, 22, 225), stop:0.94 rgba(69, 89, 99, 255), stop:0.95 rgba(121, 131, 150, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(21, 13, 14, 255), stop:0.93 rgba(3, 4, 2, 255), stop:0.95 rgba(33, 36, 41, 255), stop:1 rgba(41, 41, 44, 255));
+}
+
+QAbstractButton:disabled {
+    	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 166), stop:0.93 rgba(69, 89, 99, 166), stop:0.95 rgba(131, 171, 190, 166), stop:1 rgba(131, 171, 190, 166));
+color: rgba(250, 250, 250, 166);
+border-color: rgba(25, 25, 25, 166);
+}</string>
+              </property>
+              <property name="text">
+               <string>@bttn_tolobby</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableView" name="tournamentPlayersList">
+     <property name="minimumSize">
+      <size>
+       <width>319</width>
+       <height>169</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>169</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView {
+    background-color: #263238;
+    border:none;
+	alternate-background-color: rgb(55, 71, 79);
+    color: #e6e6e7;
+}
+QAbstractItemView::item  {
+   padding-left: 6px;
+	border-left: 1px hidden;
+}
+
+QHeaderView {
+    font: 500 12px &quot;Open Sans&quot;;
+    color: #a9b6bd;
+}
+QHeaderView::section {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(62, 81, 90, 255), stop:1 rgba(34, 42, 48, 255));
+border: 1px solid #455a64;
+border-right-color: #191919;
+border-bottom-color: #191919;
+min-height: 22px;
+}
+
+</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustToContents</enum>
+     </property>
+     <property name="autoScrollMargin">
+      <number>0</number>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::NoSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+     <property name="cornerButtonEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>16</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>16</number>
+     </attribute>
+     <widget class="QRadioButton" name="bttn_fetchPlayers">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>154</y>
+        <width>0</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>15</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>0</width>
+        <height>15</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QAbstractButton {
+    background-color: #37474f;
+    border: none;
+    border-top: 1px solid #455a64;
+    border-left: 1px solid #455a64;
+    font: 11px &quot;Open Sans&quot;;
+    color: #b0bec5;
+    spacing: -200px;
+padding-top: -3px;
+}
+
+QAbstractButton::indicator {
+    subcontrol-position: right;
+    background-clip: margin;
+	background-position: right bottom;
+	background-attachment: fixed;
+    background-origin: content;
+    background-repeat: no-repeat;
+    background-image: url(:/textures/Common/Tournament/bttn1x2_satellite_arrow.png);
+    margin-top: 4px;
+    margin-bottom: 1px;
+    margin-right: 5px;
+}
+
+QAbstractButton:pressed {
+    padding-top: -2px;
+    color: rgba(176, 190, 197, 100);
+}
+
+QAbstractButton:checked {
+    border: none;
+    background-color: transparent;
+    color: transparent;
+}
+QAbstractButton::indicator:checked {
+    background-position: right top;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>@bttn_showAll</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InfoMessage</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TextWidget</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>qualifiersLink</sender>
+   <signal>clicked()</signal>
+   <receiver>TournDescription</receiver>
+   <slot>openCurrentQualifiers()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>229</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_showPlayersList</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tournamentPlayersList</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>40</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_tolobby</sender>
+   <signal>clicked()</signal>
+   <receiver>TournDescription</receiver>
+   <slot>openCurrentLobby()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>534</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>533</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <signal>openLobbyRequested(QModelIndex)</signal>
+  <slot>openCurrentQualifiers()</slot>
+  <slot>openCurrentLobby()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Bet</class>
+ <widget class="TextWidget" name="Bet">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>94</width>
+    <height>33</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>70</width>
+    <height>24</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+    border: 1px solid rgba(0, 0, 0, 2);
+    background-color: rgba(0, 0, 0, 100);
+    border-radius: 8px;
+    margin: 7px;
+    margin-left: 1px;
+margin-right: -1px;
+color: white;
+	image: url(:/textures/Common/templates/chipsPlaceholder.png);
+image-position: left;
+image-width: 22px;
+image-height: 22px;
+font: 13px &quot;Arial&quot;;
+}
+</string>
+  </property>
+  <property name="text">
+   <string notr="true">$120.00</string>
+  </property>
+  <property name="textFormat">
+   <enum>Qt::PlainText</enum>
+  </property>
+  <property name="indent">
+   <number>27</number>
+  </property>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

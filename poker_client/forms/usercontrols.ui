@@ -1,0 +1,3397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserControls</class>
+ <widget class="QWidget" name="UserControls">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1002</width>
+    <height>624</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>624</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1002</width>
+    <height>624</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+#Player {
+    background: url(:/textures/game/bg.png);
+}
+#bottom_panel[theme=&quot;default&quot;] {
+	background-color: #243137;
+    border-top: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}
+#bottom_panel[theme=&quot;blue&quot;] {
+background-image: url(:/textures/Ice.png);
+background-position: bottom;
+padding-bottom: 186px;
+margin-bottom: -186px;
+}
+
+#HudWidget[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(227, 248, 255, 24), stop:0.659091 rgba(140, 174, 185, 44), stop:1 rgba(143, 213, 222, 52));
+}
+
+QWidget[theme=&quot;blue&quot;]
+{
+    font: 11px &quot;Showcard Gothic&quot;;
+}
+QWidget[theme=&quot;default&quot;]
+{
+    font: 12px &quot;Arial&quot;;
+    color: #c2c2c2;
+}</string>
+  </property>
+  <widget class="QListView" name="smileList">
+   <property name="geometry">
+    <rect>
+     <x>557</x>
+     <y>529</y>
+     <width>1</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListView {
+
+	background-color: rgba(255, 255, 255, 140);
+    border: 1px solid white;
+border-radius: 4px;
+}
+
+
+QListView QScrollBar:vertical {
+    width: 10px;
+	background-color: #000000;
+    padding: 1px 0px 1px 0px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+QListView QScrollBar::handle:vertical {
+
+    background: rgb(204, 204, 204);
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+QListView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical, QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    border: none;
+    background: transparent;
+}
+
+QListView::item
+{
+    width: 35px;
+    height: 35px;
+}</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="autoScrollMargin">
+    <number>0</number>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>35</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="viewMode">
+    <enum>QListView::IconMode</enum>
+   </property>
+   <property name="source" stdset="0">
+    <pixmap resource="../resources.qrc">:/textures/game/smiles.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QWidget" name="bottom_panel" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>494</y>
+     <width>1002</width>
+     <height>130</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1000</width>
+     <height>130</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1002</width>
+     <height>130</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+    border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(47, 62, 70, 255), stop:1 rgba(81, 105, 117, 255));
+    border-left-color: #2f3e46;
+    border-right-color: #516975;
+	background-color: #161d21;
+    background-color: rgba(9, 11, 14, 120);
+}
+
+QAbstractButton[theme=&quot;default&quot;] {
+	font: 600 12px &quot;Arial&quot;;
+color: #ffffff;
+padding-bottom: 1px;
+spacing: 2px;
+}
+QAbstractButton[theme=&quot;blue&quot;] {
+font: 11px &quot;Showcard Gothic&quot;;
+color: #123241;
+spacing: 4px;
+border: 2px outset rgb(24, 44, 47);
+border-radius: 5px;
+margin: 1px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(215, 215, 215, 255), stop:0.0542169 rgba(139, 139, 139, 245), stop:0.197289 rgba(155, 155, 155, 219), stop:0.763554 rgba(155, 155, 155, 225), stop:0.834411 rgba(144, 144, 167, 239), stop:0.936611 rgba(169, 165, 165, 251), stop:1 rgba(97, 95, 95, 255));
+}
+QAbstractButton:!checked:hover[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(214, 244, 255, 248), stop:0.125 rgba(172, 209, 255, 228), stop:0.34 rgba(158, 168, 185, 221), stop:0.59 rgba(227, 248, 255, 219), stop:1 rgba(255, 255, 255, 246));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+color: #191919;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 255), stop:0.949153 rgba(0, 199, 82, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(114, 244, 155, 248), stop:0.125 rgba(172, 239, 155, 228), stop:0.34 rgba(118, 168, 115, 221), stop:0.59 rgba(127, 248, 155, 219), stop:1 rgba(125, 255, 155, 246));
+color: #113133;
+}
+QAbstractButton:pressed[theme=&quot;blue&quot;]
+{
+    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(6, 24, 24, 255), stop:1 rgba(25, 25, 22, 155));
+color: black;
+padding-top: 1px;
+}
+QAbstractButton::indicator[theme=&quot;default&quot;] {
+    border: 1px solid rgba(25, 25, 25,2);
+    border-radius: 3px;
+    width: 24px;
+	height: 24px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-origin: margin;
+    background-clip: margin;
+	background-image: url(:/textures/game/btn_chek.png);
+    subcontrol-origin: margin;
+}
+QAbstractButton::indicator[theme=&quot;blue&quot;] {
+
+height: 18px;
+width: 18px;
+border-image: url(:/textures/temp/ico/48x48/Gray1.ico);
+}
+
+QAbstractButton::indicator:checked[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/Green1.ico);
+}
+QAbstractButton::indicator:!checked:hover[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/White1.ico);
+}
+QAbstractButton::indicator:checked:hover[theme=&quot;blue&quot;] {
+border-image: url(:/textures/temp/ico/48x48/Red1.ico);
+}
+
+QAbstractButton::indicator:checked[theme=&quot;default&quot;] {
+image: url(:/textures/game/icon_check_green.png);
+    image-position: top;
+}
+QAbstractButton::indicator:checked:pressed[theme=&quot;default&quot;] {
+    image-position: top;
+	image: url(:/textures/game/icon_check_pressed.png);
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <property name="spacing">
+     <number>3</number>
+    </property>
+    <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignBottom">
+     <widget class="QFrame" name="checks">
+      <property name="minimumSize">
+       <size>
+        <width>180</width>
+        <height>115</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>180</width>
+        <height>115</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>179</width>
+        <height>115</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QAbstractButton {
+    color: rgba(250, 250, 250, 250);
+    font: 14px &quot;Arial&quot;;
+}
+QAbstractButton[theme=&quot;default&quot;] {
+	font: 600 12px &quot;Arial&quot;;
+color: #ffffff;
+padding-bottom: 4px;
+spacing: 2px;
+}
+QAbstractButton[theme=&quot;blue&quot;] {
+font: 11px &quot;Showcard Gothic&quot;;
+color: #123241;
+spacing: 4px;
+border: 2px outset rgb(24, 44, 47);
+border-radius: 5px;
+margin: 1px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(215, 215, 215, 255), stop:0.0542169 rgba(139, 139, 139, 245), stop:0.197289 rgba(155, 155, 155, 219), stop:0.763554 rgba(155, 155, 155, 225), stop:0.834411 rgba(144, 144, 167, 239), stop:0.936611 rgba(169, 165, 165, 251), stop:1 rgba(97, 95, 95, 255));
+}
+QAbstractButton:!checked:hover[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(214, 244, 255, 248), stop:0.125 rgba(172, 209, 255, 228), stop:0.34 rgba(158, 168, 185, 221), stop:0.59 rgba(227, 248, 255, 219), stop:1 rgba(255, 255, 255, 246));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+color: #191919;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 255), stop:0.949153 rgba(0, 199, 82, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(114, 244, 155, 248), stop:0.125 rgba(172, 239, 155, 228), stop:0.34 rgba(118, 168, 115, 221), stop:0.59 rgba(127, 248, 155, 219), stop:1 rgba(125, 255, 155, 246));
+color: #113133;
+}
+QAbstractButton:pressed[theme=&quot;blue&quot;]
+{
+    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(6, 24, 24, 255), stop:1 rgba(25, 25, 22, 155));
+color: black;
+padding-top: 1px;
+}
+QAbstractButton::indicator[theme=&quot;default&quot;] {
+    border: none;
+
+    height: 18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    subcontrol-position: left center;
+
+    top: 1px;
+    background-image: url(:/textures/game/settingsCheckBox.png);
+}
+QAbstractButton::indicator[theme=&quot;blue&quot;] {
+height: 18px;
+width: 18px;
+border-image: url(:/textures/temp/ico/48x48/Gray1.ico);
+}
+
+QAbstractButton::indicator:checked[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/Green1.ico);
+}
+QAbstractButton::indicator:!checked:hover[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/White1.ico);
+}
+QAbstractButton::indicator:checked:hover[theme=&quot;blue&quot;] {
+border-image: url(:/textures/temp/ico/48x48/Red1.ico);
+}
+QAbstractButton::indicator:hover[theme=&quot;default&quot;] {
+background-position: center;
+}
+QAbstractButton::indicator:pressed[theme=&quot;default&quot;] {
+background-position: right;
+}
+
+QAbstractButton::indicator:checked[theme=&quot;default&quot;] {
+image-position: center;
+	image: url(:/textures/game/icon_check.png);
+}
+QAbstractButton::indicator:checked:pressed[theme=&quot;default&quot;] {
+image-position: center;
+}
+
+</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QWidget" name="checks_container" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>12</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#checks_container {
+    border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(47, 62, 70, 255), stop:1 rgba(81, 105, 117, 255));
+    border-left-color: #2f3e46;
+    border-right-color: #516975;
+	background-color: #161d21;
+    background-color: rgba(9, 11, 14, 120);
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>1</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="bottomMargin">
+           <number>1</number>
+          </property>
+          <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+           <widget class="QWidget" name="checks_layout" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>164</width>
+              <height>0</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>10</number>
+             </property>
+             <property name="topMargin">
+              <number>1</number>
+             </property>
+             <property name="rightMargin">
+              <number>1</number>
+             </property>
+             <property name="bottomMargin">
+              <number>1</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="bttn_checkboxAlwaysFold">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>@bttn_alwaysFold</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft">
+              <widget class="QCheckBox" name="bttn_checkboxSitOut">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>@bttn_sitOut</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignLeft">
+              <widget class="QCheckBox" name="bttn_checkboxSitOutOnBlind">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>@bttn_sitOutOnBlind</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QPushButton" name="bttn_hideChecks">
+            <property name="minimumSize">
+             <size>
+              <width>9</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>9</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>@Tooltip_Table_Move_left_panel_54</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QAbstractButton {
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(123, 152, 166, 255), stop:0.360136 rgba(123, 152, 166, 255), stop:0.362 rgba(123, 152, 166, 0), stop:0.638 rgba(123, 152, 166, 0), stop:0.64 rgba(123, 152, 166, 255), stop:1 rgba(123, 152, 166, 255));
+	background-image: url(:/textures/game/arrow_vertical.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-clip: margin;
+	background-origin: border;
+	margin: 1px 1px 1px 1px;
+}
+
+QAbstractButton:checked {
+    border: none;
+    border-left: 1px solid qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(123, 152, 166, 255), stop:0.360136 rgba(123, 152, 166, 255), stop:0.362 rgba(123, 152, 166, 0), stop:0.638 rgba(123, 152, 166, 0), stop:0.64 rgba(123, 152, 166, 255), stop:1 rgba(123, 152, 166, 255));
+
+
+	background-position: left;
+}
+
+QAbstractButton:hover {
+   margin: 1px 1px 1px 1px;
+
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(123, 152, 166, 0), stop:0.15 rgba(123, 152, 166, 255), stop:0.329545 rgba(123, 152, 166, 255), stop:0.414773 rgba(123, 152, 166, 0), stop:0.585227 rgba(123, 152, 166, 0), stop:0.670455 rgba(123, 152, 166, 255), stop:0.841667 rgba(123, 152, 166, 255), stop:1 rgba(123, 152, 166, 0));
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2" alignment="Qt::AlignLeft|Qt::AlignBottom">
+     <widget class="QStackedWidget" name="gameControls">
+      <property name="minimumSize">
+       <size>
+        <width>420</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>620</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QStackedWidget &gt; * {
+	background-color: transparent;
+}
+
+QAbstractButton:pressed {
+color: rgba(216, 216, 216, 128);
+padding-top: 1px;
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>6</number>
+      </property>
+      <widget class="QWidget" name="page_empty">
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>34</x>
+          <y>32</y>
+          <width>381</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    image-position: right;
+
+font: 600 16px &quot;Opena Sans&quot;;
+/*	image: url(:/textures/archive/test/djamshut.png);*/
+color: #6d99dd;
+}</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_unloginned">
+       <widget class="QLabel" name="text_loginToPlay">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>401</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    font: 600 italic 18px &quot;Open Sans&quot;;
+    color: rgba(255, 255, 255, 242);
+}</string>
+        </property>
+        <property name="text">
+         <string>@text_loginToPlay</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_frozen">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #aebcca;
+	font: 14px &quot;Arial&quot;;
+}
+QAbstractButton {
+    color: rgba(250, 250, 250, 250);
+    font: 14px &quot;Arial&quot;;
+}
+QAbstractButton[theme=&quot;default&quot;] {
+	font: 600 12px &quot;Arial&quot;;
+color: #ffffff;
+padding-bottom: 4px;
+spacing: 2px;
+}
+QAbstractButton[theme=&quot;blue&quot;] {
+font: 11px &quot;Showcard Gothic&quot;;
+color: #123241;
+spacing: 4px;
+border: 2px outset rgb(24, 44, 47);
+border-radius: 5px;
+margin: 1px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(215, 215, 215, 255), stop:0.0542169 rgba(139, 139, 139, 245), stop:0.197289 rgba(155, 155, 155, 219), stop:0.763554 rgba(155, 155, 155, 225), stop:0.834411 rgba(144, 144, 167, 239), stop:0.936611 rgba(169, 165, 165, 251), stop:1 rgba(97, 95, 95, 255));
+}
+QAbstractButton:!checked:hover[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(214, 244, 255, 248), stop:0.125 rgba(172, 209, 255, 228), stop:0.34 rgba(158, 168, 185, 221), stop:0.59 rgba(227, 248, 255, 219), stop:1 rgba(255, 255, 255, 246));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+color: #191919;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 255), stop:0.949153 rgba(0, 199, 82, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(114, 244, 155, 248), stop:0.125 rgba(172, 239, 155, 228), stop:0.34 rgba(118, 168, 115, 221), stop:0.59 rgba(127, 248, 155, 219), stop:1 rgba(125, 255, 155, 246));
+color: #113133;
+}
+QAbstractButton:pressed[theme=&quot;blue&quot;]
+{
+    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(6, 24, 24, 255), stop:1 rgba(25, 25, 22, 155));
+color: black;
+padding-top: 1px;
+}
+QAbstractButton::indicator[theme=&quot;default&quot;] {
+    border: none;
+
+    height: 18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+
+
+    subcontrol-position: left center;
+	left: 10px;
+    top: 1px;
+    background-image: url(:/textures/game/settingsCheckBox.png);
+}
+QAbstractButton::indicator[theme=&quot;blue&quot;] {
+height: 18px;
+width: 18px;
+border-image: url(:/textures/temp/ico/48x48/Gray1.ico);
+}
+
+QAbstractButton::indicator:checked[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/Green1.ico);
+}
+QAbstractButton::indicator:!checked:hover[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/White1.ico);
+}
+QAbstractButton::indicator:checked:hover[theme=&quot;blue&quot;] {
+border-image: url(:/textures/temp/ico/48x48/Red1.ico);
+}
+QAbstractButton::indicator:hover[theme=&quot;default&quot;] {
+background-position: center;
+}
+QAbstractButton::indicator:pressed[theme=&quot;default&quot;] {
+background-position: right;
+}
+
+QAbstractButton::indicator:checked[theme=&quot;default&quot;] {
+image-position: center;
+	image: url(:/textures/game/icon_check.png);
+}
+QAbstractButton::indicator:checked:pressed[theme=&quot;default&quot;] {
+image-position: center;
+}
+
+
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,1" columnstretch="1,1">
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <item row="0" column="0" alignment="Qt::AlignBottom">
+         <widget class="QCheckBox" name="bttn_waitBigBlind">
+          <property name="styleSheet">
+           <string notr="true">::indicator:checked[theme=&quot;default&quot;] {
+	image: url(:/textures/game/icon_check_govnocolor.png);
+}</string>
+          </property>
+          <property name="text">
+           <string>@bttn_waitBigBlind</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">bttnGrp_guestButtons</string>
+          </attribute>
+         </widget>
+        </item>
+        <item row="0" column="1" alignment="Qt::AlignBottom">
+         <widget class="QCheckBox" name="bttn_makeGuestBet">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>@bttn_makeGuestBet</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">bttnGrp_guestButtons</string>
+          </attribute>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2" alignment="Qt::AlignTop">
+         <widget class="InfoMessage" name="msg_guestButtons">
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>-1</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>@msg_waitBigBlind_checked</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="messages">
+           <stringlist>
+            <string>@msg_waitBigBlind_checked</string>
+            <string>@msg_waitBigBlind_unchecked</string>
+           </stringlist>
+          </property>
+          <property name="styles">
+           <stringlist>
+            <string></string>
+            <string></string>
+           </stringlist>
+          </property>
+          <property name="currentMsgIndex">
+           <number>0</number>
+          </property>
+          <property name="defaultMsgIndex">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_viewer_full_table">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-position: top left;
+border:none;
+
+    font: 13px &quot;Arial&quot;;
+color: rgba(250, 250, 250, 250);
+	background-image: url(:/textures/game/bttn2x3_commonAction.png);
+}
+QPushButton:hover {
+    background-position: bottom  left;
+}
+QPushButton:pressed {
+    background-position: center  left;
+}
+
+QLabel {
+    color: #aebcca;
+	font: 14px &quot;Arial&quot;;
+}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,1">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>40</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+         <widget class="QPushButton" name="bttn_joinQueue">
+          <property name="minimumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-position: top left;
+border:none;
+
+    font: 13px &quot;Arial&quot;;
+color: rgba(250, 250, 250, 250);
+	background-image: url(:/textures/game/bttn2x3_commonAction.png);
+}
+QPushButton:hover {
+    background-position: bottom  left;
+}
+QPushButton:pressed {
+    background-position: center  left;
+}</string>
+          </property>
+          <property name="text">
+           <string>@bttn_joinQueue</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+         <widget class="QLabel" name="msg_queueSize">
+          <property name="text">
+           <string>@msg_queueSize_%0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_viewer_can_sit">
+       <property name="styleSheet">
+        <string notr="true">
+QLabel {
+    color: #aebcca;
+	font: 14px &quot;Arial&quot;;
+}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_11" stretch="0">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+         <widget class="QLabel" name="msg_hint_to_sit_on_table">
+          <property name="text">
+           <string>@msg_hint_to_sit_on_table.</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_autoActions">
+       <property name="styleSheet">
+        <string notr="true">QAbstractButton {
+	background-position: top right;
+border:none;
+padding: 1px;
+    font: 13px &quot;Arial&quot;;
+color: rgba(250, 250, 250, 250);
+background-origin: border;
+background-clip: margin;
+}
+QAbstractButton:hover {
+    background-position: bottom  right;
+}
+QAbstractButton:pressed {
+    background-position: center  right;
+color: rgba(250, 250, 250, 128);
+padding-top: 2px;
+}
+
+QAbstractButton[theme=&quot;default&quot;] {
+	font: 600 12px &quot;Arial&quot;;
+padding-bottom: 2px;
+spacing: 2px;
+background-image: url(:/textures/game/bttn2x3_commonAction.png);
+}
+QAbstractButton[theme=&quot;blue&quot;] {
+font: 11px &quot;Showcard Gothic&quot;;
+color: #123241;
+spacing: 4px;
+border: 2px outset rgb(24, 44, 47);
+border-radius: 5px;
+margin: 1px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(215, 215, 215, 255), stop:0.0542169 rgba(139, 139, 139, 245), stop:0.197289 rgba(155, 155, 155, 219), stop:0.763554 rgba(155, 155, 155, 225), stop:0.834411 rgba(144, 144, 167, 239), stop:0.936611 rgba(169, 165, 165, 251), stop:1 rgba(97, 95, 95, 255));
+}
+QAbstractButton:!checked:hover[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(214, 244, 255, 248), stop:0.125 rgba(172, 209, 255, 228), stop:0.34 rgba(158, 168, 185, 221), stop:0.59 rgba(227, 248, 255, 219), stop:1 rgba(255, 255, 255, 246));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+color: #191919;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 255), stop:0.949153 rgba(0, 199, 82, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(114, 244, 155, 248), stop:0.125 rgba(172, 239, 155, 228), stop:0.34 rgba(118, 168, 115, 221), stop:0.59 rgba(127, 248, 155, 219), stop:1 rgba(125, 255, 155, 246));
+color: #113133;
+}
+QAbstractButton:pressed[theme=&quot;blue&quot;]
+{
+    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(6, 24, 24, 255), stop:1 rgba(25, 25, 22, 155));
+color: black;
+padding-top: 1px;
+}
+QAbstractButton::indicator[theme=&quot;default&quot;] {
+    border: none;
+
+    height: 18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    subcontrol-position: left center;
+	left: 10px;
+    top: 1px;
+    background-image: url(:/textures/game/settingsCheckBox.png);
+}
+QAbstractButton::indicator[theme=&quot;blue&quot;] {
+height: 18px;
+width: 18px;
+border-image: url(:/textures/temp/ico/48x48/Gray1.ico);
+}
+
+QAbstractButton::indicator:checked[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/Green1.ico);
+}
+QAbstractButton::indicator:!checked:hover[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/White1.ico);
+}
+QAbstractButton::indicator:checked:hover[theme=&quot;blue&quot;] {
+border-image: url(:/textures/temp/ico/48x48/Red1.ico);
+}
+QAbstractButton::indicator:hover[theme=&quot;default&quot;] {
+background-position: center;
+}
+QAbstractButton::indicator:pressed[theme=&quot;default&quot;] {
+background-position: right;
+}
+QAbstractButton::indicator:checked[theme=&quot;default&quot;] {
+image-position: center;
+	image: url(:/textures/game/icon_check_govnocolor.png);
+}
+QAbstractButton::indicator:checked:pressed[theme=&quot;default&quot;] {
+image-position: center;
+	image: url(:/textures/game/icon_check_govnocolor_pressed.png);
+}
+.QWidget {
+    border: none;
+}
+
+QAbstractButton:checked[theme=&quot;default&quot;] {
+    background-position: top left;
+}
+QAbstractButton:checked:hover[theme=&quot;default&quot;] {
+    background-position: bottom left;
+}
+QAbstractButton:checked:pressed[theme=&quot;default&quot;] {
+    background-position: center left;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>1</number>
+        </property>
+        <property name="topMargin">
+         <number>1</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+         <widget class="QWidget" name="left_auto" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>145</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>145</width>
+            <height>80</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="layout_leftAutoActions" stretch="0,0">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>1</number>
+           </property>
+           <property name="topMargin">
+            <number>1</number>
+           </property>
+           <property name="rightMargin">
+            <number>1</number>
+           </property>
+           <property name="bottomMargin">
+            <number>1</number>
+           </property>
+           <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+            <widget class="QRadioButton" name="bttn_autoFold">
+             <property name="minimumSize">
+              <size>
+               <width>145</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>145</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>@bttn_autoFold</string>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_autoActions</string>
+             </attribute>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignLeft|Qt::AlignTop">
+            <widget class="QRadioButton" name="bttn_autoCheckFold">
+             <property name="minimumSize">
+              <size>
+               <width>145</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>145</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>@bttn_autoCheckFold</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_autoActions</string>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="center_auto" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>145</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>145</width>
+            <height>80</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="layout_centerAutoActions" stretch="0,0">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>1</number>
+           </property>
+           <property name="topMargin">
+            <number>1</number>
+           </property>
+           <property name="rightMargin">
+            <number>1</number>
+           </property>
+           <property name="bottomMargin">
+            <number>1</number>
+           </property>
+           <item alignment="Qt::AlignTop">
+            <widget class="QRadioButton" name="bttn_autoCheck">
+             <property name="minimumSize">
+              <size>
+               <width>145</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>145</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>@bttn_autoCheck</string>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_autoActions</string>
+             </attribute>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignBottom">
+            <widget class="QStackedWidget" name="stackOfAutoCall">
+             <property name="minimumSize">
+              <size>
+               <width>145</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>145</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="page_autoCallAny">
+              <widget class="QRadioButton" name="bttn_autoCheckCallAny">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>145</width>
+                 <height>40</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>@bttn_autoCheckCallAny</string>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">bttnGrp_autoActions</string>
+               </attribute>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="page_autoCall">
+              <widget class="QRadioButton" name="bttn_autoCall">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>145</width>
+                 <height>40</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>145</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>145</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>@bttn_autoCall_%0</string>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">bttnGrp_autoActions</string>
+               </attribute>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="stackOfAutoBetRaise">
+          <property name="minimumSize">
+           <size>
+            <width>145</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>145</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="page_noRaisePreActions"/>
+          <widget class="QWidget" name="page_autoBetRaise">
+           <widget class="QRadioButton" name="bttn_autoBet">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>145</width>
+              <height>40</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>145</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>145</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>@bttn_autoBet_%0</string>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttnGrp_autoActions</string>
+            </attribute>
+           </widget>
+           <widget class="QRadioButton" name="bttn_autoBetRaiseAny">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>40</y>
+              <width>145</width>
+              <height>40</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>145</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>145</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>@bttn_autoBetRaiseAny</string>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttnGrp_autoActions</string>
+            </attribute>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_autoRaise">
+           <widget class="QRadioButton" name="bttn_autoRaise">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>145</width>
+              <height>40</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>145</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>145</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>@bttn_autoRaise_%0</string>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttnGrp_autoActions</string>
+            </attribute>
+           </widget>
+           <widget class="QRadioButton" name="bttn_autoRaiseAny">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>40</y>
+              <width>145</width>
+              <height>40</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>145</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>145</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>@bttn_autoRaiseAny</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttnGrp_autoActions</string>
+            </attribute>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_course">
+       <layout class="QGridLayout" name="gridLayout_9">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="0" alignment="Qt::AlignRight|Qt::AlignBottom">
+         <widget class="FramedButton" name="lbl_timebank">
+          <property name="minimumSize">
+           <size>
+            <width>110</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>110</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QAbstractButton[theme=&quot;default&quot;] {
+    background-color: transparent;
+	image: url(:/textures/game/icon_clock_timebank.png);
+color: #f0bf6c;
+	font: 600 12px &quot;Open Sans&quot;;
+border: none;
+}
+QAbstractButton[theme=&quot;blue&quot;] {
+color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.551, fx:0.502, fy:0.497468, stop:0.0788462 rgba(255, 246, 185, 255), stop:0.607692 rgba(242, 242, 196, 225), stop:0.8 rgba(255, 253, 235, 239), stop:1 rgba(97, 95, 95, 0));
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(51, 148, 167, 255), stop:0.949153 rgba(21, 156, 213, 241), stop:1 rgba(87, 223, 255, 245));
+
+	image: url(:/textures/squirrel.png);
+image-position: left bottom;
+}</string>
+          </property>
+          <property name="text">
+           <string notr="true">TIMEBANK
+%0</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>56</width>
+            <height>56</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="ns_panel::BetControls" name="betControls" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>318</width>
+            <height>52</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="QWidget" name="betTrigger" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>428</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>434</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QAbstractButton[theme=&quot;default&quot;] {
+    border: none;
+   font: 600 20px &quot;Arial Rounded MT Bold&quot;;
+	background-image: url(:/textures/game/bttn1x3_main.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    color: #bfc7cf;
+min-width: 144px; min-height: 58px;
+    max-width: 144px; max-height: 58px;
+}
+QAbstractButton:hover[theme=&quot;default&quot;] {
+   background-position: center;
+   color: #ffffff;
+}
+QAbstractButton:pressed[theme=&quot;default&quot;] {
+    background-position: bottom;
+    color: rgba(255, 255, 255, 128);
+    padding-top: 2px;
+}
+
+QAbstractButton[theme=&quot;blue&quot;] {
+min-width: 136px; min-height: 52px;
+    max-width: 136px; max-height: 52px;
+font: 11px &quot;Showcard Gothic&quot;;
+color: #123241;
+spacing: 4px;
+border: 2px outset rgb(111, 222, 223);
+border-radius: 5px;
+margin: 1px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(215, 215, 215, 255), stop:0.0542169 rgba(139, 139, 139, 245), stop:0.197289 rgba(155, 155, 155, 219), stop:0.763554 rgba(155, 155, 155, 225), stop:0.834411 rgba(144, 144, 167, 239), stop:0.936611 rgba(169, 165, 165, 251), stop:1 rgba(97, 95, 95, 255));
+}
+QAbstractButton:!checked:hover[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(214, 244, 255, 248), stop:0.125 rgba(172, 209, 255, 228), stop:0.34 rgba(158, 168, 185, 221), stop:0.59 rgba(227, 248, 255, 219), stop:1 rgba(255, 255, 255, 246));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+color: #191919;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 255), stop:0.949153 rgba(0, 199, 82, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(114, 244, 155, 248), stop:0.125 rgba(172, 239, 155, 228), stop:0.34 rgba(118, 168, 115, 221), stop:0.59 rgba(127, 248, 155, 219), stop:1 rgba(125, 255, 155, 246));
+color: #113133;
+}
+QAbstractButton:pressed[theme=&quot;blue&quot;]
+{
+    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(6, 24, 24, 255), stop:1 rgba(25, 25, 22, 155));
+color: black;
+padding-top: 1px;
+}
+
+QAbstractButton::indicator[theme=&quot;blue&quot;] {
+
+height: 18px;
+width: 18px;
+border-image: url(:/textures/temp/ico/48x48/Gray1.ico);
+}
+
+QAbstractButton::indicator:checked[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/Green1.ico);
+}
+QAbstractButton::indicator:!checked:hover[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/White1.ico);
+}
+QAbstractButton::indicator:checked:hover[theme=&quot;blue&quot;] {
+border-image: url(:/textures/temp/ico/48x48/Red1.ico);
+}
+</string>
+          </property>
+          <layout class="QHBoxLayout" name="layout_gameActions">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item alignment="Qt::AlignLeft|Qt::AlignBottom">
+            <widget class="QPushButton" name="bttn_fold">
+             <property name="minimumSize">
+              <size>
+               <width>144</width>
+               <height>59</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>144</width>
+               <height>59</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>@bttn_fold</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_gameActions</string>
+             </attribute>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+            <widget class="QStackedWidget" name="stackOfGameActionsCenter">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="page_check">
+              <layout class="QGridLayout" name="gridLayout_7">
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <property name="spacing">
+                <number>1</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="bttn_check">
+                 <property name="minimumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>@bttn_check</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">bttnGrp_gameActions</string>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_call">
+              <layout class="QGridLayout" name="gridLayout_8">
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <property name="spacing">
+                <number>1</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="ns_widget::MoneyButton" name="bttn_call">
+                 <property name="minimumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>@bttn_call_%0</string>
+                 </property>
+                 <property name="userAction" stdset="0">
+                  <cstring>Call</cstring>
+                 </property>
+                 <property name="userActionArg" stdset="0">
+                  <longLong>0</longLong>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">bttnGrp_gameActions</string>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight|Qt::AlignBottom">
+            <widget class="QStackedWidget" name="stackOfGameActionsRight">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="page_bet">
+              <layout class="QGridLayout" name="gridLayout_4">
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <property name="spacing">
+                <number>1</number>
+               </property>
+               <item row="0" column="0" alignment="Qt::AlignRight">
+                <widget class="ns_widget::MoneyButton" name="bttn_bet">
+                 <property name="minimumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>@bttn_bet_%0</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">bttnGrp_gameActions</string>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_raise">
+              <layout class="QGridLayout" name="gridLayout_5">
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <property name="spacing">
+                <number>1</number>
+               </property>
+               <item row="0" column="0" alignment="Qt::AlignRight">
+                <widget class="ns_widget::MoneyButton" name="bttn_raise">
+                 <property name="minimumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>@bttn_raise_%0</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">bttnGrp_gameActions</string>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_all_in">
+              <layout class="QGridLayout" name="gridLayout_6" rowstretch="0" columnstretch="0">
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="0" alignment="Qt::AlignRight">
+                <widget class="ns_widget::MoneyButton" name="bttn_allin">
+                 <property name="minimumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>144</width>
+                   <height>59</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>@bttn_all_in_%0</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">bttnGrp_gameActions</string>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_waiter">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-position: top left;
+border:none;
+
+    font: 13px &quot;Arial&quot;;
+color: rgba(250, 250, 250, 250);
+	background-image: url(:/textures/game/bttn2x3_commonAction.png);
+}
+QPushButton:hover {
+    background-position: bottom  left;
+}
+QPushButton:pressed {
+    background-position: center  left;
+}
+
+QLabel {
+    color: #aebcca;
+	font: 14px &quot;Arial&quot;;
+}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,1">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>40</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+         <widget class="QPushButton" name="bttn_leaveQueue">
+          <property name="minimumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>@bttn_leaveQueue</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+         <widget class="QLabel" name="msg_posInQueue">
+          <property name="text">
+           <string>@msg_pos_%0_in_queue_%1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_sitOut">
+       <widget class="QPushButton" name="bttn_backToGame">
+        <property name="geometry">
+         <rect>
+          <x>147</x>
+          <y>40</y>
+          <width>145</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>145</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>145</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	background-position: top left;
+border:none;
+
+    font: 13px &quot;Arial&quot;;
+color: rgba(250, 250, 250, 250);
+	background-image: url(:/textures/game/bttn2x3_commonAction.png);
+}
+QPushButton:hover {
+    background-position: bottom  left;
+}
+QPushButton:pressed {
+    background-position: center  left;
+}</string>
+        </property>
+        <property name="text">
+         <string>@bttn_backToGame</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_folded">
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>381</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    image-position: right;
+/*	image: url(:/textures/archive/test/ravshan.png);*/
+font: 600 16px &quot;Opena Sans&quot;;
+color: #6d99dd;
+}</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_rebuy">
+       <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,1" columnstretch="1,0,0">
+        <property name="leftMargin">
+         <number>15</number>
+        </property>
+        <property name="topMargin">
+         <number>20</number>
+        </property>
+        <property name="rightMargin">
+         <number>15</number>
+        </property>
+        <property name="bottomMargin">
+         <number>20</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0" rowspan="2" alignment="Qt::AlignLeft|Qt::AlignVCenter">
+         <widget class="QLabel" name="lbl_rebuyTimer">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>56</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>56</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel[theme=&quot;default&quot;] {
+
+	image: url(:/textures/game/icon_clock_timebank.png);
+color: #f0bf6c;
+	font: 600 12px &quot;Open Sans&quot;;
+}
+QLabel[theme=&quot;blue&quot;] {
+
+	image: url(:/textures/squirrel.png);
+image-position: right bottom;
+}</string>
+          </property>
+          <property name="text">
+           <string notr="true">%0</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" alignment="Qt::AlignLeft|Qt::AlignVCenter">
+         <widget class="QPushButton" name="bttn_rebuy">
+          <property name="minimumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-position: top left;
+border:none;
+
+    font: 13px &quot;Arial&quot;;
+color: rgba(250, 250, 250, 250);
+	background-image: url(:/textures/game/bttn2x3_commonAction.png);
+}
+QPushButton:hover {
+    background-position: bottom  left;
+}
+QPushButton:pressed {
+    background-position: center  left;
+}</string>
+          </property>
+          <property name="text">
+           <string>@bttn_rebuy</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+         <widget class="QPushButton" name="bttn_double_rebuy">
+          <property name="minimumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-position: top left;
+border:none;
+
+    font: 13px &quot;Arial&quot;;
+color: rgba(250, 250, 250, 250);
+	background-image: url(:/textures/game/bttn2x3_commonAction.png);
+}
+QPushButton:hover {
+    background-position: bottom  left;
+}
+QPushButton:pressed {
+    background-position: center  left;
+}</string>
+          </property>
+          <property name="text">
+           <string>@bttn_double_rebuy</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" alignment="Qt::AlignLeft|Qt::AlignVCenter">
+         <widget class="QPushButton" name="bttn_quit">
+          <property name="minimumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>145</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-position: top right;
+border:none;
+
+    font: 13px &quot;Arial&quot;;
+color: rgba(250, 250, 250, 250);
+	background-image: url(:/textures/game/bttn2x3_commonAction.png);
+}
+QPushButton:hover {
+    background-position: bottom  right;
+}
+QPushButton:pressed {
+    background-position: center  right;
+}</string>
+          </property>
+          <property name="text">
+           <string>@bttn_quit</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="1" alignment="Qt::AlignLeft|Qt::AlignBottom">
+     <widget class="QWidget" name="chatForm" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>376</width>
+        <height>120</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>376</width>
+        <height>120</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignBottom">
+        <widget class="QPushButton" name="bttn_hideChat">
+         <property name="minimumSize">
+          <size>
+           <width>376</width>
+           <height>7</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>376</width>
+           <height>7</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Table_Move_chat_panel_51</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton {
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 152, 166, 255), stop:0.45 rgba(123, 152, 166, 255), stop:0.452 rgba(123, 152, 166, 0), stop:0.548 rgba(123, 152, 166, 0), stop:0.55 rgba(123, 152, 166, 255), stop:1 rgba(123, 152, 166, 255));
+	background-image: url(:/textures/game/bttn_hide_chat.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-origin: border;
+	background-clip: margin;
+    margin: 1px 110px 1px 110px;
+}
+
+QAbstractButton:checked {
+    border: none;
+    border-bottom: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 152, 166, 255), stop:0.45 rgba(123, 152, 166, 255), stop:0.452 rgba(123, 152, 166, 0), stop:0.548 rgba(123, 152, 166, 0), stop:0.55 rgba(123, 152, 166, 255), stop:1 rgba(123, 152, 166, 255));
+	background-image: url(:/textures/game/bttn_show_chat.png);
+	background-position: bottom;
+}
+
+QAbstractButton:hover {
+   margin: 1px 60px 1px 60px;
+
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 152, 166, 60), stop:0.1 rgba(123, 152, 166, 255), stop:0.360136 rgba(123, 152, 166, 255), stop:0.45303 rgba(123, 152, 166, 0), stop:0.54697 rgba(123, 152, 166, 0), stop:0.64 rgba(123, 152, 166, 255), stop:0.9 rgba(123, 152, 166, 255), stop:1 rgba(123, 152, 166, 60));
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="chat">
+         <property name="minimumSize">
+          <size>
+           <width>376</width>
+           <height>110</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>376</width>
+           <height>111</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    background-color: transparent;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>7</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="msgLineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>349</width>
+                <height>23</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>349</width>
+                <height>23</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(38, 39, 41, 250), stop:0.0768362 rgba(170, 175, 181, 255), stop:0.140113 rgba(224, 231, 239, 255), stop:0.887006 rgba(224, 231, 239, 255), stop:1 rgba(176, 180, 186, 252));
+    border: 1px solid #1b2326;
+    border-radius: 3px;
+    color: #848383;
+    font-size: 12px;
+}
+
+QWidget {
+    image-position: right;
+    padding-right: 4px;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>@message...</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignRight">
+             <widget class="QToolButton" name="button_smile">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>@Tooltip_Table_chat_emoticons_53</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QAbstractButton {
+    border: none;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources.qrc">
+                <normaloff>:/textures/game/icon_smile.png</normaloff>:/textures/game/icon_smile.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>18</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="chatList">
+            <property name="minimumSize">
+             <size>
+              <width>366</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>375</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#chatList {
+    background-color: transparent;
+    border: 1px solid #191919;
+	font: 500 11px &quot;Arial&quot;;
+margin-bottom: 0px;
+}
+QScrollBar:vertical {
+     border: none;
+     background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+     width: 16px;
+     margin: 12px 0 14px 0;
+height: 86px;
+ }
+QScrollBar::handle:vertical {
+    min-width: 12px;
+    min-height: 32px;
+    max-width: 12px;
+    max-height: 32px;
+    margin: 0px 2px 1px 2px;
+
+	image: url(:/textures/Common/points.png);
+    image-position: center;
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(69, 90, 100, 255), stop:0.483304 rgba(34, 42, 48, 255), stop:0.560633 rgba(34, 42, 48, 255), stop:1 rgba(64, 84, 93, 255));
+    border-radius: 3px 3px;
+    border-top: 1px solid #678694;
+    border-bottom: 2px qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(36, 47, 52, 255), stop:0.256598 rgba(37, 48, 54, 255), stop:0.629032 rgba(25, 25, 25, 237), stop:1 rgba(25, 25, 25, 137));
+}
+ QScrollBar::handle:hover:vertical {
+    border-top: 1px solid #A9B6BA;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(121, 130, 133, 255), stop:0.483304 rgba(51, 58, 62, 255), stop:0.560633 rgba(51, 58, 62, 255), stop:1 rgba(113, 122, 125, 255));
+	image: url(:/textures/Common/points_hover.png);
+
+}
+ QScrollBar::add-line:vertical {
+     border: none;
+    background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+    height: 16px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    bottom: 2px;
+ }
+
+QScrollBar::add-page:vertical {
+	background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+ }
+ QScrollBar::sub-page:vertical {
+     background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+}
+
+ QScrollBar::sub-line:vertical {
+    border: none;
+    background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+    height: 16px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+    top: -2px;
+ }
+ QScrollBar::up-arrow:vertical {
+background-image: url(:/textures/tmp_up1.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border;
+    height: 12px;
+
+ }
+
+QScrollBar::down-arrow:vertical {
+	background-image: url(:/textures/tmp_down1.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border;
+    height: 12px;
+
+}
+
+QScrollBar::add-line:vertical:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #222a30, stop: 0.1 #37473f, stop:0.5 #222a30, stop:1 rgba(14, 27, 28, 225));
+}
+QScrollBar::sub-line:vertical:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #222a30, stop: 0.9 #37473f, stop:0.5 #222a30, stop:0 rgba(14, 27, 28, 225));
+}
+
+QScrollBar::add-line:vertical:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(24, 13, 39, 255), stop:1 rgba(25, 25, 25, 255));
+     border: 1px ridge #191919;
+    border-bottom: none;
+}
+QScrollBar::sub-line:vertical:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(24, 13, 39, 255), stop:1 rgba(25, 25, 25, 255));
+    border: 1px ridge #191919;
+    border-top: none;
+}</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOn</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="html">
+             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:11px; font-weight:496; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="textInteractionFlags">
+             <set>Qt::TextBrowserInteraction</set>
+            </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
+            </property>
+            <property name="msgPattern" stdset="0">
+             <string notr="true">&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; background-color:#e0e7ee ; color:#dcfddc;&quot;&gt;%0:&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12px; color:#117a52;&quot;&gt;%1&lt;/span&gt;&lt;/p&gt;%2</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="buttons_righttop" native="true">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>0</y>
+     <width>230</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QAbstractButton {
+background-image: url(:/textures/game/panel/bttn_normal.png);
+border: none;
+color: #a7b6c4;
+font: 14px &quot;Open Sans&quot;;
+}
+
+
+QAbstractButton:hover {
+background-image: url(:/textures/game/panel/bttn_hover.png);
+}
+</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <property name="spacing">
+     <number>3</number>
+    </property>
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="bttn_buyChips">
+      <property name="minimumSize">
+       <size>
+        <width>77</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>77</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>@Tooltip_Table_Buy_Chips_44</string>
+      </property>
+      <property name="statusTip">
+       <string>@Tooltip_Table_BuyChips_49</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>@BUYCHIPS</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="bttn_deposit">
+      <property name="minimumSize">
+       <size>
+        <width>73</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>73</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>@Tooltip_Deposit_45</string>
+      </property>
+      <property name="statusTip">
+       <string>@Tooltip_Table_Deposit_48</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>@DEPOSIT</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="bttn_lobby">
+      <property name="minimumSize">
+       <size>
+        <width>73</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>73</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>@Tooltip_Table_Main_Lobby_46</string>
+      </property>
+      <property name="statusTip">
+       <string>@Tooltip_Table_MainLobby_50</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>@LOBBY</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="EntityWidget" name="buttons_lefttop">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>0</y>
+     <width>230</width>
+     <height>76</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #444444, stop:1 rgba(0, 0, 0, 255));
+border: 1px solid #000000;
+background-position: top;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-origin: margin;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #585858, stop:1 rgba(0, 0, 0, 255));
+background-position: center;
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #161616, stop:1 rgba(0, 0, 0, 255));
+background-position: bottom;
+}
+
+QLabel[theme=&quot;default&quot;] {
+    color: #aebcca;
+	font: 600 12px &quot;Arial&quot;;
+}</string>
+   </property>
+   <property name="shape">
+    <bool>false</bool>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <property name="spacing">
+     <number>5</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="GameTableToolBar" name="toolbar">
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+
+}
+
+QAbstractButton {
+    background-color: transparent;
+	background-image: url(:/textures/game/panel/bttn_normal.png);
+	background-position: left top;
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+
+
+border: none;
+}
+
+QAbstractButton:hover {
+
+	background-image: url(:/textures/game/panel/bttn_hover.png);
+}
+</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="bttn_replay">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Table_Repeat_47</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/textures/game/panel/icon_replay.png</normaloff>:/textures/game/panel/icon_replay.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bttn_wndMaximize">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Table_Stack_table_46</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/textures/game/panel/icon_full.png</normaloff>:/textures/game/panel/icon_full.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bttn_wndCascade">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Table_Cascade_table_45</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/textures/game/panel/icon_cascade.png</normaloff>:/textures/game/panel/icon_cascade.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bttn_wndCompact">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Table_Tile_table_44</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/textures/game/panel/icon_4w.png</normaloff>:/textures/game/panel/icon_4w.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bttn_sound">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Table_Sound_43</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/textures/game/panel/icon_sound.png</normaloff>:/textures/game/panel/icon_sound.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bttn_settings">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Table_Settings_42</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/textures/game/panel/icon_settings.png</normaloff>:/textures/game/panel/icon_settings.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bttn_0">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Table_Statistics_41</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/textures/game/panel/icon_statistics.png</normaloff>:/textures/game/panel/icon_statistics.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignLeft">
+     <widget class="QLabel" name="distributionNumber">
+      <property name="text">
+       <string>@game_id_%0</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="roundType">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">:disabled {
+    color: transparent;
+}</string>
+      </property>
+      <property name="text">
+       <string>round_type</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="EntityWidget" name="statusActions">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>290</y>
+     <width>163</width>
+     <height>183</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QWidget" name="hand_buttons" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item alignment="Qt::AlignBottom">
+        <widget class="QPushButton" name="bttn_showHand">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>@bttn_show_hand</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignVCenter">
+        <widget class="QPushButton" name="bttn_hideHand">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>@bttn_hide_hand</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLineEdit" name="_DEBUG_STATE">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>-40</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>70</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+
+color: rgba(244, 251, 255, 160);
+    font: 600 16px &quot;Tahoma&quot;;
+    background-color: rgba(25, 25, 25, 110);
+
+}
+
+QLineEdit:hover {
+color: rgba(252, 255, 255, 255);
+    font: 600 16px &quot;Tahoma&quot;;
+    background-color: rgba(15,15,15, 210);
+   border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">DEBUG STATE</string>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="bttn_uncheckAutoActions">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>81</y>
+     <width>130</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>130</width>
+     <height>22</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>130</width>
+     <height>22</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QAbstractButton {
+	background-image: transparent;
+    color: transparent;
+    border: 1px solid red;
+margin: 1px;
+border-radius: 7px;
+font: 600 14px &quot;Open Sans&quot;;
+}
+QAbstractButton::indicator {
+    background: none;
+    border:none;
+    image: none;
+}
+
+QAbstractButton:checked {
+    color: red;
+    border: 2px outset red;
+}
+
+QAbstractButton:!checked {
+    color: white;
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+    border: 2px inset gray;
+}</string>
+   </property>
+   <property name="text">
+    <string>No preAction</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bttnGrp_autoActions</string>
+   </attribute>
+  </widget>
+  <zorder>buttons_righttop</zorder>
+  <zorder>buttons_lefttop</zorder>
+  <zorder>statusActions</zorder>
+  <zorder>smileList</zorder>
+  <zorder>_DEBUG_STATE</zorder>
+  <zorder>bottom_panel</zorder>
+  <zorder>bttn_uncheckAutoActions</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FramedButton</class>
+   <extends>QPushButton</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InfoMessage</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ns_widget::MoneyButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">widgets/widget_MoneyButton.h</header>
+   <slots>
+    <signal>clicked(double)</signal>
+    <signal>clicked(Money)</signal>
+    <signal>clicked(int)</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>GameTableToolBar</class>
+   <extends>QFrame</extends>
+   <header location="global">widgets/GameTableToolBar.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_panel::BetControls</class>
+   <extends>QWidget</extends>
+   <header>game/tableItems/panel_BetControls.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>button_smile</sender>
+   <signal>clicked()</signal>
+   <receiver>UserControls</receiver>
+   <slot>showSmiles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>532</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>459</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_hideChat</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chat</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>550</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>540</x>
+     <y>534</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_buyChips</sender>
+   <signal>clicked()</signal>
+   <receiver>bttn_quit</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>787</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>708</x>
+     <y>541</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_makeGuestBet</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>UserControls</receiver>
+   <slot>toggleGuestBlind(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>643</x>
+     <y>514</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>996</x>
+     <y>440</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttnGrp_gameActions</sender>
+   <signal>buttonClicked(int)</signal>
+   <receiver>UserControls</receiver>
+   <slot>setPlayersCourse(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>311</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_showHand</sender>
+   <signal>clicked()</signal>
+   <receiver>hand_buttons</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>976</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>960</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_hideChecks</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checks_layout</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>599</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>18</x>
+     <y>598</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UserControls</sender>
+   <signal>initialized()</signal>
+   <receiver>statusActions</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>993</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>968</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>initialized()</signal>
+  <slot>toggleChatVisibility(bool)</slot>
+  <slot>showSmiles()</slot>
+  <slot>hideSmiles()</slot>
+  <slot>toggleGuestBlind(bool)</slot>
+  <slot>enableMask()</slot>
+  <slot>setPlayersCourse(int)</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bttnGrp_guestButtons"/>
+  <buttongroup name="bttnGrp_autoActions"/>
+  <buttongroup name="bttnGrp_gameActions"/>
+ </buttongroups>
+</ui>

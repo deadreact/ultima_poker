@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VipSystemDescription</class>
+ <widget class="QWidget" name="VipSystemDescription">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>518</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>518</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>518</height>
+   </size>
+  </property>
+  <widget class="QLabel" name="text_vipStatusInfo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    padding: 5px 24px 5px 19px;
+    font: 13px &quot;Open Sans&quot;;
+    color: #fafafa;
+    background-color: #37474f;
+    border: none;
+/*    border-top: 1px solid #455a64;*/
+    border-bottom: 1px solid #191919;
+}</string>
+   </property>
+   <property name="text">
+    <string>@text_vipStatusInfo</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="msg_vipStatusInfo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>470</y>
+     <width>960</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    padding-left: 40px;
+    font: 13px &quot;Open Sans&quot;;
+    color: #00aeff;
+	text-decoration: underline;
+    background-color: #222a30;
+    border-top: 1px solid #34424a;
+}</string>
+   </property>
+   <property name="text">
+    <string>@msg_vipStatusInfo</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolBox" name="toolBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>48</y>
+     <width>960</width>
+     <height>440</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>440</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>440</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolBox{
+     icon-size: 42px;
+     padding-top: 22px;
+     padding-bottom: 14px;
+    background-color: #222a30;
+    border-top: 1px solid #34424a;
+}
+
+QToolBox QScrollArea&gt;QWidget&gt;QWidget
+{
+    background: #222a30;
+    border-top: 1px solid #34424a;
+    margin-top: -7px;
+}
+
+QToolBox QScrollArea {
+    border: none;
+}
+
+</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="tabSpacing">
+    <number>6</number>
+   </property>
+   <widget class="ns_page::VipStatusItem" name="page_beginner">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>960</width>
+      <height>137</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>137</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>137</height>
+     </size>
+    </property>
+    <attribute name="label">
+     <string notr="true">0</string>
+    </attribute>
+   </widget>
+   <widget class="ns_page::VipStatusItem" name="page_semi_pro">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>960</width>
+      <height>137</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>137</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>137</height>
+     </size>
+    </property>
+    <attribute name="label">
+     <string notr="true">1</string>
+    </attribute>
+   </widget>
+   <widget class="ns_page::VipStatusItem" name="page_professional">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>960</width>
+      <height>137</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>137</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>137</height>
+     </size>
+    </property>
+    <attribute name="label">
+     <string notr="true">2</string>
+    </attribute>
+   </widget>
+   <widget class="ns_page::VipStatusItem" name="page_elite">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>960</width>
+      <height>137</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>137</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>137</height>
+     </size>
+    </property>
+    <attribute name="label">
+     <string notr="true">3</string>
+    </attribute>
+   </widget>
+   <widget class="ns_page::VipStatusItem" name="page_master">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>960</width>
+      <height>137</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>137</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>137</height>
+     </size>
+    </property>
+    <attribute name="label">
+     <string notr="true">4</string>
+    </attribute>
+   </widget>
+   <widget class="ns_page::VipStatusItem" name="page_legend">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>960</width>
+      <height>137</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>137</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>137</height>
+     </size>
+    </property>
+    <attribute name="label">
+     <string notr="true">5</string>
+    </attribute>
+   </widget>
+  </widget>
+  <zorder>msg_vipStatusInfo</zorder>
+  <zorder>text_vipStatusInfo</zorder>
+  <zorder>toolBox</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ns_page::VipStatusItem</class>
+   <extends>QWidget</extends>
+   <header>pages/vipSystem/page_VipStatusItem.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PixmapEditor</class>
+ <widget class="FramedEntity" name="PixmapEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>244</width>
+    <height>244</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="sizeOfFrame">
+   <size>
+    <width>244</width>
+    <height>244</height>
+   </size>
+  </property>
+  <widget class="EntityWidget" name="corner_1">
+   <property name="geometry">
+    <rect>
+     <x>236</x>
+     <y>0</y>
+     <width>8</width>
+     <height>8</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>8</width>
+     <height>8</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>8</width>
+     <height>8</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>SizeBDiagCursor</cursorShape>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="backgroundColor">
+    <color>
+     <red>207</red>
+     <green>216</green>
+     <blue>220</blue>
+    </color>
+   </property>
+  </widget>
+  <widget class="EntityWidget" name="corner_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>236</y>
+     <width>8</width>
+     <height>8</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>8</width>
+     <height>8</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>8</width>
+     <height>8</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>SizeBDiagCursor</cursorShape>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="backgroundColor">
+    <color>
+     <red>207</red>
+     <green>216</green>
+     <blue>220</blue>
+    </color>
+   </property>
+  </widget>
+  <widget class="EntityWidget" name="selectionFrame">
+   <property name="geometry">
+    <rect>
+     <x>-2</x>
+     <y>-2</y>
+     <width>248</width>
+     <height>248</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+#selectionFrame {
+    border: 1px ridge #cfd8dc;
+    margin: 2px;
+    padding: 0px
+}</string>
+   </property>
+   <property name="opacity">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="rendering">
+    <bool>true</bool>
+   </property>
+   <property name="parentPainting">
+    <enum>E::PaintParentAfter</enum>
+   </property>
+   <widget class="FramedEntity" name="squareFrame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>244</width>
+      <height>244</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>SizeAllCursor</cursorShape>
+    </property>
+    <property name="backgroundColor">
+     <color alpha="190">
+      <red>190</red>
+      <green>190</green>
+      <blue>190</blue>
+     </color>
+    </property>
+    <property name="blending">
+     <enum>E::Overlay</enum>
+    </property>
+    <property name="rendering">
+     <bool>true</bool>
+    </property>
+    <property name="parentPainting">
+     <enum>E::IgnoreParentPainting</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources.qrc">:/textures/Common/avatarSelectionFrame2.png</pixmap>
+    </property>
+    <property name="sizeOfFrame">
+     <size>
+      <width>196</width>
+      <height>196</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="EntityWidget" name="corner_0">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>8</width>
+     <height>8</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>8</width>
+     <height>8</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>8</width>
+     <height>8</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>SizeFDiagCursor</cursorShape>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="backgroundColor">
+    <color>
+     <red>207</red>
+     <green>216</green>
+     <blue>220</blue>
+    </color>
+   </property>
+  </widget>
+  <widget class="EntityWidget" name="corner_2">
+   <property name="geometry">
+    <rect>
+     <x>236</x>
+     <y>236</y>
+     <width>8</width>
+     <height>8</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>8</width>
+     <height>8</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>8</width>
+     <height>8</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>SizeFDiagCursor</cursorShape>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="backgroundColor">
+    <color>
+     <red>207</red>
+     <green>216</green>
+     <blue>220</blue>
+    </color>
+   </property>
+  </widget>
+  <zorder>selectionFrame</zorder>
+  <zorder>corner_1</zorder>
+  <zorder>corner_2</zorder>
+  <zorder>corner_3</zorder>
+  <zorder>corner_0</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FramedEntity</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>selectionFrame</sender>
+   <signal>pressed()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>beginDrag()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>155</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>171</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>selectionFrame</sender>
+   <signal>released()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>endDrag()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>113</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corner_3</sender>
+   <signal>pressed()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>cornerPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-11</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corner_3</sender>
+   <signal>released()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>cornerReleased()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>5</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>24</x>
+     <y>-8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corner_2</sender>
+   <signal>released()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>cornerReleased()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corner_2</sender>
+   <signal>pressed()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>cornerPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corner_1</sender>
+   <signal>pressed()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>cornerPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>24</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corner_1</sender>
+   <signal>released()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>cornerReleased()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corner_0</sender>
+   <signal>pressed()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>cornerPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>11</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-12</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corner_0</sender>
+   <signal>released()</signal>
+   <receiver>PixmapEditor</receiver>
+   <slot>cornerReleased()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>11</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-10</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>selectionChanged(QRectF)</signal>
+  <slot>cornerPressed()</slot>
+  <slot>cornerReleased()</slot>
+  <slot>beginDrag()</slot>
+  <slot>endDrag()</slot>
+ </slots>
+</ui>

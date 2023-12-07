@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NotesCompactView</class>
+ <widget class="QDialog" name="NotesCompactView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>380</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>380</width>
+    <height>360</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>380</width>
+    <height>360</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">.QWidget#notesList {
+border: 1px solid blue;
+}
+.QWidget#notesListEdit {
+border: 1px solid rgba(255, 0, 0, 200);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="pages">
+     <property name="minimumSize">
+      <size>
+       <width>380</width>
+       <height>360</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>380</width>
+       <height>360</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget {
+    background-color: #455a64;
+    border: none;
+}
+QTabWidget::pane {
+border-top: 1px solid #191919;
+}
+
+QTabBar {
+   background-color: #191919;
+}
+
+QTabBar::tab {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+border: none;
+	border-top: 1px solid #83abbe;
+    border-right: 1px solid #191919;
+    border-left: 1px solid #455a64;
+height: 31px;
+width: 188px;
+font: 600 13px &quot;Open Sans&quot;;
+color: #fafafa;
+margin-left: 0px;
+border-top-right-radius: 1px 0px;
+}
+
+QTabBar::tab:selected {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(13, 71, 161, 255), stop:1 rgba(66, 165, 245, 253));
+	border-top: 1px solid rgb(126, 246, 254);
+}
+QTabBar::tab:selected:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(13, 71, 181, 255), stop:1 rgba(66, 165, 255, 253));
+}
+QTabBar::tab:!selected:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(31, 30, 39, 255), stop:1 rgba(75, 125, 145, 255));
+}
+
+QTabBar::tab:disabled {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 100), stop:1 rgba(69, 89, 99, 100));
+    color: rgba(250, 250, 250, 100);
+    border-top: 1px solid rgba(131, 171, 190, 100);
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_notes">
+      <property name="styleSheet">
+       <string notr="true">#tab_notes {
+    background-color: #222a30;
+}</string>
+      </property>
+      <attribute name="title">
+       <string>@tab_notes</string>
+      </attribute>
+      <widget class="NotesListEditor" name="notesListEdit" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>221</y>
+         <width>378</width>
+         <height>106</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>378</width>
+         <height>106</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>378</width>
+         <height>254</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="NotesList" name="notesList" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>378</width>
+         <height>222</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>378</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>378</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+      <zorder>notesList</zorder>
+      <zorder>notesListEdit</zorder>
+     </widget>
+     <widget class="MarkersList" name="tab_markers">
+      <attribute name="title">
+       <string>@tab_markers</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>NotesList</class>
+   <extends>QWidget</extends>
+   <header>noteslist.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NotesListEditor</class>
+   <extends>QWidget</extends>
+   <header>noteslisteditor.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MarkersList</class>
+   <extends>QWidget</extends>
+   <header>markerslist.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

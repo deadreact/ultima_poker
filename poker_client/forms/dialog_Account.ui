@@ -1,0 +1,4508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AccountPage</class>
+ <widget class="QDialog" name="AccountPage">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>592</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>592</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>54563</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#AccountPage {
+    background-color: #191919;
+}
+</string>
+  </property>
+  <widget class="QLabel" name="title_block_menu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>269</y>
+     <width>960</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    border: none;
+    border-top: 1px solid #455a64;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+	font: 550 16px &quot;Open Sans&quot;;
+    color: #b0bec5;
+}</string>
+   </property>
+   <property name="text">
+    <string>@Title_personal_info</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_header">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>9630</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>9630</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_header {
+    border-top: 1px solid #83abbe;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(34, 42, 48, 255), stop:1 rgba(69, 90, 100, 255));
+	image: url(:/textures/Common/Tournament/icon_info_area_2_players.png);
+    image-position: left;
+    padding-left: 40px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="header">
+    <property name="geometry">
+     <rect>
+      <x>64</x>
+      <y>9</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#header {   
+    font: 550 16px &quot;Open Sans&quot;;
+    color: #fafafa;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>@Title_account</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_close">
+    <property name="geometry">
+     <rect>
+      <x>926</x>
+      <y>12</y>
+      <width>14</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>14</width>
+      <height>14</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>14</width>
+      <height>14</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QAbstractButton {
+    border: none;
+
+    background-position:top;
+	background-image: url(:/textures/Common/buttons/bttn_close.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-clip: margin;
+    background-origin: border;
+}
+
+QAbstractButton:hover {
+    padding-top: 14px;
+    margin-top: -14px;
+}
+QAbstractButton:pressed {
+    padding-top: 28px;
+    margin-top: -28px;
+}</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_top">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>40</y>
+     <width>959</width>
+     <height>224</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#frame_top {
+    border: none;
+    background-color: #191919;
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,1">
+    <property name="spacing">
+     <number>1</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="avatar_frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>240</width>
+        <height>222</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>240</width>
+        <height>222</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>190</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+#avatar_frame {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+ border: none;
+    border-top: 1px solid #455a64;
+    border-right: 1px solid #455a64;
+}
+
+QLabel
+{
+    max-height: 20px;
+    color: #fafafa;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0,1">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <property name="leftMargin">
+        <number>30</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>30</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+        <widget class="ns_widget::ProfilePicture" name="profile_picture" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>134</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>134</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Lobby_Myaccount_avatar_69</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget#profile_picture
+{
+	background-repeat: no-repeat;
+    background-clip: margin;
+	background-position: top;
+	background-attachment: fixed;
+    background-origin: content;
+    border: 1px outset rgba(220,220, 220, 50);
+    border-radius: 60px;
+    margin-bottom: 14px;
+background-image: url(:/textures/__avatars/Harly_120.png);
+}</string>
+         </property>
+         <property name="viewport" stdset="0">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>120</width>
+           <height>120</height>
+          </rect>
+         </property>
+         <widget class="QPushButton" name="bttn_browse">
+          <property name="geometry">
+           <rect>
+            <x>46</x>
+            <y>107</y>
+            <width>26</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>26</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>26</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QAbstractButton {
+	border: 1px solid rgba(25, 25, 25, 155);
+    background-color: rgba(255, 255, 255, 222);
+    border-radius: 13px;
+}
+
+QAbstractButton:hover {
+    background-color: #ffffff;
+}
+
+QAbstractButton:pressed {
+    background-color: rgba(255, 255, 255, 80);
+}</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources.qrc">
+            <normaloff>:/textures/Common/icons/icon_upload_avatar.png</normaloff>:/textures/Common/icons/icon_upload_avatar.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignTop">
+        <widget class="QLabel" name="textlink_nickname">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font: 600 16px &quot;Open Sans&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string notr="true">nickname</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignTop">
+        <widget class="QPushButton" name="bttn_status">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton {
+color: #00aeef;	
+font: 600 12px &quot;Open Sans&quot;;
+}
+/*
+QAbstractButton[text=&quot;BEGINNER&quot;] {
+    color: #00aeef;
+}
+QAbstractButton[text=&quot;SEMI-PRO&quot;] {
+    color: #9B9B9B;
+}
+QAbstractButton[text=&quot;PROFESSIONAL&quot;] {
+    color: #D5A540;
+}
+QAbstractButton[text=&quot;ELITE&quot;] {
+    color: #A0A7BC;
+}
+QAbstractButton[text=&quot;MASTER&quot;] {
+    color: #8AB0C8;
+}
+QAbstractButton[text=&quot;LEGEND&quot;] {
+    color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.340909 rgba(98, 1, 1, 255), stop:0.659091 rgba(72, 73, 73, 255));
+
+}*/</string>
+         </property>
+         <property name="text">
+          <string notr="true">BEGINNER</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/textures/Common/icons/icon_crystall.psd</normaloff>:/textures/Common/icons/icon_crystall.psd</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>12</width>
+           <height>13</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="frame_playersMoney" native="true">
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    border: none;
+    border-right: 1px solid #455a64;
+    border-top: 1px solid #455a64;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,1">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="title_block_info">
+         <property name="minimumSize">
+          <size>
+           <width>236</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>236</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    border: none;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+	font: 550 16px &quot;Open Sans&quot;;
+    color: #b0bec5;
+}</string>
+         </property>
+         <property name="text">
+          <string>@Title_money_account</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="cash_frame">
+         <property name="minimumSize">
+          <size>
+           <width>236</width>
+           <height>112</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>236</width>
+           <height>456454</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    background-color: #37474f;
+    border: none;
+    border-top: 1px solid #455a64;
+}
+QLabel {
+       font: 14px &quot;Open Sans&quot;;
+    color: #fafafa;
+background-color: transparent;
+border: none;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,1">
+          <property name="leftMargin">
+           <number>17</number>
+          </property>
+          <property name="topMargin">
+           <number>23</number>
+          </property>
+          <property name="rightMargin">
+           <number>17</number>
+          </property>
+          <property name="bottomMargin">
+           <number>23</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>13</number>
+          </property>
+          <item row="0" column="0" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="msg_cash_total">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #90a4ae;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_cash_total:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="msg_cash_ingame">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #90a4ae;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_cash_ingame:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="money_cash_available">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string notr="true">$0.00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="msg_cash_available">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #90a4ae;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_available:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="money_cash_total">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #ffb74d;
+}</string>
+            </property>
+            <property name="text">
+             <string notr="true">$0.00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="money_cash_ingame">
+            <property name="text">
+             <string notr="true">$0.00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="frame_bonuses" native="true">
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    border: none;
+    border-right: 1px solid #455a64;
+    border-top: 1px solid #455a64;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,1">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignTop">
+        <widget class="QLabel" name="title_bonus">
+         <property name="minimumSize">
+          <size>
+           <width>479</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>479</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    border: none;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+	font: 550 16px &quot;Open Sans&quot;;
+    color: #b0bec5;
+}</string>
+         </property>
+         <property name="text">
+          <string>@Title_bonus</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_bonus">
+         <property name="minimumSize">
+          <size>
+           <width>479</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>479</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>480</width>
+           <height>189</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    background-color: #37474f;
+    border: none;
+    border-top: 1px solid #455a64;
+}
+
+QLabel {
+    color: #b0bec5;
+    font: 11px &quot;Open Sans&quot;;
+    background-color: transparent;
+    border: none;
+}
+#bonus_1, #bonus_2, #bonus_3 {
+    font: 600 14px &quot;Open Sans&quot; ;
+    color: #fafafa;
+    background-color: transparent;
+    padding-left: 7px;
+}
+
+QProgressBar {
+    color: #fafafa;
+    font:600  14px &quot;Open Sans&quot;;
+    text-align: left;
+    border: none;
+    border-radius: 4px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 50, 56, 255), stop:1 rgba(25, 25, 25, 255));
+    margin: 5px 3px 1px 35px;
+}
+
+QProgressBar::chunk {
+	border: 1px solid #263238;
+    border-radius: 4px;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(1, 87, 155, 255), stop:1 rgba(0, 174, 239, 255));
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,0,0,0,0,1">
+          <property name="leftMargin">
+           <number>40</number>
+          </property>
+          <property name="topMargin">
+           <number>23</number>
+          </property>
+          <property name="rightMargin">
+           <number>40</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>2</number>
+          </property>
+          <item row="5" column="0" alignment="Qt::AlignTop">
+           <widget class="QProgressBar" name="progressBar_3">
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>1325</number>
+            </property>
+            <property name="value">
+             <number>1000</number>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="2" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="msg_bonus_3">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent;
+	font: 50 11px &quot;Open Sans&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_bonus_%0</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="indent">
+             <number>5</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="bonus_1">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string notr="true">$5</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="2" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="msg_bonus_1">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent;
+	font: 50 11px &quot;Open Sans&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_bonus_%0</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="indent">
+             <number>5</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QProgressBar" name="progressBar_1">
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>2000</number>
+            </property>
+            <property name="value">
+             <number>500</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" alignment="Qt::AlignTop">
+           <widget class="QProgressBar" name="progressBar_2">
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>142000</number>
+            </property>
+            <property name="value">
+             <number>100000</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLabel" name="bonus_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="text">
+             <string notr="true">$1000</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2" alignment="Qt::AlignTop">
+           <widget class="QLabel" name="msg_bonus_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>18</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent;
+	font: 50 11px &quot;Open Sans&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_bonus_%0</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="indent">
+             <number>5</number>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLabel" name="bonus_3">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="text">
+             <string notr="true">$10</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="2">
+           <widget class="QLabel" name="infolink_bonus">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent;
+	font: 11px &quot;Open Sans&quot;;
+    color:#fafafa;
+}</string>
+            </property>
+            <property name="text">
+             <string>@infolink_bonus</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>302</y>
+     <width>960</width>
+     <height>290</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>290</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>290</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QWidget {
+background-color: #191919;
+border-top: 1px solid #34424a;
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>1</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>479</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>479</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    border: none;
+    border-right: 1px solid #34424a;
+    background-color: #222a30;
+}
+
+QAbstractButton {
+    border: 1px solid #191919;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+border-radius: 8px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 42, 48, 255), stop:0.978 rgba(38, 50, 56, 255), stop:0.995 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+font: 600 11px &quot;Open Sans&quot;;
+color: #b0bec5;
+padding-top: 80px;
+}
+
+QAbstractButton:checked {
+
+    color: rgba(176, 190, 197, 128);
+	background-color: rgb(25, 29, 32);
+    padding-top: 82px;
+}
+QAbstractButton:checked:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(40, 61, 66, 255), stop:0.15 rgba(31, 41, 46, 255), stop:0.6 rgba(25, 29, 31, 255), stop:1 rgba(25, 29, 32, 255));
+}
+
+QAbstractButton:!checked:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 97, 108, 255), stop:0.978 rgba(38, 50, 56, 255), stop:0.995 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}</string>
+      </property>
+      <widget class="QFrame" name="frame_personal_info">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>160</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>121</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>121</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">.QFrame {
+    background-color: #455a64;
+    border-radius: 8 10px;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="bttn_personal_info">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>160</width>
+          <height>120</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>160</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QAbstractButton {
+    background-image: url(:/textures/Common/icons/account/icon_persoanl_date_male.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>@bttn_personal_info</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">bttnGrp_categories</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_contacts">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>20</y>
+         <width>160</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>121</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>121</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">.QFrame {
+    background-color: #455a64;
+    border-radius: 8 10px;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="bttn_contacts">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>160</width>
+          <height>120</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>160</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QAbstractButton {
+	background-image: url(:/textures/Common/icons/account/icon_contacts.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>@bttn_contacts</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">bttnGrp_categories</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_security">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>150</y>
+         <width>160</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>121</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>121</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">.QFrame {
+    background-color: #455a64;
+    border-radius: 8 10px;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="bttn_security">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>160</width>
+          <height>120</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>160</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QAbstractButton {
+	background-image: url(:/textures/Common/icons/account/icon_security.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>@bttn_security</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">bttnGrp_categories</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_verification">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>150</y>
+         <width>160</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>121</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>121</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">.QFrame {
+    background-color: #455a64;
+    border-radius: 8 10px;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="bttn_verification">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>160</width>
+          <height>120</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>160</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QAbstractButton {
+	background-image: url(:/textures/Common/icons/account/icon_verification.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>@bttn_verification</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">bttnGrp_categories</string>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_4" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>479</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>479</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    border: none;
+    background-color: #222a30;
+}
+QAbstractButton {
+    font: 14px &quot;Open Sans&quot;;
+    color: rgba(250, 250, 250, 250);
+}</string>
+      </property>
+      <widget class="QStackedWidget" name="zstack">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>460</width>
+         <height>270</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>460</width>
+         <height>270</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>460</width>
+         <height>270</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#zstack &gt; QWidget {
+    background-color: transparent;
+}
+
+QLineEdit {
+    color: #191919;
+}
+QAbstractButton {
+    color: rgba(250, 250, 250, 250);
+    font: 14px &quot;Open Sans&quot;;
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>6</number>
+       </property>
+       <widget class="QWidget" name="page_edit_4"/>
+       <widget class="DropArea" name="page_verification">
+        <property name="minimumSize">
+         <size>
+          <width>460</width>
+          <height>270</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>460</width>
+          <height>270</height>
+         </size>
+        </property>
+        <property name="acceptDrops">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton {
+    color: #ffb74d;
+	font: 11px &quot;Open Sans&quot;;
+    border: none;
+}
+QToolButton:hover {
+	image: url(:/textures/Common/icons/icon_notOk.png);
+    image-position: right;
+    border: 1px solid red;
+}
+</string>
+        </property>
+        <property name="acceptedFormats" stdset="0">
+         <stringlist notr="true">
+          <string>png</string>
+          <string>jpg</string>
+          <string>pdf</string>
+         </stringlist>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,1,0,0">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="leftMargin">
+          <number>15</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>15</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="text_verification">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+    font: 11px &quot;Open Sans&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>@text_verification:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="text_verification_instruction">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #fafafa;
+    font: 11px &quot;Open Sans&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>@text_verification_instruction</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="filesListLayout" stretch="0,1">
+           <property name="spacing">
+            <number>20</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="filesListLayout_2" stretch="0,0,0">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QToolButton" name="bttn_remove_file_1">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>140</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTip">
+                <string>@Tooltip_Myaccount_remove_bttn_96</string>
+               </property>
+               <property name="text">
+                <string notr="true">filename</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../resources.qrc">
+                 <normaloff>:/textures/Common/icons/account/icon_ver_file.png</normaloff>:/textures/Common/icons/account/icon_ver_file.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">bttnGrp_verificationFiles</string>
+               </attribute>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="bttn_remove_file_2">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>140</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTip">
+                <string>@Tooltip_Myaccount_remove_bttn_96</string>
+               </property>
+               <property name="text">
+                <string notr="true">filename</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../resources.qrc">
+                 <normaloff>:/textures/Common/icons/account/icon_ver_file.png</normaloff>:/textures/Common/icons/account/icon_ver_file.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">bttnGrp_verificationFiles</string>
+               </attribute>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="bttn_remove_file_3">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>140</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTip">
+                <string>@Tooltip_Myaccount_remove_bttn_96</string>
+               </property>
+               <property name="text">
+                <string notr="true">filename</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../resources.qrc">
+                 <normaloff>:/textures/Common/icons/account/icon_ver_file.png</normaloff>:/textures/Common/icons/account/icon_ver_file.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">bttnGrp_verificationFiles</string>
+               </attribute>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item alignment="Qt::AlignLeft|Qt::AlignTop">
+            <widget class="QPushButton" name="bttn_upload_file">
+             <property name="minimumSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="acceptDrops">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QAbstractButton {
+    
+color: #00aeef;
+	text-decoration: underline;
+	font: 11px &quot;Open Sans&quot;;
+    border: none;
+}
+
+QAbstractButton:pressed {
+    padding-top: 2px;
+}</string>
+             </property>
+             <property name="text">
+              <string>@link_upload_file</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../resources.qrc">
+               <normaloff>:/textures/Common/icons/account/icon_not_ver_file.png</normaloff>:/textures/Common/icons/account/icon_not_ver_file.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>3</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="bttn_send">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>148</width>
+               <height>34</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>148</width>
+               <height>34</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+border: 1px solid #191919;
+border-radius: 3px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.93 rgba(0, 199, 83, 255), stop:0.94 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:pressed
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+QPushButton:disabled {
+    border: 1px solid rgba(25, 25, 25, 166);
+    color: rgba(250, 250, 250, 166);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 166), stop:0.94 rgba(0, 199, 83, 166), stop:0.95 rgba(0, 250, 158, 166), stop:1 rgba(0, 250, 158, 166));
+}
+
+</string>
+             </property>
+             <property name="text">
+              <string>@bttn_send</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="bttn_cancel_verification">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>148</width>
+               <height>34</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>148</width>
+               <height>34</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QAbstractButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.93 rgba(69, 89, 99, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+border: 1px solid #191919;
+border-radius: 3px;
+}
+
+QAbstractButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(205, 55, 33, 215), stop:0.33 rgba(69, 24, 22, 225), stop:0.94 rgba(69, 89, 99, 255), stop:0.95 rgba(121, 131, 150, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QAbstractButton:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(21, 13, 14, 255), stop:0.93 rgba(3, 4, 2, 255), stop:0.95 rgba(33, 36, 41, 255), stop:1 rgba(41, 41, 44, 255));
+}
+
+QAbstractButton:disabled {
+    	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 166), stop:0.93 rgba(69, 89, 99, 166), stop:0.95 rgba(131, 171, 190, 166), stop:1 rgba(131, 171, 190, 166));
+color: rgba(250, 250, 250, 166);
+border-color: rgba(25, 25, 25, 166);
+}</string>
+             </property>
+             <property name="text">
+              <string>@bttn_cancel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_personal_info">
+        <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,0">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>40</number>
+         </property>
+         <property name="topMargin">
+          <number>13</number>
+         </property>
+         <property name="rightMargin">
+          <number>40</number>
+         </property>
+         <property name="bottomMargin">
+          <number>13</number>
+         </property>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QWidget" name="block_personal_info" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>384</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>384</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#block_personal_info {
+    background-color: rgba(225, 225, 225, 15);
+    border: 1px solid #191919;
+}
+QLabel {
+    color: #fafafa;
+	font: 14px &quot;Open Sans&quot;;
+}
+</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <property name="leftMargin">
+             <number>17</number>
+            </property>
+            <property name="topMargin">
+             <number>20</number>
+            </property>
+            <property name="rightMargin">
+             <number>17</number>
+            </property>
+            <property name="bottomMargin">
+             <number>20</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>20</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>5</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="msg_firstname">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+              </property>
+              <property name="text">
+               <string>@msg_firstname:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="msg_lastname">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+              </property>
+              <property name="text">
+               <string>@msg_lastname:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="msg_gender">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+              </property>
+              <property name="text">
+               <string>@msg_gender:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="info_gender">
+              <property name="text">
+               <string>@gender_male</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="msg_birthDate">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+              </property>
+              <property name="text">
+               <string>@msg_birthDate</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="info_birthdate">
+              <property name="text">
+               <string notr="true">00.00.0000</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="info_lastname">
+              <property name="text">
+               <string notr="true">Surname</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="info_firstname">
+              <property name="text">
+               <string notr="true">Name</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignTop">
+          <widget class="QLabel" name="infolink_change_personal_info">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    background-color: transparent;
+	font: 11px &quot;Open Sans&quot;;
+    color:#b0bec5;
+}</string>
+           </property>
+           <property name="text">
+            <string>@infolink_change_personal_info</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignHCenter|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="margin">
+            <number>16</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_contacts">
+        <widget class="QWidget" name="block_menu" native="true">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>5</y>
+           <width>384</width>
+           <height>190</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>384</width>
+           <height>190</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>384</width>
+           <height>190</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#block_menu {
+    background-color: rgba(225, 225, 225, 15);
+    border: 1px solid #191919;
+}
+QLabel {
+    color: #fafafa;
+	font: 14px &quot;Open Sans&quot;;
+}
+</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout" columnstretch="0,1">
+          <property name="leftMargin">
+           <number>17</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>17</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>5</number>
+          </property>
+          <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_email">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_email:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_phone">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_phone:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="info_phone">
+            <property name="text">
+             <string notr="true">+012345678900</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_country">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_country:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="info_country">
+            <property name="text">
+             <string notr="true">Country</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_city">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_city:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="info_city">
+            <property name="text">
+             <string notr="true">City</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="info_address">
+            <property name="text">
+             <string notr="true">Address</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="info_index">
+            <property name="text">
+             <string notr="true">Index</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_address">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_address:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="msg_index">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #b0bec5;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_index:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="info_email">
+            <property name="toolTip">
+             <string>@Tooltip_Myaccount_email_not_verified_70</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    padding-right: 20px;
+	background-image: url(:/textures/Common/icons/icon1x2_ok_error.png);
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-origin: border;
+}
+
+QLabel[verified=true] {
+padding-top: 2px;
+margin-top: -2px;
+}
+QLabel[verified=false] {
+padding-top: 26px;
+margin-top: -26px;
+}</string>
+            </property>
+            <property name="text">
+             <string notr="true">email@example.com</string>
+            </property>
+            <property name="verified" stdset="0">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="bttn_edit_contacts">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>220</y>
+           <width>155</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>155</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>155</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.93 rgba(69, 89, 99, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+border: 1px solid black;
+border-radius: 3px;
+font: 14px &quot;Open Sans&quot;;
+color: #fafafa;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 155, 133, 215), stop:0.33 rgba(24, 69, 62, 225), stop:0.94 rgba(69, 89, 99, 255), stop:0.95 rgba(121, 131, 150, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(21, 13, 14, 255), stop:0.93 rgba(3, 4, 2, 255), stop:0.95 rgba(33, 36, 41, 255), stop:1 rgba(41, 41, 44, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string>@bttn_edit_contacts</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_edit_password">
+        <widget class="QPushButton" name="bttn_edit_password">
+         <property name="geometry">
+          <rect>
+           <x>155</x>
+           <y>231</y>
+           <width>148</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.93 rgba(69, 89, 99, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+border: 1px solid black;
+border-radius: 3px;
+font: 14px &quot;Open Sans&quot;;
+color: #fafafa;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 155, 133, 215), stop:0.33 rgba(24, 69, 62, 225), stop:0.94 rgba(69, 89, 99, 255), stop:0.95 rgba(121, 131, 150, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(21, 13, 14, 255), stop:0.93 rgba(3, 4, 2, 255), stop:0.95 rgba(33, 36, 41, 255), stop:1 rgba(41, 41, 44, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string>@bttn_edit_password</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="bttn_cancel_password">
+         <property name="geometry">
+          <rect>
+           <x>237</x>
+           <y>231</y>
+           <width>148</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.93 rgba(69, 89, 99, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+border: 1px solid black;
+border-radius: 3px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(205, 55, 33, 215), stop:0.33 rgba(69, 24, 22, 225), stop:0.94 rgba(69, 89, 99, 255), stop:0.95 rgba(121, 131, 150, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(21, 13, 14, 255), stop:0.93 rgba(3, 4, 2, 255), stop:0.95 rgba(33, 36, 41, 255), stop:1 rgba(41, 41, 44, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string>@bttn_cancel</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="bttn_save_password">
+         <property name="geometry">
+          <rect>
+           <x>73</x>
+           <y>231</y>
+           <width>148</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+border: 1px solid #191919;
+border-radius: 3px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.93 rgba(0, 199, 83, 255), stop:0.94 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:pressed
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+QPushButton:disabled {
+    border: 1px solid rgba(25, 25, 25, 166);
+    color: rgba(250, 250, 250, 166);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 166), stop:0.94 rgba(0, 199, 83, 166), stop:0.95 rgba(0, 250, 158, 166), stop:1 rgba(0, 250, 158, 166));
+}
+
+</string>
+         </property>
+         <property name="text">
+          <string>@bttn_save_password</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="pass_edit_form" native="true">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>5</y>
+           <width>378</width>
+           <height>197</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget {
+    background-color: transparent;
+}
+QLineEdit:disabled {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0,1">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>90</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>90</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="title_password_edit">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #fafafa;
+    font: 14px &quot;Open Sans&quot;;
+    padding-bottom: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>@title_password_edit</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="PasswordLineEdit" name="input_password_current">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>198</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>198</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit:disabled {
+    background-color: rgba(255, 255, 255, 100);
+    color: rgba(25, 25, 25, 100);
+border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string notr="true">*********</string>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="placeholderText">
+             <string>@password_current</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="InfoMessage" name="imsg_incorrect_password">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Open Sans</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; min-height: 16px; max-height: 16px; }</string>
+            </property>
+            <property name="text">
+             <string>@msg_incorrect_password</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="messages" stdset="0">
+             <stringlist>
+              <string>@msg_incorrect_password</string>
+              <string></string>
+             </stringlist>
+            </property>
+            <property name="styles" stdset="0">
+             <stringlist notr="true">
+              <string>QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; min-height: 16px; max-height: 16px; }</string>
+              <string>QLabel {min-height: 10px; max-height: 10px; }</string>
+             </stringlist>
+            </property>
+            <property name="currentMsgIndex" stdset="0">
+             <number>0</number>
+            </property>
+            <property name="defaultMsgIndex" stdset="0">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="PasswordLineEdit" name="input_password_new">
+            <property name="minimumSize">
+             <size>
+              <width>198</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>198</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>@Tooltip_Myaccount_New_password_97</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string>@password_new</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="InfoMessage" name="imsg_incorrect_password_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Open Sans</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; min-height: 16px; max-height: 16px; }</string>
+            </property>
+            <property name="text">
+             <string>@msg_incorrect_password</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="messages" stdset="0">
+             <stringlist>
+              <string>@msg_incorrect_password</string>
+              <string>@empty</string>
+             </stringlist>
+            </property>
+            <property name="styles" stdset="0">
+             <stringlist notr="true">
+              <string>QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; min-height: 16px; max-height: 16px; }</string>
+              <string>QLabel {min-height: 10px; max-height: 10px; }</string>
+             </stringlist>
+            </property>
+            <property name="currentMsgIndex" stdset="0">
+             <number>0</number>
+            </property>
+            <property name="defaultMsgIndex" stdset="0">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ConfirmationLineEdit" name="input_confirmation">
+            <property name="minimumSize">
+             <size>
+              <width>198</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>198</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="placeholderText">
+             <string>@password2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="InfoMessage" name="imsg_mismatch">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Open Sans</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; min-height: 16px; max-height: 16px; }</string>
+            </property>
+            <property name="text">
+             <string>@msg_mismatch</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="messages" stdset="0">
+             <stringlist>
+              <string>@msg_mismatch</string>
+              <string></string>
+             </stringlist>
+            </property>
+            <property name="styles" stdset="0">
+             <stringlist notr="true">
+              <string>QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; min-height: 16px; max-height: 16px; }</string>
+              <string>QLabel {min-height: 10px; max-height: 10px; }</string>
+             </stringlist>
+            </property>
+            <property name="currentMsgIndex" stdset="0">
+             <number>0</number>
+            </property>
+            <property name="defaultMsgIndex" stdset="0">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="check_showPassword">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>17</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>17</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+	font: 550 12px &quot;Open Sans&quot;;
+    color: rgba(250, 250, 250, 220);
+    spacing: 2px;
+    border: none;
+}
+QCheckBox::indicator {
+    subcontrol-position: left;
+    border: 1px solid black;
+    border-radius: 1px;
+    width: 10px;
+    height: 10px;
+    
+    background-color: rgba(250, 250, 250, 220);
+}
+
+QCheckBox::indicator:!checked:hover {
+background-color: rgba(250, 250, 250, 120);
+}
+
+QCheckBox::indicator:!checked:pressed, QCheckBox::indicator:checked:pressed {
+    margin-top: 1px;
+    background-color: rgba(0, 166, 81, 100);
+	background-image: url(:/textures/Common/icons/check1.png);
+}
+
+QCheckBox::indicator:checked {
+    background-color: rgba(0, 166, 81, 230);
+	background-image: url(:/textures/Common/icons/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+background-color: rgba(0, 166, 81, 255);
+}
+QCheckBox:disabled, QCheckBox::indicator:disabled {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_showPassword</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>188</width>
+              <height>38</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <zorder>pass_edit_form</zorder>
+        <zorder>bttn_cancel_password</zorder>
+        <zorder>bttn_save_password</zorder>
+        <zorder>bttn_edit_password</zorder>
+       </widget>
+       <widget class="QWidget" name="page_edit_contacts">
+        <property name="styleSheet">
+         <string notr="true">QComboBox, QLineEdit, QPlainTextEdit {
+    background-color: white;
+    border: 1px solid rgba(250, 250, 250, 150);
+    border-radius: 2px;
+}
+
+QComboBox::drop-down {
+    border: none;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;    
+	
+	background-image: url(:/textures/Common/icons/combobox_arrow.png);
+}</string>
+        </property>
+        <widget class="CountryComboBox" name="input_country">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>110</y>
+           <width>148</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #191919;</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>-1</number>
+         </property>
+        </widget>
+        <widget class="PostIndexLineEdit" name="input_index">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>110</y>
+           <width>148</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Change_contact_index_98</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>@msg_index</string>
+         </property>
+        </widget>
+        <widget class="NotEmptyPlainTextEdit" name="input_address">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>30</y>
+           <width>148</width>
+           <height>64</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Change_contact_address_99</string>
+         </property>
+         <property name="placeholderText">
+          <string>@msg_address</string>
+         </property>
+        </widget>
+        <widget class="NotEmptyLineEdit" name="input_city">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>150</y>
+           <width>148</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>@Tooltip_Change_contact_city_98</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>@msg_city</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="bttn_apply">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>230</y>
+           <width>148</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+border: 1px solid #191919;
+border-radius: 3px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.93 rgba(0, 199, 83, 255), stop:0.94 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:pressed
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+QPushButton:disabled {
+    border: 1px solid rgba(25, 25, 25, 166);
+    color: rgba(250, 250, 250, 166);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 166), stop:0.94 rgba(0, 199, 83, 166), stop:0.95 rgba(0, 250, 158, 166), stop:1 rgba(0, 250, 158, 166));
+}
+
+</string>
+         </property>
+         <property name="text">
+          <string>@bttn_apply</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="bttn_cancel">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>230</y>
+           <width>148</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.93 rgba(69, 89, 99, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+border: 1px solid black;
+border-radius: 3px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(205, 55, 33, 215), stop:0.33 rgba(69, 24, 22, 225), stop:0.94 rgba(69, 89, 99, 255), stop:0.95 rgba(121, 131, 150, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(21, 13, 14, 255), stop:0.93 rgba(3, 4, 2, 255), stop:0.95 rgba(33, 36, 41, 255), stop:1 rgba(41, 41, 44, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string>@bttn_cancel</string>
+         </property>
+        </widget>
+        <widget class="PhoneNumberLineEdit" name="input_phone">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>70</y>
+           <width>148</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>@msg_phonenumber</string>
+         </property>
+        </widget>
+        <widget class="EmailLineEdit" name="input_email">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>30</y>
+           <width>148</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>@msg_email</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="header_edit_contacts">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>0</y>
+           <width>321</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font: 14px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+         </property>
+         <property name="text">
+          <string>@header_edit_contacts</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="InfoMessage" name="imsg_email">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>56</y>
+           <width>148</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>148</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>148</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Calibri</family>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="messages" stdset="0">
+          <stringlist>
+           <string>@msg_incorrect_email</string>
+           <string>@msg_email_busy</string>
+          </stringlist>
+         </property>
+         <property name="styles" stdset="0">
+          <stringlist notr="true">
+           <string>QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; }</string>
+           <string>QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; }</string>
+          </stringlist>
+         </property>
+         <property name="currentMsgIndex" stdset="0">
+          <number>-1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="imsg_incorrect_phone">
+         <property name="geometry">
+          <rect>
+           <x>71</x>
+           <y>94</y>
+           <width>147</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Open Sans</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; }</string>
+         </property>
+         <property name="text">
+          <string>@msg_incorrect_number</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="messages" stdset="0">
+          <stringlist>
+           <string>@msg_incorrect_number</string>
+          </stringlist>
+         </property>
+         <property name="styles" stdset="0">
+          <stringlist notr="true">
+           <string>QLabel {color: #ff0000; font: 600 12px &quot;Open Sans&quot;; }</string>
+          </stringlist>
+         </property>
+         <property name="currentMsgIndex" stdset="0">
+          <number>-1</number>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_verification_2">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <widget class="QWidget" name="block_verification_status" native="true">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>13</y>
+           <width>384</width>
+           <height>139</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>384</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>384</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#block_verification_status {
+    background-color: rgba(225, 225, 225, 15);
+    border: 1px solid #191919;
+}
+#info_verification_status {
+    color: #fafafa;
+    font: 11px &quot;Open Sans&quot;;
+    padding-left: 20px;
+    padding-top: 1px;
+    margin-left: 3px;
+	background-position: left;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+min-height: 22px;
+max-height: 22px;
+}</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>17</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>17</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>5</number>
+          </property>
+          <item row="0" column="0" colspan="2" alignment="Qt::AlignLeft">
+           <widget class="InfoMessage" name="info_verification_status">
+            <property name="indent">
+             <number>20</number>
+            </property>
+            <property name="messages" stdset="0">
+             <stringlist>
+              <string>@verification_in_progress</string>
+              <string>@verification_done</string>
+              <string>@verification_failed</string>
+              <string></string>
+             </stringlist>
+            </property>
+            <property name="styles" stdset="0">
+             <stringlist>
+              <string>background-image: url(:/textures/Common/icons/icon_attention.png);
+	background-position: left;</string>
+              <string>background-image: url(:/textures/Common/icons/icon1x2_ok_error.png);background-position: left top; margin-left: 0px;</string>
+              <string>background-image: url(:/textures/Common/icons/icon1x2_ok_error.png);background-position: left bottom; margin-left: 0px;</string>
+              <string></string>
+             </stringlist>
+            </property>
+            <property name="currentMsgIndex" stdset="0">
+             <number>0</number>
+            </property>
+            <property name="defaultMsgIndex" stdset="0">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>350</width>
+               <height>74</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>350</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>350</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0,0,1">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QCheckBox" name="file_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>140</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QAbstractButton {
+    font: 11px &quot;Open Sans&quot;;
+color: #b0bec5;
+}
+
+QAbstractButton::indicator {
+    width: 32px;
+    height: 32px;
+	border-image: url(:/textures/Common/icons/account/icon_ver_file.png);
+
+}</string>
+                </property>
+                <property name="text">
+                 <string notr="true">filename</string>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="file_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>140</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QAbstractButton {
+    font: 11px &quot;Open Sans&quot;;
+color: #b0bec5;
+}
+
+QAbstractButton::indicator {
+    width: 32px;
+    height: 32px;
+	border-image: url(:/textures/Common/icons/account/icon_ver_file.png);
+
+}</string>
+                </property>
+                <property name="text">
+                 <string notr="true">filename</string>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="file_1">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>140</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QAbstractButton {
+    font: 11px &quot;Open Sans&quot;;
+color: #b0bec5;
+}
+
+QAbstractButton::indicator {
+    width: 32px;
+    height: 32px;
+	border-image: url(:/textures/Common/icons/account/icon_ver_file.png);
+
+}</string>
+                </property>
+                <property name="text">
+                 <string notr="true">filename</string>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="infolink_change_personal_info_2">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>155</y>
+           <width>380</width>
+           <height>47</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>380</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>380</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    background-color: transparent;
+	font: 11px &quot;Open Sans&quot;;
+    color:#b0bec5;
+}</string>
+         </property>
+         <property name="text">
+          <string>@infolink_change_personal_info</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="margin">
+          <number>16</number>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="FramedEntity" name="bg_overlayed" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>479</width>
+         <height>289</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>479</width>
+         <height>289</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>479</width>
+         <height>289</height>
+        </size>
+       </property>
+       <property name="opacity" stdset="0">
+        <double>0.400000000000000</double>
+       </property>
+       <property name="respondable" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="pixmap" stdset="0">
+        <pixmap resource="../resources.qrc">:/textures/menubar/bg.png</pixmap>
+       </property>
+       <property name="sizeOfFrame" stdset="0">
+        <size>
+         <width>900</width>
+         <height>506</height>
+        </size>
+       </property>
+      </widget>
+      <zorder>bg_overlayed</zorder>
+      <zorder>zstack</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionReject">
+   <property name="text">
+    <string notr="true">reject</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">reject</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">reject</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Esc</string>
+   </property>
+  </action>
+  <zorder>frame_top</zorder>
+  <zorder>title_block_menu</zorder>
+  <zorder>frame_header</zorder>
+  <zorder>widget_2</zorder>
+ </widget>
+ <pixmapfunction>ns_utildb::cached</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InfoMessage</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ns_widget::ProfilePicture</class>
+   <extends>EntityWidget</extends>
+   <header>widgets/widget_ProfilePicture.h</header>
+   <container>1</container>
+   <slots>
+    <signal>iconChanged(QIcon)</signal>
+    <signal>avatarChanged(Avatar)</signal>
+    <signal>avatarChanged(Avatar*)</signal>
+    <signal>iconChange(QIcon)</signal>
+    <signal>sourceChanged(QPixmap)</signal>
+    <slot>setIcon(QIcon)</slot>
+    <slot>setViewport(QRect)</slot>
+    <slot>setAvatar(Avatar*)</slot>
+    <slot>setSource(QPixmap)</slot>
+    <slot>setAlphaMask(QPixmap)</slot>
+    <slot>updateStyle()</slot>
+    <slot>setPixImage(QPixmap)</slot>
+    <slot>setAvatar(Avatar)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>FramedEntity</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NotEmptyLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PasswordLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>plugins.h</header>
+   <slots>
+    <signal>passwordDifficultyChanged(float)</signal>
+    <signal>passwordDifficultyChanged(double)</signal>
+    <slot>onRequested()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>ConfirmationLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>plugins.h</header>
+   <slots>
+    <signal>requestPasswordLineEdit()</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>PhoneNumberLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>plugins.h</header>
+   <slots>
+    <slot>setCodeFromCountryInfo(CountryInfo)</slot>
+    <slot>setCodeFromCountryInfo(SharedDB::country_info)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>EmailLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PostIndexLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CheckedComboBox</class>
+   <extends>QComboBox</extends>
+   <header>plugins.h</header>
+   <slots>
+    <signal>currentCountryInfoChanged(SharedDB::country_info)</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>NotEmptyPlainTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header>plugins.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CountryComboBox</class>
+   <extends>CheckedComboBox</extends>
+   <header>plugins.h</header>
+   <slots>
+    <signal>currentCountryInfoChanged(CountryInfo)</signal>
+    <signal>currentCountryInfoChanged(SharedDB::country_info)</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>DropArea</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/DropArea.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>bttn_personal_info</tabstop>
+  <tabstop>bttn_contacts</tabstop>
+  <tabstop>bttn_security</tabstop>
+  <tabstop>bttn_verification</tabstop>
+  <tabstop>bttn_edit_contacts</tabstop>
+  <tabstop>bttn_edit_password</tabstop>
+  <tabstop>input_password_current</tabstop>
+  <tabstop>input_password_new</tabstop>
+  <tabstop>input_confirmation</tabstop>
+  <tabstop>check_showPassword</tabstop>
+  <tabstop>bttn_cancel_password</tabstop>
+  <tabstop>input_email</tabstop>
+  <tabstop>input_phone</tabstop>
+  <tabstop>input_country</tabstop>
+  <tabstop>input_city</tabstop>
+  <tabstop>input_address</tabstop>
+  <tabstop>input_index</tabstop>
+  <tabstop>bttn_apply</tabstop>
+  <tabstop>bttn_cancel</tabstop>
+  <tabstop>bttn_upload_file</tabstop>
+  <tabstop>bttn_send</tabstop>
+  <tabstop>bttn_remove_file_1</tabstop>
+  <tabstop>bttn_remove_file_2</tabstop>
+  <tabstop>bttn_remove_file_3</tabstop>
+  <tabstop>bttn_cancel_verification</tabstop>
+  <tabstop>bttn_browse</tabstop>
+  <tabstop>bttn_close</tabstop>
+  <tabstop>bttn_save_password</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>AccountPage</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>465</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_browse</sender>
+   <signal>clicked()</signal>
+   <receiver>AccountPage</receiver>
+   <slot>onChangeAvatar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttnGrp_categories</sender>
+   <signal>buttonToggled(int,bool)</signal>
+   <receiver>zstack</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>720</x>
+     <y>447</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_edit_password</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pass_edit_form</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>570</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>563</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_edit_password</sender>
+   <signal>clicked()</signal>
+   <receiver>input_password_current</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>690</x>
+     <y>562</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>624</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_edit_password</sender>
+   <signal>clicked()</signal>
+   <receiver>bttn_edit_password</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>709</x>
+     <y>568</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>673</x>
+     <y>557</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_edit_password</sender>
+   <signal>clicked()</signal>
+   <receiver>bttn_cancel_password</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>770</x>
+     <y>561</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>816</x>
+     <y>563</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_edit_password</sender>
+   <signal>clicked()</signal>
+   <receiver>bttn_save_password</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>652</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>584</x>
+     <y>557</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel_password</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pass_edit_form</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>839</x>
+     <y>565</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>824</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel_password</sender>
+   <signal>clicked()</signal>
+   <receiver>bttn_save_password</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>552</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>586</x>
+     <y>561</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel_password</sender>
+   <signal>clicked()</signal>
+   <receiver>bttn_edit_password</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>797</x>
+     <y>558</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>733</x>
+     <y>546</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel_password</sender>
+   <signal>clicked()</signal>
+   <receiver>bttn_cancel_password</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>849</x>
+     <y>558</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>859</x>
+     <y>551</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_edit_password</sender>
+   <signal>clicked()</signal>
+   <receiver>input_confirmation</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>546</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>692</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_edit_password</sender>
+   <signal>clicked()</signal>
+   <receiver>input_password_new</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>734</x>
+     <y>548</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>673</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel_password</sender>
+   <signal>clicked()</signal>
+   <receiver>input_confirmation</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>807</x>
+     <y>554</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>788</x>
+     <y>437</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel_password</sender>
+   <signal>clicked()</signal>
+   <receiver>input_password_new</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>803</x>
+     <y>552</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>744</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_edit_password</sender>
+   <signal>clicked()</signal>
+   <receiver>check_showPassword</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>733</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>817</x>
+     <y>493</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel_password</sender>
+   <signal>clicked()</signal>
+   <receiver>check_showPassword</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>812</x>
+     <y>557</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>817</x>
+     <y>493</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_country</sender>
+   <signal>currentCountryInfoChanged(CountryInfo)</signal>
+   <receiver>input_phone</receiver>
+   <slot>setCodeFromCountryInfo(CountryInfo)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>580</x>
+     <y>428</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>597</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>bttn_cancel_password</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>955</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>862</x>
+     <y>558</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>bttn_save_password</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>951</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>554</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>input_confirmation</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>897</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>806</x>
+     <y>438</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>input_password_new</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>849</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>706</x>
+     <y>406</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>check_showPassword</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>763</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>817</x>
+     <y>493</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_password_current</sender>
+   <signal>focused()</signal>
+   <receiver>input_password_current</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>796</x>
+     <y>366</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>757</x>
+     <y>366</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_upload_file</sender>
+   <signal>clicked()</signal>
+   <receiver>AccountPage</receiver>
+   <slot>uploadDocument()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>791</x>
+     <y>492</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>711</x>
+     <y>591</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_apply</sender>
+   <signal>clicked()</signal>
+   <receiver>AccountPage</receiver>
+   <slot>onChangeContacts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>682</x>
+     <y>555</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>bttn_remove_file_3</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>635</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>bttn_remove_file_2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>763</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>571</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>bttn_remove_file_1</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>544</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>507</x>
+     <y>496</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_email</sender>
+   <signal>focused()</signal>
+   <receiver>imsg_email</receiver>
+   <slot>resetCurrentMsgIndex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>651</x>
+     <y>359</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>645</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_email</sender>
+   <signal>correctStateUpdated(bool)</signal>
+   <receiver>header_edit_contacts</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>687</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>689</x>
+     <y>328</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_confirmation</sender>
+   <signal>requestPasswordLineEdit()</signal>
+   <receiver>input_password_new</receiver>
+   <slot>onRequested()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>817</x>
+     <y>460</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>649</x>
+     <y>404</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_password_current</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>input_password_current</receiver>
+   <slot>updateCorrectState()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>696</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>732</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_password_current</sender>
+   <signal>focused()</signal>
+   <receiver>imsg_incorrect_password</receiver>
+   <slot>resetCurrentMsgIndex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>778</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>777</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_password_new</sender>
+   <signal>focused()</signal>
+   <receiver>imsg_incorrect_password_2</receiver>
+   <slot>resetCurrentMsgIndex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>759</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>423</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_confirmation</sender>
+   <signal>focused()</signal>
+   <receiver>imsg_mismatch</receiver>
+   <slot>resetCurrentMsgIndex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>663</x>
+     <y>444</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>817</x>
+     <y>476</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_save_password</sender>
+   <signal>clicked()</signal>
+   <receiver>AccountPage</receiver>
+   <slot>onApplyPassword()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>597</x>
+     <y>558</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_phone</sender>
+   <signal>focused()</signal>
+   <receiver>imsg_incorrect_phone</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>623</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>578</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AccountPage</sender>
+   <signal>initialized()</signal>
+   <receiver>imsg_incorrect_phone</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>946</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>617</x>
+     <y>414</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_close</sender>
+   <signal>clicked()</signal>
+   <receiver>AccountPage</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>933</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>979</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReject</sender>
+   <signal>triggered()</signal>
+   <receiver>AccountPage</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>initialized()</signal>
+  <slot>resetAllPages()</slot>
+  <slot>onChangeAvatar()</slot>
+  <slot>uploadDocument()</slot>
+  <slot>onChangeContacts()</slot>
+  <slot>onApplyPassword()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bttnGrp_verificationFiles">
+   <property name="exclusive">
+    <bool>false</bool>
+   </property>
+  </buttongroup>
+  <buttongroup name="bttnGrp_categories"/>
+ </buttongroups>
+</ui>

@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TableSettings</class>
+ <widget class="QDialog" name="TableSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1002</width>
+    <height>626</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1002</width>
+    <height>626</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1002</width>
+    <height>626</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #191919;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,0,0">
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item alignment="Qt::AlignTop">
+    <widget class="QFrame" name="header">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>38</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>38</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+    
+	image: url(:/textures/game/icon_settings.png);
+    image-position: left;
+    padding-left: 10px;
+    padding-top: 5px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1">
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <property name="leftMargin">
+       <number>40</number>
+      </property>
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+       <widget class="QLabel" name="title_tableSettings">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #b3c3d3;
+    
+	font: 600 18px &quot;Arial Rounded MT Bold&quot;;
+}</string>
+        </property>
+        <property name="text">
+         <string>@Title_tableSettings</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+       <widget class="QLabel" name="about_tableSettings">
+        <property name="minimumSize">
+         <size>
+          <width>500</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+font: 600 12px &quot;Open Sans&quot;;
+color: #b0bec5;
+}</string>
+        </property>
+        <property name="text">
+         <string>@about_tableSettings.</string>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+    <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>996</width>
+       <height>130</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>996</width>
+       <height>130</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+    
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:1 rgba(34, 42, 48, 255));
+border-top: 1px solid #455a64
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QComboBox" name="comboBox_theme">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>304</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>304</width>
+        <height>22</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>304</width>
+        <height>22</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox::drop-down {
+
+	background-image: url(:/textures/Common/icons/arrow_down.png);
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-origin: margin;
+    min-height: 20px;
+    max-height: 20px;
+    min-width: 20px;
+    max-width: 20px;
+
+}
+
+QComboBox::drop-down:open {
+    /*background-position:right;*/
+    top: 1px;
+}
+
+QComboBox {
+    padding:2px;
+    border: 1px solid #191919;
+    border-radius: 3px;
+	font: 12px &quot;Open Sans&quot;;
+	color: rgba(220, 231, 237, 220);
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 71, 78, 255), stop:0.498 rgba(54, 71, 78, 255), stop:0.502 rgba(24, 24, 24, 255), stop:1 rgba(24, 24, 24, 255));
+
+
+}
+ QComboBox:hover {
+ border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(69, 90, 100, 255), stop:0.498 rgba(69, 90, 100, 255), stop:0.502 rgba(24, 24, 24, 255), stop:1 rgba(24, 24, 24, 255));
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(84, 122, 120, 255), stop:0.380682 rgba(64, 113, 95, 255), stop:1 rgba(76, 94, 108, 25));
+
+color: rgba(255, 255, 255, 155);
+
+}
+QComboBox:focus {    
+    border: 1px solid #00aeef;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(84, 122, 120, 255), stop:0.380682 rgba(64, 113, 95, 255), stop:1 rgba(76, 94, 108, 255));
+}
+
+
+QComboBox:!open {    
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+}
+QComboBox::drop-down {
+    width: 20px;
+}
+QComboBox:open {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(69, 89, 99, 255), stop:1 rgba(34, 43, 49, 255));
+
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 1px;
+    padding-left: 2px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #536f7a;
+color: #191919;
+    border: 2px solid #191919;
+border-radius: 3px;
+    selection-background-color: #cbd6da;
+min-width: 276px;
+	selection-color: black;
+margin: -1px;
+outline:0;
+}
+</string>
+      </property>
+      <property name="maxVisibleItems">
+       <number>23</number>
+      </property>
+      <item>
+       <property name="text">
+        <string notr="true">default</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>blue</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_applyTo">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>304</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>304</width>
+        <height>22</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>304</width>
+        <height>22</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox::drop-down {
+
+	background-image: url(:/textures/Common/icons/arrow_down.png);
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-origin: margin;
+    min-height: 20px;
+    max-height: 20px;
+    min-width: 20px;
+    max-width: 20px;
+
+}
+
+QComboBox::drop-down:open {
+    /*background-position:right;*/
+    top: 1px;
+}
+
+QComboBox {
+    padding:2px;
+    border: 1px solid #191919;
+    border-radius: 3px;
+	font: 12px &quot;Open Sans&quot;;
+	color: rgba(220, 231, 237, 220);
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 71, 78, 255), stop:0.498 rgba(54, 71, 78, 255), stop:0.502 rgba(24, 24, 24, 255), stop:1 rgba(24, 24, 24, 255));
+
+
+}
+ QComboBox:hover {
+ border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(69, 90, 100, 255), stop:0.498 rgba(69, 90, 100, 255), stop:0.502 rgba(24, 24, 24, 255), stop:1 rgba(24, 24, 24, 255));
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(84, 122, 120, 255), stop:0.380682 rgba(64, 113, 95, 255), stop:1 rgba(76, 94, 108, 25));
+
+color: rgba(255, 255, 255, 155);
+
+}
+QComboBox:focus {    
+    border: 1px solid #00aeef;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(84, 122, 120, 255), stop:0.380682 rgba(64, 113, 95, 255), stop:1 rgba(76, 94, 108, 255));
+}
+
+
+QComboBox:!open {    
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+}
+QComboBox::drop-down {
+    width: 20px;
+}
+QComboBox:open {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(69, 89, 99, 255), stop:1 rgba(34, 43, 49, 255));
+
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 1px;
+    padding-left: 2px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #536f7a;
+color: #191919;
+    border: 2px solid #191919;
+border-radius: 3px;
+    selection-background-color: #cbd6da;
+min-width: 276px;
+	selection-color: black;
+margin: -1px;
+outline:0;
+}
+</string>
+      </property>
+      <property name="currentText">
+       <string>@applyTo_thisTable</string>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <property name="maxVisibleItems">
+       <number>23</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>@applyTo_cashes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>@applyTo_tourns</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>@applyTo_all</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>@applyTo_thisTable</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="msg_applyTo">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+font: 11px &quot;Open Sans&quot;;
+color: #b0bec5;
+}</string>
+      </property>
+      <property name="text">
+       <string>@msg_applyTo</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="msg_theme">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+font: 11px &quot;Open Sans&quot;;
+color: #b0bec5;
+}</string>
+      </property>
+      <property name="text">
+       <string>@msg_theme</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>10</y>
+        <width>590</width>
+        <height>117</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border: none;
+	background-color: transparent;
+    outline: 0;
+ background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right top;    
+	background-image: url(:/textures/game/settingsComboBox.png);
+ subcontrol-position: right;
+}
+
+QComboBox::drop-down {
+    width: 82px;
+    border: none;
+	background-color: transparent;
+    subcontrol-position: right;
+}
+
+QComboBox:pressed {
+    background-position: right bottom;
+}
+
+QComboBox QAbstractItemView { 
+    
+	selection-color: transparent;
+	selection-background-color: rgba(0, 88, 167, 10);
+    background-color: #263238;
+    border: 1px solid #a0b7c3;
+    border-radius: 4px;
+    padding-left: 9px;
+    padding-top: 9px;
+    outline: 0;
+}
+
+QComboBox QAbstractItemView::item {
+    outline: 0;
+    border: 1px solid #191919;
+    border-radius: 1px;
+
+}
+QComboBox QAbstractItemView::item:selected{
+    outline: 0;
+    border: 4px solid #191919;
+    border-radius: 4px;
+}
+/*
+QComboBox QAbstractItemView::item:selected {
+    icon: none;
+	background-image: url(:/textures/game/selected_box.png);
+}*/
+
+QLabel {
+    color: #ffffff;
+    font: 11px &quot;Open Sans&quot;;
+}
+</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>10</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>5</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="bttn_addFeltColor">
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3" alignment="Qt::AlignHCenter|Qt::AlignBottom">
+        <widget class="QLabel" name="label_Bg">
+         <property name="text">
+          <string>@label_Bg</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5" alignment="Qt::AlignHCenter|Qt::AlignBottom">
+        <widget class="QLabel" name="label_FrontDeck">
+         <property name="text">
+          <string>@label_FrontDeck</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="7" alignment="Qt::AlignHCenter|Qt::AlignBottom">
+        <widget class="QLabel" name="label_BackDeck">
+         <property name="text">
+          <string>@label_BackDeck</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="bttn_addBackground">
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QPushButton" name="bttn_addFrontDeck">
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QComboBox" name="comboBox_feltColor">
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="maxVisibleItems">
+          <number>6</number>
+         </property>
+         <property name="maxCount">
+          <number>14</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContents</enum>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" alignment="Qt::AlignHCenter|Qt::AlignBottom">
+        <widget class="QLabel" name="label_FeltColor">
+         <property name="text">
+          <string>@label_FeltColor</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="6">
+        <widget class="QPushButton" name="bttn_addBackDeck">
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" colspan="2">
+        <widget class="QComboBox" name="comboBox_background">
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="maxVisibleItems">
+          <number>6</number>
+         </property>
+         <property name="maxCount">
+          <number>14</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContents</enum>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4" colspan="2">
+        <widget class="QComboBox" name="comboBox_frontDeck">
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractItemView::item:selected {
+margin: 3px;
+margin-top: 4px;
+border: 3px solid rgba(0, 0, 0, 255);
+border-radius: 5px;
+}
+
+QAbstractItemView::item {
+margin: 5px;
+margin-bottom: 6px;
+border: 1px solid rgba(0, 0, 0, 255);
+border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="currentIndex">
+          <number>-1</number>
+         </property>
+         <property name="maxVisibleItems">
+          <number>6</number>
+         </property>
+         <property name="maxCount">
+          <number>14</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContents</enum>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>52</width>
+           <height>71</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="6" colspan="2">
+        <widget class="QComboBox" name="comboBox_backDeck">
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractItemView::item:selected {
+margin: 3px;
+border: 3px solid rgba(0, 0, 0, 255);
+border-radius: 5px;
+}
+
+QAbstractItemView::item {
+margin:4px;
+margin-top: 3px;
+margin-left: 3px;
+border: 1px solid rgba(0, 0, 0, 255);
+border-radius: 5px;
+}
+</string>
+         </property>
+         <property name="maxVisibleItems">
+          <number>6</number>
+         </property>
+         <property name="maxCount">
+          <number>14</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContents</enum>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <property name="leftMargin">
+      <number>2</number>
+     </property>
+     <property name="rightMargin">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="left_part">
+       <property name="minimumSize">
+        <size>
+         <width>498</width>
+         <height>402</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>498</width>
+         <height>422</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#left_part {
+    border: 1px solid #191919;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,1">
+        <property name="spacing">
+         <number>1</number>
+        </property>
+        <property name="leftMargin">
+         <number>1</number>
+        </property>
+        <property name="topMargin">
+         <number>1</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item alignment="Qt::AlignTop">
+         <widget class="QLabel" name="title_previous_view">
+          <property name="minimumSize">
+           <size>
+            <width>498</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>498</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border: 1px solid #677b86;
+border-left color: #455962;
+border-right: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(49, 61, 66, 255), stop:0.499 rgba(49, 61, 66, 255), stop:0.501 rgba(55, 71, 79, 255), stop:1 rgba(55, 71, 79, 255));
+border-bottom: none;
+color: #e9ecf1;
+font: 600 18px &quot;Arial Rounded MT Bold&quot;;
+}</string>
+          </property>
+          <property name="text">
+           <string>@title_previous_view</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QLabel" name="preview_previous">
+          <property name="minimumSize">
+           <size>
+            <width>498</width>
+            <height>246</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>498</width>
+            <height>246</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border: 1px solid #455a64;
+}</string>
+          </property>
+          <property name="pixmap">
+           <pixmap>:/textures/tableSettingsCap1.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QLabel" name="title_chat_messages">
+          <property name="minimumSize">
+           <size>
+            <width>498</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>498</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border: 1px solid #677b86;
+border-left color: #455962;
+border-right: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(49, 61, 66, 255), stop:0.499 rgba(49, 61, 66, 255), stop:0.501 rgba(55, 71, 79, 255), stop:1 rgba(55, 71, 79, 255));
+border-bottom: none;
+color: #e9ecf1;
+font: 600 18px &quot;Arial Rounded MT Bold&quot;;
+}</string>
+          </property>
+          <property name="text">
+           <string>@title_chat_messages</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QFrame" name="frame_2">
+          <property name="minimumSize">
+           <size>
+            <width>498</width>
+            <height>88</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>498</width>
+            <height>88</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #263238;
+    border-left: 1px solid #455964;
+}
+QCheckBox {
+	font: 12px &quot;Arial Rounded MT Bold&quot;;
+color: #ffffff;
+padding-bottom: 11px;
+spacing: 2px;
+}
+QCheckBox::indicator {
+    border: 1px solid rgba(25, 25, 25,2);
+    border-radius: 3px;
+    width: 18px;
+	height: 18px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    
+    
+	background-image: url(:/textures/game/settingsCheckBox.png);
+    subcontrol-origin: border;
+    subcontrol-position: left top;
+}
+
+QCheckBox::indicator:hover {
+    background-position: center;
+}
+QCheckBox::indicator:pressed {
+    background-position: right;
+}
+
+QCheckBox::indicator:checked {
+	image: url(:/textures/game/icon_check_green.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+    
+	image: url(:/textures/game/icon_check_pressed.png);
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QCheckBox" name="bttn_showDealerMsgs">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>@bttn_showDealerMsgs</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_flags</string>
+             </attribute>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="bttn_showPlayersMsgs">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>@bttn_showPlayersMsgs</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_flags</string>
+             </attribute>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="bttn_displayEmoticone">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>@bttn_displayEmoticone</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_flags</string>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="right_part">
+       <property name="minimumSize">
+        <size>
+         <width>498</width>
+         <height>402</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>498</width>
+         <height>422</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#right_part {
+    border: 1px solid #191919;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,0,1">
+        <property name="spacing">
+         <number>1</number>
+        </property>
+        <property name="leftMargin">
+         <number>1</number>
+        </property>
+        <property name="topMargin">
+         <number>1</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item alignment="Qt::AlignTop">
+         <widget class="QLabel" name="title_next_view">
+          <property name="minimumSize">
+           <size>
+            <width>498</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>498</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border: 1px solid #677b86;
+border-left color: #455962;
+border-right: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(49, 61, 66, 255), stop:0.499 rgba(49, 61, 66, 255), stop:0.501 rgba(55, 71, 79, 255), stop:1 rgba(55, 71, 79, 255));
+border-bottom: none;
+color: #e9ecf1;
+font: 600 18px &quot;Arial Rounded MT Bold&quot;;
+}</string>
+          </property>
+          <property name="text">
+           <string>@title_next_view</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="GameTablePreview" name="preview_next">
+          <property name="minimumSize">
+           <size>
+            <width>498</width>
+            <height>246</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>498</width>
+            <height>246</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border: 1px solid #455a64;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QLabel" name="msg_show_hands">
+          <property name="minimumSize">
+           <size>
+            <width>498</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>498</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border: 1px solid #677b86;
+border-left color: #455962;
+border-right: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(49, 61, 66, 255), stop:0.499 rgba(49, 61, 66, 255), stop:0.501 rgba(55, 71, 79, 255), stop:1 rgba(55, 71, 79, 255));
+border-bottom: none;
+color: #e9ecf1;
+font: 600 18px &quot;Arial Rounded MT Bold&quot;;
+}</string>
+          </property>
+          <property name="text">
+           <string>@msg_show_hands</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QFrame" name="frame_3">
+          <property name="minimumSize">
+           <size>
+            <width>498</width>
+            <height>88</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>498</width>
+            <height>88</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #263238;
+    border-left: 1px solid #455964;
+}
+QCheckBox {
+	font: 12px &quot;Arial Rounded MT Bold&quot;;
+color: #ffffff;
+padding-bottom: 11px;
+spacing: 2px;
+}
+QCheckBox::indicator {
+    border: 1px solid rgba(25, 25, 25,2);
+    border-radius: 3px;
+    width: 18px;
+	height: 18px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    
+    
+	background-image: url(:/textures/game/settingsCheckBox.png);
+    subcontrol-origin: border;
+    subcontrol-position: left top;
+}
+
+QCheckBox::indicator:hover {
+    background-position: center;
+}
+QCheckBox::indicator:pressed {
+    background-position: right;
+}
+
+QCheckBox::indicator:checked {
+	image: url(:/textures/game/icon_check_green.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+	image: url(:/textures/game/icon_check_pressed.png);
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QCheckBox" name="bttn_dropLooserHand">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>@bttn_dropLooserHand</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_flags</string>
+             </attribute>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="bttn_dontShowWinningHand">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>@bttn_dontShowWinningHand</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_flags</string>
+             </attribute>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="bttn_dontShowLastFold">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>@bttn_dontShowLastFold</string>
+             </property>
+             <attribute name="buttonGroup">
+              <string notr="true">bttnGrp_flags</string>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item alignment="Qt::AlignTop">
+    <widget class="QFrame" name="bottom_frame">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>48</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>48</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+border: 1px solid #677b86;
+border-left color: #455962;
+border-right: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(49, 61, 66, 255), stop:0.499 rgba(49, 61, 66, 255), stop:0.501 rgba(55, 71, 79, 255), stop:1 rgba(55, 71, 79, 255));
+border-bottom: none;
+background-color: #263238;
+}
+
+QAbstractButton {
+    color: #fafafa;
+    font: 14px &quot;Open Sans&quot;;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="bttn_apply">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>134</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>134</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+border: 1px solid #191919;
+border-radius: 3px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.94 rgba(0, 199, 83, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+QPushButton:pressed
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+QPushButton:disabled {
+    border: 1px solid rgba(25, 25, 25, 166);
+    color: rgba(250, 250, 250, 166);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 166), stop:0.94 rgba(0, 199, 83, 166), stop:0.95 rgba(0, 250, 158, 166), stop:1 rgba(0, 250, 158, 166));
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>@bttn_OK</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="bttn_cancel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>134</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>134</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.93 rgba(69, 89, 99, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+border: 1px solid black;
+border-radius: 3px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(205, 55, 33, 215), stop:0.33 rgba(69, 24, 22, 225), stop:0.94 rgba(69, 89, 99, 255), stop:0.95 rgba(121, 131, 150, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QPushButton:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(21, 13, 14, 255), stop:0.93 rgba(3, 4, 2, 255), stop:0.95 rgba(33, 36, 41, 255), stop:1 rgba(41, 41, 44, 255));
+}</string>
+        </property>
+        <property name="text">
+         <string>@bttn_cancel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GameTablePreview</class>
+   <extends>QFrame</extends>
+   <header>widgets/GameTablePreview.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setBackgroundColor(QColor)</slot>
+    <slot>setFeltColor(QColor)</slot>
+    <slot>setFrontDeck(QPixmap)</slot>
+    <slot>setBackDeck(QPixmap)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bttn_apply</sender>
+   <signal>clicked()</signal>
+   <receiver>TableSettings</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>405</x>
+     <y>615</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>370</x>
+     <y>670</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>TableSettings</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>584</x>
+     <y>600</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>590</x>
+     <y>666</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="bttnGrp_flags">
+   <property name="exclusive">
+    <bool>false</bool>
+   </property>
+  </buttongroup>
+ </buttongroups>
+</ui>

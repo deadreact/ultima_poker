@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AvatarsList</class>
+ <widget class="AvatarsListWidget" name="AvatarsList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>841</width>
+    <height>132</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>840</width>
+    <height>132</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>846</width>
+    <height>132</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">[*]</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">.QFrame {
+    border: 1px solid red;
+	image: url(:/textures/Common/icons/icon_avatar_cap.png);
+    margin: 21px 16px 21px 16px;
+}</string>
+  </property>
+  <property name="windowFilePath">
+   <string notr="true">:/textures/__avatars/</string>
+  </property>
+  <widget class="ns_widget::ProfilePicture" name="item_0">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>120</width>
+     <height>132</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="backgroundColor">
+    <color alpha="55">
+     <red>0</red>
+     <green>0</green>
+     <blue>155</blue>
+    </color>
+   </property>
+   <property name="opacity">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="shape">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="ns_widget::ProfilePicture" name="item_1">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>0</y>
+     <width>120</width>
+     <height>132</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="backgroundColor">
+    <color alpha="55">
+     <red>0</red>
+     <green>0</green>
+     <blue>155</blue>
+    </color>
+   </property>
+   <property name="shape">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="ns_widget::ProfilePicture" name="item_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>0</y>
+     <width>120</width>
+     <height>132</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="backgroundColor">
+    <color alpha="55">
+     <red>0</red>
+     <green>0</green>
+     <blue>155</blue>
+    </color>
+   </property>
+   <property name="shape">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="ns_widget::ProfilePicture" name="item_3">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>0</y>
+     <width>120</width>
+     <height>132</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QFrame {
+    margin:  6px 1px 6px 1px;
+}</string>
+   </property>
+   <property name="backgroundColor">
+    <color alpha="55">
+     <red>0</red>
+     <green>0</green>
+     <blue>155</blue>
+    </color>
+   </property>
+   <property name="shape">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="ns_widget::ProfilePicture" name="item_4">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>0</y>
+     <width>120</width>
+     <height>132</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="backgroundColor">
+    <color alpha="55">
+     <red>0</red>
+     <green>0</green>
+     <blue>155</blue>
+    </color>
+   </property>
+   <property name="shape">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="ns_widget::ProfilePicture" name="item_5">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>0</y>
+     <width>120</width>
+     <height>132</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="backgroundColor">
+    <color alpha="55">
+     <red>0</red>
+     <green>0</green>
+     <blue>155</blue>
+    </color>
+   </property>
+   <property name="shape">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="ns_widget::ProfilePicture" name="item_6">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>0</y>
+     <width>120</width>
+     <height>132</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>132</height>
+    </size>
+   </property>
+   <property name="backgroundColor">
+    <color alpha="55">
+     <red>0</red>
+     <green>0</green>
+     <blue>155</blue>
+    </color>
+   </property>
+   <property name="shape">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_widget::ProfilePicture</class>
+   <extends>EntityWidget</extends>
+   <header>widgets/widget_ProfilePicture.h</header>
+   <container>1</container>
+   <slots>
+    <signal>avatarChanged(Avatar*)</signal>
+    <signal>iconChanged(QIcon)</signal>
+    <slot>setAvatar(Avatar*)</slot>
+    <slot>setViewport(QRect)</slot>
+    <slot>setIcon(QIcon)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>AvatarsListWidget</class>
+   <extends>QWidget</extends>
+   <header>views/AvatarsListWidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>avatarClicked(Avatar*)</signal>
+    <signal>avatarClicked(QPixmap)</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

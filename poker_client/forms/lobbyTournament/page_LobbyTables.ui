@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LobbyTables</class>
+ <widget class="QWidget" name="LobbyTables">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>346</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>396</width>
+    <height>346</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>396</width>
+    <height>346</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+    outline: 0;
+}
+
+QTableView, QTableView::item, QTableView * {
+    outline: 0;
+}
+
+QTableView
+{
+    background-color: #222a30;
+    alternate-background-color: #37474f;
+    gridline-color: rgba(0, 220, 0, 10);
+}
+QTableView::item:selected {
+    
+    background-color: #cfd8dc;
+    color: #191919;
+}
+QTableView::item {
+    font: 11px &quot;Open Sans&quot;;
+    color: #fafafa;
+}
+
+QHeaderView::section
+{
+     border-top: 1px solid #455a64;
+border-left: 1px solid #455a64;
+border-bottom: 1px solid #191919;
+border-right: 1px solid #191919;
+
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+}
+
+QHeaderView::section:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QHeaderView::section:pressed{
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(1, 1, 1, 255), stop:0.162011 rgba(45, 45, 45, 255), stop:0.49162 rgba(19, 19, 19, 255), stop:1 rgba(37, 37, 37, 255));
+} *{outline: 0;}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTableView" name="tableView">
+     <property name="styleSheet">
+      <string notr="true">QTableView {
+    border: none;
+    border-bottom: 1px solid #191919;
+    alternate-background-color: #37474f;
+    
+	background-color: rgb(34, 42, 48);
+	selection-background-color: rgb(207, 216, 220);
+    font-size: 11px;
+    text-align: center;
+}
+
+QTableView::item {
+    
+}
+
+QHeaderView {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+ border-bottom: 1px solid #191919;
+}
+QHeaderView:section {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+    height: 24px;
+    border: none;
+    border-right: 1px solid #191919;
+    border-left: 1px solid #455a64;
+ border-bottom: 1px solid #191919;
+color: #b0bec5;
+font: 11px &quot;Open Sans&quot;;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="cornerButtonEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>98</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>30</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>16</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>16</number>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+    background-repeat: no-repeat;
+	background-image: url(:/textures/game/minitable2.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #222a30;
+     border-top: 1px solid #34424a;
+}</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="ns_widget::MiniTable" name="minitbl_container" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>320</width>
+          <height>162</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>396</width>
+          <height>162</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ns_widget::MiniTable</class>
+   <extends>QWidget</extends>
+   <header>widgets/widget_MiniTable.h</header>
+   <container>1</container>
+   <slots>
+    <slot>onStatisticCurrentItemChanged(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BuyIn</class>
+ <widget class="QDialog" name="BuyIn">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>376</width>
+    <height>384</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>376</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>376</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>376</width>
+    <height>314</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>@WndTitle_BuyIn</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	border: none;
+	background-color: #191919;
+}
+
+QAbstractButton {
+	font: 550 14px &quot;Open Sans&quot;;
+    color: rgba(250, 250, 250, 250);
+}
+QAbstractButton:pressed {
+    padding-top: 2px;
+    color: rgba(250, 250, 250, 125);
+}
+
+
+QLineEdit {
+    padding-left: 3px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    
+	font: 12px &quot;Open Sans&quot;;
+}
+
+
+QLabel {
+	color: rgba(250, 250, 250, 250);
+	font: 12px &quot;Open Sans&quot;;
+}</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,1">
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame_header">
+     <property name="minimumSize">
+      <size>
+       <width>376</width>
+       <height>69</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>376</width>
+       <height>69</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>13</number>
+      </property>
+      <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+       <widget class="QLabel" name="tableName">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    font: 600 18px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+        </property>
+        <property name="text">
+         <string notr="true">Table Name</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+       <widget class="QLabel" name="title">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    font: 600 18px &quot;Open Sans&quot;;
+    color: #fafafa;
+}</string>
+        </property>
+        <property name="text">
+         <string notr="true">$0.01/$0.02 LimType GameType</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackOfPages">
+     <property name="minimumSize">
+      <size>
+       <width>376</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>376</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QStackedWidget &gt; *{
+    border: none;
+background-color: transparent;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_main">
+      <property name="minimumSize">
+       <size>
+        <width>376</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>376</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#page_main {
+    border-top: 1px solid #455a64;
+    background-color: #37474f;
+}
+#msg_notEnoughMoney, #msg_ratMode {
+    color: #e53935;
+     font:550 11px &quot;Open Sans&quot;;
+    margin-left: 15px;
+    margin-top: 2px;
+    padding-top: -5px;
+    padding-left: 15px;
+    padding-right: 15px;
+	background-image: url(:/textures/Common/icons/icon_attention.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-origin: border;
+}
+
+#msg_ratMode {
+    color: #fa6623;
+font-weight: 600;
+background-image: url(:/textures/Common/icons/wa.png);
+ padding-left: 15px;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0,1,1,0,0">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignTop">
+        <widget class="QWidget" name="widget_playersMoney" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>376</width>
+           <height>42</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>376</width>
+           <height>42</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,1">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="msg_gotmoney">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>42</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>42</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 14px &quot;Open Sans&quot;;
+    color: #b0bec5;
+    padding-left: 15px;
+    border: none;
+    border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}
+
+QLabel:disabled {
+    color: rgba(176, 190, 197, 100);
+}</string>
+            </property>
+            <property name="text">
+             <string>@msg_gotmoney:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="money_got">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>42</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>42</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font: 14px &quot;Open Sans&quot;;
+    color: #fafafa;
+    border: none;
+    border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+padding-right: 15px;
+}
+
+QLabel:disabled {
+    color: rgba(250, 250, 250, 100);
+}</string>
+            </property>
+            <property name="text">
+             <string notr="true">$0.00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="controls" native="true">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>1</number>
+          </property>
+          <property name="topMargin">
+           <number>1</number>
+          </property>
+          <property name="rightMargin">
+           <number>1</number>
+          </property>
+          <property name="bottomMargin">
+           <number>1</number>
+          </property>
+          <item alignment="Qt::AlignTop">
+           <widget class="QWidget" name="widget_spinBoxControls" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,0">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>1</number>
+             </property>
+             <property name="rightMargin">
+              <number>15</number>
+             </property>
+             <item alignment="Qt::AlignBottom">
+              <widget class="QLabel" name="msg_choosesum">
+               <property name="minimumSize">
+                <size>
+                 <width>290</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>290</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    font: 14px &quot;Open Sans&quot;;
+    color: #b0bec5;
+    padding-left: 15px;
+}
+
+QLabel:disabled {
+    color: rgba(176, 190, 197, 100);
+}</string>
+               </property>
+               <property name="text">
+                <string>@msg_choosesum:</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+              <widget class="MoneySpinBox" name="money_buyin">
+               <property name="minimumSize">
+                <size>
+                 <width>68</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>68</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QAbstractSpinBox {
+    border-radius: 2px;
+    font: 14px &quot;Open Sans&quot;;
+    color: #191919;
+}
+QAbstractSpinBox:hover {
+ border: 1px inset rgba(50, 50, 50, 200);
+}
+QAbstractSpinBox:focus {
+ border: 1px solid rgb(0, 170, 255);
+}
+
+QAbstractSpinBox:disabled {
+    background-color: rgba(255, 255, 255, 100);
+    color: rgba(0, 0, 0, 100);
+}</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+               <property name="accelerated">
+                <bool>true</bool>
+               </property>
+               <property name="showGroupSeparator" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="prefix">
+                <string notr="true">$</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QWidget" name="widget" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>60</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="leftMargin">
+              <number>15</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>15</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0">
+               <property name="spacing">
+                <number>2</number>
+               </property>
+               <property name="bottomMargin">
+                <number>2</number>
+               </property>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="min_ammount">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font: 600 14px &quot;Open Sans&quot;;
+    color: #fafafa;
+}
+
+QLabel:disabled {
+    color: rgba(250, 250, 250, 100);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">$2500</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                <widget class="QPushButton" name="bttn_min">
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{	
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(36, 45, 51, 255), stop:1 rgba(68, 89, 99, 255));
+border: 1px solid #191919;
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.498 rgba(25, 25, 25, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+border-radius: 4px;
+font: 600 14px &quot;Open Sans&quot;;
+color: #b0bec5;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(36, 75, 81, 255), stop:1 rgba(68, 89, 99, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(36, 45, 51, 255), stop:1 rgba(68, 89, 99, 255));
+	color: rgba(176, 190, 197, 128);
+}
+
+QAbstractButton:disabled {
+    color: rgba(176, 190, 197, 100);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 100), stop:1 rgba(69, 89, 99, 100));
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>@bttn_min</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item alignment="Qt::AlignBottom">
+              <widget class="MoneySlider" name="money_slider">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>208</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>208</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+
+QSlider::groove {
+border: 1px solid #263238;
+height: 14px;
+border-radius: 4px;
+padding: -3px 0px -3px 0px;
+}
+
+QSlider::handle {
+width: 32px;
+height: 12px;
+	border-image: url(:/textures/Common/handle.png);
+}
+
+QSlider::handle:hover {
+border-image: url(:/textures/Common/handle_hover.png);
+}
+
+QSlider::add-page {
+border: 1px solid #263238;
+border-radius: 4px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 50, 56, 255), stop:1 rgba(25, 25, 25, 255));
+}
+
+QSlider::sub-page {
+border: 1px solid #263238;
+border-radius: 4px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(1, 87, 155, 255), stop:1 rgba(0, 174, 239, 255));
+}
+
+/*DISABLED*/
+QSlider::groove:disabled {
+border: 1px solid rgba(38, 50, 56, 100);
+}
+
+QSlider::handle:disabled {
+border-image: url(:/textures/Common/handle_disabled.png);
+}
+
+QSlider::add-page:disabled {
+border: 1px solid #263238;
+border-radius: 4px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 55, 55, 255), stop:1 rgba(44, 44, 44, 255));
+}
+
+QSlider::sub-page:disabled {
+border: 1px solid #263238;
+border-radius: 4px;
+background-color: #777777;
+}
+</string>
+               </property>
+               <property name="value">
+                <number>99</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0">
+               <property name="spacing">
+                <number>2</number>
+               </property>
+               <property name="bottomMargin">
+                <number>2</number>
+               </property>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="max_ammount">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    font: 600 14px &quot;Open Sans&quot;;
+    color: #fafafa;
+}
+
+QLabel:disabled {
+    color: rgba(250, 250, 250, 100);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">$5000</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                <widget class="QPushButton" name="bttn_max">
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{	
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(36, 45, 51, 255), stop:1 rgba(68, 89, 99, 255));
+border: 1px solid #191919;
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.498 rgba(25, 25, 25, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+border-radius: 4px;
+font: 600 14px &quot;Open Sans&quot;;
+color: #b0bec5;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(36, 75, 81, 255), stop:1 rgba(68, 89, 99, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(36, 45, 51, 255), stop:1 rgba(68, 89, 99, 255));
+	color: rgba(176, 190, 197, 128);
+}
+
+QAbstractButton:disabled {
+    color: rgba(176, 190, 197, 100);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 100), stop:1 rgba(69, 89, 99, 100));
+border: 1px solid rgba(25, 25, 25, 100);
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 100), stop:0.498 rgba(25, 25, 25, 100), stop:0.502 rgba(69, 90, 100, 100), stop:1 rgba(69, 90, 100, 100));
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>@bttn_max</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="TextWidget" name="msg_ratMode">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="strings">
+          <stringlist notr="true"/>
+         </property>
+         <property name="text">
+          <string>@msg_rat_mode_%0_%1_%2_%1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="msg_notEnoughMoney">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@msg_notEnoughMoney.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignTop">
+        <widget class="QFrame" name="frame_rebuy">
+         <property name="minimumSize">
+          <size>
+           <width>376</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>376</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QFrame {
+    background-color: #37474f;
+    border-top: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <item alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QCheckBox" name="check_autorebuy">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+	font: 550 12px &quot;Open Sans&quot;;
+    color: rgba(250, 250, 250, 220);
+    spacing: 2px;
+    border: none;
+}
+QCheckBox::indicator {
+    subcontrol-position: left;
+    border: 1px solid black;
+    border-radius: 1px;
+    width: 10px;
+    height: 10px;
+    
+    background-color: rgba(250, 250, 250, 220);
+}
+
+QCheckBox::indicator:!checked:hover {
+background-color: rgba(250, 250, 250, 120);
+}
+
+QCheckBox::indicator:!checked:pressed, QCheckBox::indicator:checked:pressed {
+    margin-top: 1px;
+    background-color: rgba(0, 166, 81, 100);
+	background-image: url(:/textures/Common/icons/check1.png);
+}
+
+QCheckBox::indicator:checked {
+    background-color: rgba(0, 166, 81, 230);
+	background-image: url(:/textures/Common/icons/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+background-color: rgba(0, 166, 81, 255);
+}
+
+QCheckBox:disabled {
+    color: rgba(250, 250, 250, 100);
+}
+
+QCheckBox::indicator:disabled {
+    background-color: rgba(250, 250, 250, 100);
+    border-color: rgba(25, 25, 25, 100);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>@msg_rebuy</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignRight|Qt::AlignTop">
+           <widget class="QLabel" name="lnk_autorebuySettings">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="palette">
+             <palette>
+              <active>
+               <colorrole role="WindowText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Text">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="ButtonText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Link">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </active>
+              <inactive>
+               <colorrole role="WindowText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Text">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="ButtonText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="255">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Link">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="245">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </inactive>
+              <disabled>
+               <colorrole role="WindowText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="100">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Text">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="100">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="ButtonText">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="100">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+               <colorrole role="Link">
+                <brush brushstyle="SolidPattern">
+                 <color alpha="100">
+                  <red>0</red>
+                  <green>174</green>
+                  <blue>239</blue>
+                 </color>
+                </brush>
+               </colorrole>
+              </disabled>
+             </palette>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #00aeef;
+	font: 12px &quot;Open Sans&quot;;
+}
+QLabel:disabled {
+    color: rgba(0, 174, 239, 100);
+}</string>
+            </property>
+            <property name="text">
+             <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;google.com&quot;&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;%0&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="translatedString" stdset="0">
+             <string>@link_rebuy_setting</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="bottom_frame">
+         <property name="minimumSize">
+          <size>
+           <width>376</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>376</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(34, 42, 48, 255), stop:1 rgba(55, 71, 79, 255));
+	border-top: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.498 rgba(25, 25, 25, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>16</number>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>16</number>
+          </property>
+          <property name="bottomMargin">
+           <number>15</number>
+          </property>
+          <item alignment="Qt::AlignLeft|Qt::AlignBottom">
+           <widget class="QPushButton" name="bttn_apply">
+            <property name="minimumSize">
+             <size>
+              <width>126</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>126</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+border: 1px solid #191919;
+border-radius: 4px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.94 rgba(0, 199, 83, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.498 rgba(25, 25, 25, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+
+QPushButton:pressed
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+QPushButton:disabled {
+    border: 1px solid rgba(25, 25, 25, 166);
+    color: rgba(250, 250, 250, 166);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 166), stop:0.94 rgba(0, 199, 83, 166), stop:0.95 rgba(0, 250, 158, 166), stop:1 rgba(0, 250, 158, 166));
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>@bttn_buyin_%0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item alignment="Qt::AlignRight|Qt::AlignBottom">
+           <widget class="QPushButton" name="bttn_deposit">
+            <property name="minimumSize">
+             <size>
+              <width>126</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>126</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+border: 1px solid #191919;
+border-radius: 4px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(176, 76, 1, 255), stop:0.9 rgba(254, 182, 76, 255), stop:1 rgba(255, 248, 146, 255));
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.498 rgba(25, 25, 25, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(196, 116, 111, 255), stop:0.8 rgba(254, 182, 76, 255), stop:1 rgba(255, 248, 146, 255));
+}
+QPushButton:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(80, 49, 20, 255), stop:0.95 rgba(30, 21, 25, 255), stop:1 rgba(25, 22, 18, 255));
+}
+</string>
+            </property>
+            <property name="text">
+             <string>@bttn_deposit</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+      <zorder>widget_playersMoney</zorder>
+      <zorder>controls</zorder>
+      <zorder>bottom_frame</zorder>
+      <zorder>msg_notEnoughMoney</zorder>
+      <zorder>frame_rebuy</zorder>
+      <zorder>msg_ratMode</zorder>
+     </widget>
+     <widget class="QWidget" name="page_timeout">
+      <property name="styleSheet">
+       <string notr="true">#page_timeout {
+    border-top: 1px solid #455a64;
+    background-color: #37474f;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label">
+         <property name="minimumSize">
+          <size>
+           <width>262</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>262</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #fafafa;
+    font: 12px &quot;Open Sans&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>@text_timeout.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="reject_frame">
+         <property name="minimumSize">
+          <size>
+           <width>376</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>376</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(34, 42, 48, 255), stop:1 rgba(55, 71, 79, 255));
+	border-top: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.498 rgba(25, 25, 25, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>16</number>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>16</number>
+          </property>
+          <property name="bottomMargin">
+           <number>15</number>
+          </property>
+          <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+           <widget class="QPushButton" name="bttn_OK">
+            <property name="minimumSize">
+             <size>
+              <width>126</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>126</width>
+              <height>36</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+border: 1px solid #191919;
+border-radius: 4px;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.94 rgba(0, 199, 83, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.498 rgba(25, 25, 25, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+
+
+QPushButton:pressed
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+QPushButton:disabled {
+    border: 1px solid rgba(25, 25, 25, 166);
+    color: rgba(250, 250, 250, 166);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 166), stop:0.94 rgba(0, 199, 83, 166), stop:0.95 rgba(0, 250, 158, 166), stop:1 rgba(0, 250, 158, 166));
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>@bttn_OK</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="5" margin="10"/>
+ <pixmapfunction>ns_utildb::cached</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>TextWidget</class>
+   <extends>QLabel</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MoneySlider</class>
+   <extends>QSlider</extends>
+   <header location="global">widgets/MoneySlider.h</header>
+   <slots>
+    <signal>moneyChanged(Money)</signal>
+    <slot>setToMinimum()</slot>
+    <slot>setToMaximum()</slot>
+    <slot>setRange(Money,Money)</slot>
+    <slot>setMoney(Money)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>MoneySpinBox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>widgets/MoneySpinBox.h</header>
+   <slots>
+    <signal>moneyChanged(Money)</signal>
+    <slot>setMoney(Money)</slot>
+    <slot>setRange(Money,Money)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>bttn_apply</tabstop>
+  <tabstop>bttn_deposit</tabstop>
+  <tabstop>money_slider</tabstop>
+  <tabstop>bttn_max</tabstop>
+  <tabstop>check_autorebuy</tabstop>
+  <tabstop>money_buyin</tabstop>
+  <tabstop>bttn_min</tabstop>
+  <tabstop>bttn_OK</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>bttn_apply</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyIn</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>142</x>
+     <y>368</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_OK</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyIn</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>368</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>375</x>
+     <y>251</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BuyIn</sender>
+   <signal>enoughMoneyChanged(bool)</signal>
+   <receiver>controls</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BuyIn</sender>
+   <signal>enoughMoneyChanged(bool)</signal>
+   <receiver>bttn_apply</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>96</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_min</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyIn</receiver>
+   <slot>setToMinimum()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_max</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyIn</receiver>
+   <slot>setToMaximum()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>money_slider</sender>
+   <signal>moneyChanged(Money)</signal>
+   <receiver>BuyIn</receiver>
+   <slot>setMoney(Money)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-91</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BuyIn</sender>
+   <signal>enoughMoneyChanged(bool)</signal>
+   <receiver>msg_notEnoughMoney</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>false</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>false</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <signal>initialized()</signal>
+  <signal>enoughMoneyChanged(bool)</signal>
+  <slot>setToMaximum()</slot>
+  <slot>setToMinimum()</slot>
+  <slot>setMoney(Money)</slot>
+ </slots>
+</ui>

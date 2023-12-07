@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BetControls</class>
+ <widget class="EntityWidget" name="BetControls">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>334</width>
+    <height>69</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QAbstractSpinBox[theme=&quot;default&quot;] {
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(38, 39, 41, 250), stop:0.0768362 rgba(170, 175, 181, 255), stop:0.140113 rgba(224, 231, 239, 255), stop:0.887006 rgba(224, 231, 239, 255), stop:1 rgba(176, 180, 186, 252));
+    border: 1px solid #1b2326;
+    border-radius: 3px;
+    font: 15px &quot;Helvetica&quot;;
+    color: #242d33;
+}
+
+QAbstractSpinBox[theme=&quot;blue&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(38, 39, 51, 250), stop:0.076 rgba(170, 175, 231, 255), stop:0.14 rgba(224, 231, 239, 255), stop:0.887006 rgba(134, 181, 239, 255), stop:1 rgba(36, 70, 126, 252));
+    border: 1px solid #1b2326;
+    border-radius: 3px;
+    color: #242d33;
+font-size: 13px;
+}
+
+
+QAbstractSpinBox {
+    image-position: right;
+    padding-right: 4px;
+}
+
+QScrollBar:horizontal {  
+	background-color: transparent;
+border: none;
+    padding: 0px 18px 0px 18px;
+
+}
+
+QScrollBar::sub-page:horizontal {
+margin: 11px -4px 11px 6px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(253, 214, 145, 255), stop:1 rgba(111, 94, 63, 255));
+border-bottom: 1px solid #83abbe;
+border-top: 1px solid #191919;
+}
+
+
+QScrollBar::add-page:horizontal {
+
+margin: 11px 6px 11px -4px;
+border-bottom: 1px solid #83abbe;
+border-top: 1px solid #191919;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(36, 45, 51, 255), stop:1 rgba(25, 25, 25, 255));
+}
+
+QScrollBar::sub-line:horizontal {
+background-image: url(:/textures/game/btn_2x2_slider_1.png);
+subcontrol-position: left;
+
+}
+
+QScrollBar::add-line:horizontal {
+background-image: url(:/textures/game/btn_2x2_slider_0.png);
+subcontrol-position: right;
+
+}
+
+QScrollBar::sub-line:horizontal, QScrollBar::add-line:horizontal {
+ background-attachment: fixed;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-origin: border;
+    background-clip: content;
+    
+    width: 24px;
+    height: 24px;
+}
+QScrollBar::add-line:horizontal:hover, QScrollBar::sub-line:horizontal:hover {
+background-position: top right;
+}
+QScrollBar::add-line:horizontal:pressed, QScrollBar::sub-line:horizontal:pressed{
+background-position: bottom left;
+}
+QScrollBar::add-line:horizontal:disabled, QScrollBar::sub-line:horizontal:disabled {
+background-position: bottom right;
+}
+/*QScrollBar::left-arrow:horizontal {
+	background-image: url(:/textures/game/icon_btn_2x2_slider.png);
+background-position: left bottom;
+    width: 15px;
+    height: 13px;
+    left: -1px;
+   background-clip: content; 
+}
+
+QScrollBar::right-arrow:horizontal {
+	background-image: url(:/textures/game/icon_btn_2x2_slider.png);
+background-position: left top;
+    width: 15px;
+    height: 13px;
+    left: -1px;
+background-clip: content;
+}
+
+QScrollBar::right-arrow:horizontal:hover, QScrollBar::left-arrow:horizontal:hover {
+padding-left: 15px;    
+margin-left: -15px;
+}
+*/
+
+QScrollBar::handle:horizontal[theme=&quot;default&quot;] {
+	background-image: url(:/textures/game/btn_slider.png);
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-clip: margin;
+    border: none;
+    min-width:   28px;
+    min-height:  28px;
+    max-width:  28px;
+    max-height: 28px;
+}
+QScrollBar::handle:horizontal[theme=&quot;blue&quot;] {
+border-image: url(:/textures/nut1.png);
+margin: -1px;
+    min-width:   30px;
+    min-height:  28px;
+    max-width:  30px;
+    max-height: 28px;
+}
+QScrollBar::handle:hover:horizontal[theme=&quot;blue&quot;] {
+	border-image: url(:/textures/nut2.png);
+margin: 0px;
+    min-width:   28px;
+    min-height:  28px;
+    max-width:  28px;
+    max-height: 28px;
+}
+QScrollBar::handle:pressed:horizontal[theme=&quot;blue&quot;] {
+	border-image: url(:/textures/nut3.png);
+margin: 0px;
+    min-width:   28px;
+    min-height:  28px;
+    max-width:  28px;
+    max-height: 28px;
+}
+
+QScrollBar::handle:horizontal:hover[theme=&quot;default&quot;]  {
+    padding-top: 28px;
+   margin-top: -28px;
+}
+QScrollBar::handle:horizontal:pressed[theme=&quot;default&quot;]  {
+   padding-top: 56x;
+   margin-top: -56px;
+}
+QScrollBar::handle:horizontal:disabled[theme=&quot;default&quot;]  {
+   background-position: bottom;
+}
+QAbstractButton {
+    color: #fafafa;
+	font: 14px &quot;Open Sans&quot;;
+    background-position: top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    min-width: 54px; min-height: 36px;
+    max-width: 54px; max-height: 36px;
+}
+
+QAbstractButton[theme=&quot;default&quot;] {
+    border: none;
+   
+	background-image: url(:/textures/game/bttn1x4_min_max.png);
+}
+QAbstractButton:hover[theme=&quot;default&quot;] {
+padding-top: 36px;
+margin-top: -36px;
+   color: #ffffff;
+}
+QAbstractButton:pressed[theme=&quot;default&quot;] {
+padding-top: 74px;
+margin-top: -72px;
+    color: rgba(255, 255, 255, 128);
+
+}
+QAbstractButton:disabled[theme=&quot;default&quot;] {
+padding-top: 0px;
+margin-top: 0px;
+color: rgba(255, 255, 255, 128);
+    background-position: bottom;
+}
+QAbstractButton[theme=&quot;blue&quot;] {
+min-width: 48px; min-height: 27px;
+    max-width: 48px; max-height: 27px;
+font: 9px &quot;Showcard Gothic&quot;;
+color: #123241;
+spacing: 4px;
+border:2px outset rgb(111, 222, 223);
+border-radius: 4px 11px;
+border-bottom-left-radius: 1px;
+border-bottom-right-radius: 1px;
+margin: 1px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(215, 215, 215, 255), stop:0.0542169 rgba(139, 139, 139, 245), stop:0.197289 rgba(155, 155, 155, 219), stop:0.763554 rgba(155, 155, 155, 225), stop:0.834411 rgba(144, 144, 167, 239), stop:0.936611 rgba(169, 165, 165, 251), stop:1 rgba(97, 95, 95, 255));
+}
+QAbstractButton:!checked:hover[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(214, 244, 255, 248), stop:0.125 rgba(172, 209, 255, 228), stop:0.34 rgba(158, 168, 185, 221), stop:0.59 rgba(227, 248, 255, 219), stop:1 rgba(255, 255, 255, 246));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+color: #191919;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 41, 255), stop:0.949153 rgba(0, 199, 82, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QAbstractButton:checked[theme=&quot;blue&quot;] {
+background-color: qlineargradient(spread:pad, x1:0, y1:0.903, x2:0, y2:0.045, stop:0 rgba(114, 244, 155, 248), stop:0.125 rgba(172, 239, 155, 228), stop:0.34 rgba(118, 168, 115, 221), stop:0.59 rgba(127, 248, 155, 219), stop:1 rgba(125, 255, 155, 246));
+color: #113133;
+}
+QAbstractButton:pressed[theme=&quot;blue&quot;]
+{
+    background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(6, 24, 24, 255), stop:1 rgba(25, 25, 22, 155));
+color: black;
+padding-top: 1px;
+}
+
+QAbstractButton::indicator[theme=&quot;blue&quot;] {
+
+height: 18px;
+width: 18px;
+border-image: url(:/textures/temp/ico/48x48/Gray1.ico);
+}
+
+QAbstractButton::indicator:checked[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/Green1.ico);
+}
+QAbstractButton::indicator:!checked:hover[theme=&quot;blue&quot;] {
+    border-image: url(:/textures/temp/ico/48x48/White1.ico);
+}
+QAbstractButton::indicator:checked:hover[theme=&quot;blue&quot;] {
+border-image: url(:/textures/temp/ico/48x48/Red1.ico);
+}
+</string>
+  </property>
+  <property name="theme" stdset="0">
+   <string notr="true">default</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="0,1" columnstretch="0,0,0,1" rowminimumheight="28,20">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetMinimumSize</enum>
+   </property>
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <item row="0" column="0" colspan="4">
+    <widget class="ns_widget::BetScrollBar" name="bet_slider">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>3000</number>
+     </property>
+     <property name="singleStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>1600</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="theme" stdset="0">
+      <string notr="true">default</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="bttn_min">
+     <property name="minimumSize">
+      <size>
+       <width>54</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>54</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>@bttn_min</string>
+     </property>
+     <property name="theme" stdset="0">
+      <string notr="true">default</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QStackedWidget" name="stackOfMoneyButtons">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="theme" stdset="0">
+      <string notr="true">default</string>
+     </property>
+     <widget class="QWidget" name="page_blinds">
+      <property name="theme" stdset="0">
+       <string notr="true">default</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="ns_widget::MoneyButton" name="bttn_3bb">
+         <property name="minimumSize">
+          <size>
+           <width>54</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>54</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_3BB</string>
+         </property>
+         <property name="triggerValue" stdset="0">
+          <double>0.750000000000000</double>
+         </property>
+         <property name="theme" stdset="0">
+          <string notr="true">default</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_moneyBttns</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="ns_widget::MoneyButton" name="bttn_4bb">
+         <property name="minimumSize">
+          <size>
+           <width>54</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>54</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_4BB</string>
+         </property>
+         <property name="triggerValue" stdset="0">
+          <double>0.750000000000000</double>
+         </property>
+         <property name="theme" stdset="0">
+          <string notr="true">default</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_moneyBttns</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_pots">
+      <property name="theme" stdset="0">
+       <string notr="true">default</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="ns_widget::MoneyButton" name="bttn_half">
+         <property name="minimumSize">
+          <size>
+           <width>54</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>54</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>@bttn_half</string>
+         </property>
+         <property name="triggerValue" stdset="0">
+          <double>0.500000000000000</double>
+         </property>
+         <property name="theme" stdset="0">
+          <string notr="true">default</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_moneyBttns</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="ns_widget::MoneyButton" name="bttn_pot">
+         <property name="minimumSize">
+          <size>
+           <width>54</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>54</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>@bttn_pot</string>
+         </property>
+         <property name="theme" stdset="0">
+          <string notr="true">default</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_moneyBttns</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="bttn_max">
+     <property name="minimumSize">
+      <size>
+       <width>54</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>54</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>@bttn_max</string>
+     </property>
+     <property name="theme" stdset="0">
+      <string notr="true">default</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QSpinBox" name="bet_spinbox">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>23</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="accelerated">
+      <bool>true</bool>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="suffix">
+      <string notr="true">.00</string>
+     </property>
+     <property name="prefix">
+      <string notr="true">$</string>
+     </property>
+     <property name="maximum">
+      <number>999999</number>
+     </property>
+     <property name="theme" stdset="0">
+      <string notr="true">default</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_widget::MoneyButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">widgets/widget_MoneyButton.h</header>
+   <slots>
+    <signal>clicked(double)</signal>
+    <signal>clicked(Money)</signal>
+    <signal>clicked(int)</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>ns_widget::BetScrollBar</class>
+   <extends>QScrollBar</extends>
+   <header location="global">widgets/widget_BetScrollBar.h</header>
+   <slots>
+    <slot>setToMinimum()</slot>
+    <slot>setToMaximum()</slot>
+    <slot>setBetValue(Money)</slot>
+    <slot>setBetValue(double)</slot>
+    <slot>setRelativeValue(double)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <slots>
+  <signal>valueChanged(Money)</signal>
+  <slot>setValue(Money)</slot>
+  <slot>setToMin()</slot>
+  <slot>setToMax()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bttnGrp_moneyBttns"/>
+ </buttongroups>
+</ui>

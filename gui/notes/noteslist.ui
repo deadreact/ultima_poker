@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NotesList</class>
+ <widget class="QWidget" name="NotesList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>231</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>320</width>
+    <height>140</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>516</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>NotesPageView</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QDialogButtonBox {
+    min-height:50px;
+    max-height:50px;
+}
+QLabel {
+    min-height: 50px;
+}
+
+QTableView {
+    border: none;
+    border-top: 1px solid #455a64;
+    alternate-background-color: #37474f;
+    
+	background-color: rgb(34, 42, 48);
+	selection-background-color: rgb(207, 216, 220);
+    font-size: 11px;
+    text-align: center;
+    border-right: 1px solid #191919;
+    border-bottom: 1px solid #191919;
+    color: #fafafa;
+}
+
+QTableView::text {
+    top: -1px;
+    left: 20px;
+}
+QTableView::item:selected {
+background-color: #cfd8dc;
+color: #191919;
+}
+QHeaderView {
+height: 22px;
+color: #b0bec5;
+font: 11px &quot;Open Sans&quot;;
+}
+QHeaderView {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+ border-bottom: 1px solid #191919;
+}
+QHeaderView:section {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+    height: 24px;
+    border: none;
+    border-right: 1px solid #191919;
+    border-left: 1px solid #455a64;
+    border-bottom: 1px solid #191919;
+    color: #b0bec5;
+    font: 11px &quot;Open Sans&quot;;
+}
+
+QTableView::item {
+    height: 16px;
+    border: 1px hidden;
+}
+QTableView::icon {
+top:1px;
+    margin: -1px -1px -1px -1px;
+    width: 11px;
+    border: 1px solid #191919;
+}
+* {outline:0;}
+
+QDialog {
+	border: none;
+	background-color: #37474f;
+	background-position: bottom;
+	background-attachment: fixed;
+	background-repeat: repeat-x;    
+	background-image: url(:/textures/bottom_bg.png);
+    padding: 40px;
+}
+
+QLabel {
+    border: none;
+	color: rgba(250, 250, 250, 250);
+	font: 12px &quot;Open Sans Semibold&quot;;
+    background-color: transparent;
+}
+
+
+QDialog QAbstractButton {
+font: 550 14px &quot;Open Sans&quot;;
+color: rgba(250, 250, 250, 250);
+border: 1px solid #191919;
+border-radius: 4px;
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.498 rgba(25, 25, 25, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+min-width: 124px;
+min-height: 28px;
+max-height: 28px;
+margin: 3px;
+}
+QDialog QAbstractButton:pressed {
+    padding-top: 1px;
+    color: rgba(250, 250, 250, 100);
+}
+
+QDialog QAbstractButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.94 rgba(0, 199, 83, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QDialog QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 255), stop:0.95 rgba(0, 250, 158, 255), stop:1 rgba(0, 250, 158, 255));
+}
+QDialog QPushButton:pressed {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 41, 20, 255), stop:0.95 rgba(0, 90, 55, 255), stop:1 rgba(0, 90, 50, 255));
+}
+
+QDialog QPushButton:disabled {
+    border: 1px solid rgba(25, 25, 25, 166);
+    color: rgba(250, 250, 250, 100);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 121, 40, 166), stop:0.94 rgba(0, 199, 83, 166), stop:0.95 rgba(0, 250, 158, 166), stop:1 rgba(0, 250, 158, 166));
+}
+/*
+QAbstractButton[theme=&quot;orange&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(176, 76, 1, 255), stop:0.954802 rgba(254, 182, 76, 255), stop:1 rgba(255, 248, 146, 255));
+}
+
+QAbstractButton[theme=&quot;orange&quot;]:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(196, 186, 31, 255), stop:0.5 rgba(156, 116, 1, 255), stop:0.95 rgba(254, 152, 76, 255), stop:1 rgba(255, 248, 146, 255));
+color: rgba(233, 250, 233, 233);
+}
+*/</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="search" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QWidget {
+    
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+border-top: 1px solid #455a64;
+border-bottom: 1px solid #191919;
+border-right: 1px solid #191919;
+
+}
+
+QLineEdit {
+    background-color: #455a64;
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(109, 138, 158, 100), stop:0.805 rgba(69, 89, 99, 126), stop:1 rgba(36, 49, 56, 255));
+    border-radius: 10px;
+    border: 1px solid #191919;
+   color: #78909c;
+padding:0px 6px 2px 14px;
+font: 11px &quot;Open Sans&quot;;
+	image: url(:/textures/Common/Tournament/icon_search.png);
+    image-position: right bottom;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>3</number>
+      </property>
+      <item alignment="Qt::AlignVCenter">
+       <widget class="QLineEdit" name="input_search">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>@Tooltip_notes_bttn_Search_84</string>
+        </property>
+        <property name="placeholderText">
+         <string>@search</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="NotesTableView" name="tableView">
+     <property name="styleSheet">
+      <string notr="true">QScrollBar:vertical {
+     border: none;
+     background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+     width: 16px;
+     margin: 2px 0 0px 0;
+padding-top: 35px;
+padding-bottom: 13px;
+    /*border-top: 36px solid #191919;*/
+
+ }
+QScrollBar::handle:vertical {
+    min-width: 12px;
+    min-height: 32px;
+    max-width: 12px;
+    max-height: 32px;
+    margin: 0px 2px 1px 2px;
+    
+	image: url(:/textures/Common/points.png);
+    image-position: center;
+   
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(69, 90, 100, 255), stop:0.483304 rgba(34, 42, 48, 255), stop:0.560633 rgba(34, 42, 48, 255), stop:1 rgba(64, 84, 93, 255));
+    border-radius: 3px 3px; 
+    border-top: 1px solid #678694;
+    border-bottom: 2px qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(36, 47, 52, 255), stop:0.256598 rgba(37, 48, 54, 255), stop:0.629032 rgba(25, 25, 25, 237), stop:1 rgba(25, 25, 25, 137));
+}
+ QScrollBar::handle:hover:vertical {
+    border-top: 1px solid #A9B6BA;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(121, 130, 133, 255), stop:0.483304 rgba(51, 58, 62, 255), stop:0.560633 rgba(51, 58, 62, 255), stop:1 rgba(113, 122, 125, 255));
+	image: url(:/textures/Common/points_hover.png);
+
+}
+ QScrollBar::add-line:vertical {
+     border: none;
+    background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+    height: 16px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    bottom: 0px;
+
+	background-image: url(:/textures/Common/scroll_footer.png);
+background-repeat: no-repeat;
+background-position: bottom right;
+background-clip: margin;
+background-origin: border;
+ }
+
+QScrollBar::add-page:vertical {
+	background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+ }
+ QScrollBar::sub-page:vertical {
+     background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+}
+
+ QScrollBar::sub-line:vertical {
+    border: none;
+	background-repeat: repeat-y;
+    height: 16px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+margin-top: 23px;
+	background-image: url(:/textures/Common/scroll_header.png);
+background-repeat: no-repeat;
+background-position: top;
+background-clip: margin;
+background-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical {
+background-image: url(:/textures/tmp_up1.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border;
+    height: 12px;
+
+ }
+
+QScrollBar::down-arrow:vertical {
+	background-image: url(:/textures/tmp_down1.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border;
+    height: 12px;
+
+}
+
+QScrollBar::add-line:vertical:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #222a30, stop: 0.1 #37473f, stop:0.5 #222a30, stop:1 rgba(14, 27, 28, 225));
+}
+QScrollBar::sub-line:vertical:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #222a30, stop: 0.9 #37473f, stop:0.5 #222a30, stop:0 rgba(14, 27, 28, 225));
+}
+
+QScrollBar::add-line:vertical:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(24, 13, 39, 255), stop:1 rgba(25, 25, 25, 255));
+     border: 1px ridge #191919;
+    border-bottom: none;
+}
+QScrollBar::sub-line:vertical:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(24, 13, 39, 255), stop:1 rgba(25, 25, 25, 255));
+    border: 1px ridge #191919;
+    border-top: none;
+}
+#tableView {
+    border: none;
+}
+QHeaderView {
+     border-top: 1px solid #455a64;
+	min-width: 25px;
+border-bottom: 1px solid #191919;
+}
+QHeaderView::section {
+    border-bottom: none;
+}</string>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="autoScroll">
+      <bool>true</bool>
+     </property>
+     <property name="autoScrollMargin">
+      <number>0</number>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::DoubleClicked</set>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>12</width>
+       <height>12</height>
+      </size>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="cornerButtonEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>182</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>160</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>16</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>16</number>
+     </attribute>
+    </widget>
+   </item>
+  </layout>
+  <action name="actioneditItem">
+   <property name="text">
+    <string>editItem</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>NotesTableView</class>
+   <extends>QTableView</extends>
+   <header>noteslist.h</header>
+   <slots>
+    <signal>currentChanged(QModelIndex)</signal>
+    <slot>editCurrent()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../ultima_poker/poker_client/data/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actioneditItem</sender>
+   <signal>triggered()</signal>
+   <receiver>tableView</receiver>
+   <slot>editCurrent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>131</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>currentChanged(QModelIndex)</signal>
+ </slots>
+</ui>

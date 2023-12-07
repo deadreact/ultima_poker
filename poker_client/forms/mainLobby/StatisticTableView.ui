@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatisticTableView</class>
+ <widget class="QTableView" name="StatisticTableView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>961</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>961</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTableView {
+    border: none;
+}</string>
+  </property>
+  <property name="horizontalScrollBarPolicy">
+   <enum>Qt::ScrollBarAlwaysOff</enum>
+  </property>
+  <property name="editTriggers">
+   <set>QAbstractItemView::NoEditTriggers</set>
+  </property>
+  <property name="alternatingRowColors">
+   <bool>true</bool>
+  </property>
+  <property name="selectionMode">
+   <enum>QAbstractItemView::SingleSelection</enum>
+  </property>
+  <property name="selectionBehavior">
+   <enum>QAbstractItemView::SelectRows</enum>
+  </property>
+  <property name="showGrid">
+   <bool>false</bool>
+  </property>
+  <property name="sortingEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="wordWrap">
+   <bool>false</bool>
+  </property>
+  <property name="cornerButtonEnabled">
+   <bool>false</bool>
+  </property>
+  <attribute name="horizontalHeaderDefaultSectionSize">
+   <number>90</number>
+  </attribute>
+  <attribute name="verticalHeaderVisible">
+   <bool>false</bool>
+  </attribute>
+  <attribute name="verticalHeaderDefaultSectionSize">
+   <number>16</number>
+  </attribute>
+  <widget class="QFrame" name="scrollbar_container">
+   <property name="geometry">
+    <rect>
+     <x>944</x>
+     <y>0</y>
+     <width>16</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>16</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QScrollBar" name="scrollbar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>16</width>
+      <height>302</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>16</width>
+      <height>302</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16</width>
+      <height>302</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QScrollBar:vertical {
+     border: none;
+     background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+     width: 16px;
+     margin: 2px 0 2px 0;
+padding-top: 35px;
+padding-bottom: 13px;
+    /*border-top: 36px solid #191919;*/
+
+ }
+QScrollBar::handle:vertical {
+    min-width: 12px;
+    min-height: 32px;
+    max-width: 12px;
+    max-height: 32px;
+    margin: 0px 2px 1px 2px;
+    
+	image: url(:/textures/Common/points.png);
+    image-position: center;
+   
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(69, 90, 100, 255), stop:0.483304 rgba(34, 42, 48, 255), stop:0.560633 rgba(34, 42, 48, 255), stop:1 rgba(64, 84, 93, 255));
+    border-radius: 3px 3px; 
+    border-top: 1px solid #678694;
+    border-bottom: 2px qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(36, 47, 52, 255), stop:0.256598 rgba(37, 48, 54, 255), stop:0.629032 rgba(25, 25, 25, 237), stop:1 rgba(25, 25, 25, 137));
+}
+ QScrollBar::handle:hover:vertical {
+    border-top: 1px solid #A9B6BA;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(121, 130, 133, 255), stop:0.483304 rgba(51, 58, 62, 255), stop:0.560633 rgba(51, 58, 62, 255), stop:1 rgba(113, 122, 125, 255));
+	image: url(:/textures/Common/points_hover.png);
+
+}
+ QScrollBar::add-line:vertical {
+     border: none;
+    background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+    height: 16px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    bottom: 2px;
+
+	background-image: url(:/textures/Common/scroll_footer.png);
+background-repeat: no-repeat;
+background-position: bottom right;
+background-clip: margin;
+background-origin: border;
+ }
+
+QScrollBar::add-page:vertical {
+	background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+ }
+ QScrollBar::sub-page:vertical {
+     background-image: url(:/textures/Common/scrollBar_bg.png);
+	background-repeat: repeat-y;
+}
+
+ QScrollBar::sub-line:vertical {
+    border: none;
+	background-repeat: repeat-y;
+    height: 16px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+margin-top: 23px;
+	background-image: url(:/textures/Common/scroll_header.png);
+background-repeat: no-repeat;
+background-position: top;
+background-clip: margin;
+background-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical {
+background-image: url(:/textures/tmp_up1.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border;
+    height: 12px;
+
+ }
+
+QScrollBar::down-arrow:vertical {
+	background-image: url(:/textures/tmp_down1.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border;
+    height: 12px;
+
+}
+
+QScrollBar::add-line:vertical:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #222a30, stop: 0.1 #37473f, stop:0.5 #222a30, stop:1 rgba(14, 27, 28, 225));
+}
+QScrollBar::sub-line:vertical:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #222a30, stop: 0.9 #37473f, stop:0.5 #222a30, stop:0 rgba(14, 27, 28, 225));
+}
+
+QScrollBar::add-line:vertical:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(24, 13, 39, 255), stop:1 rgba(25, 25, 25, 255));
+     border: 1px ridge #191919;
+    border-bottom: none;
+}
+QScrollBar::sub-line:vertical:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(24, 13, 39, 255), stop:1 rgba(25, 25, 25, 255));
+    border: 1px ridge #191919;
+    border-top: none;
+}</string>
+    </property>
+    <property name="value">
+     <number>99</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <pixmapfunction>ns_utildb::cached</pixmapfunction>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

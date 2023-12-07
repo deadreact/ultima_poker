@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/svg.svg</file>
+        <file>icons/entitywidget.png</file>
+        <file>icons/sunken_frame.png</file>
+        <file>icons/svgwidget.png</file>
+        <file>icons/clockwidget.png</file>
+        <file>icons/correct_input.png</file>
+        <file>icons/framedbutton.png</file>
+        <file>icons/validator.png</file>
+    </qresource>
+</RCC>

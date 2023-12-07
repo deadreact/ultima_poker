@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>miniTableItem</class>
+ <widget class="QStackedWidget" name="miniTableItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>92</width>
+    <height>30</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>92</width>
+    <height>30</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>92</width>
+    <height>30</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {background-color: transparent;}</string>
+  </property>
+  <property name="currentIndex">
+   <number>1</number>
+  </property>
+  <widget class="QWidget" name="busy">
+   <property name="minimumSize">
+    <size>
+     <width>92</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>92</width>
+     <height>30</height>
+    </size>
+   </property>
+   <widget class="QWidget" name="player_info" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>92</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>92</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#player_info {
+    background-clip: border;
+    background-origin: border;
+    border: 1px solid #4f6773;
+    border-radius: 3px;
+    margin: 2px 6px 2px 6px;
+
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:1.005, fx:0.501404, fy:0.5, stop:0 rgba(34, 42, 48, 182), stop:1 rgba(13, 14, 14, 222));
+}
+
+#nick {
+    color: rgba(250, 250, 250, 250);
+	font: 10px &quot;Open Sans&quot;;
+}
+#money {
+    color: #b0bec5;
+    font: 10px &quot;Open Sans&quot;;
+}</string>
+    </property>
+    <widget class="QLabel" name="nick">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>3</y>
+       <width>72</width>
+       <height>11</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>72</width>
+       <height>11</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>72</width>
+       <height>11</height>
+      </size>
+     </property>
+     <property name="text">
+      <string notr="true">Nickname</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="money">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>15</y>
+       <width>72</width>
+       <height>11</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>72</width>
+       <height>11</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>72</width>
+       <height>11</height>
+      </size>
+     </property>
+     <property name="text">
+      <string notr="true">$5500</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="free">
+   <property name="minimumSize">
+    <size>
+     <width>92</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>92</width>
+     <height>30</height>
+    </size>
+   </property>
+   <widget class="QPushButton" name="bttn_seat">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>2</y>
+      <width>32</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>26</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>26</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>@Tooltip_Main_Screen_take_this_seat_18</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#bttn_seat {
+    border: 1px solid #4f6773;
+    border-radius: 3px;
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:1.005, fx:0.501404, fy:0.5, stop:0 rgba(34, 42, 48, 180), stop:1 rgba(13, 14, 14, 180));
+}
+#bttn_seat:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 180), stop:1 rgba(69, 89, 99, 180));
+border: 1px solid #6f8793;
+}
+
+#bttn_seat:pressed {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 180), stop:1 rgba(9, 9, 9, 180));
+border: 1px solid #8fa7b3;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../resources.qrc">
+      <normaloff>:/textures/Common/icons/icon_take_a_seat.png</normaloff>:/textures/Common/icons/icon_take_a_seat.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>26</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <signal>buttonClicked()</signal>
+  <signal>buttonMoved(int)</signal>
+  <slot>setFree()</slot>
+  <slot>setFree(bool)</slot>
+  <slot>setBusy()</slot>
+  <slot>setBusy(bool)</slot>
+  <slot>moveButton(int)</slot>
+ </slots>
+</ui>

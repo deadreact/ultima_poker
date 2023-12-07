@@ -1,0 +1,41 @@
+.QCheckBox::indicator, .CheckedCheckBox::indicator {
+    min-width:  32px; max-width:  32px;
+    min-height: 32px; max-height: 32px;
+}
+
+.QCheckBox::indicator, .CheckedCheckBox::indicator {
+    margin: 7px;
+    subcontrol-position: top;
+    border: 2px inset gray;
+    border-radius: 4px;
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.858, y2:0.131, stop:0 rgba(254, 254, 254, 255), stop:0.454545 rgba(254, 254, 254, 248), stop:1 rgba(232, 232, 232, 243));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-origin: margin;
+    background-clip: border;
+}
+.QCheckBox::indicator:hover, .CheckedCheckBox::indicator:hover {
+    background-color: qlineargradient(spread:pad, x1:0.028, y1:0, x2:0, y2:1, stop:0.0681818 rgba(252, 252, 252, 255), stop:0.295455 rgba(237, 237, 237, 255), stop:1 rgba(255, 255, 255, 255));
+    background-position: bottom left;
+}
+.QCheckBox::indicator:checked, .CheckedCheckBox::indicator:checked {
+    background-position: top right;
+    background-image: url(:/textures/Common/icons/selected2.png);
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.955, x2:0, y2:0.034, stop:0 rgba(12, 88, 50, 255), stop:0.247019 rgba(12, 64, 39, 255), stop:0.516333 rgba(21, 49, 33, 255), stop:0.528961 rgba(12, 52, 34, 255), stop:0.987578 rgba(13, 88, 50, 255), stop:1 rgba(31, 100, 66, 255));
+}
+.QCheckBox::indicator:checked:hover, .CheckedCheckBox::indicator:checked:hover {
+    background-image: url(:/textures/Common/icons/selected2.png);
+    background-position: top left;
+}
+.QCheckBox::indicator:checked:pressed, .CheckedCheckBox::indicator:checked:pressed {
+    margin: 6px;
+    background-position: bottom right;
+    background-image: url(:/textures/Common/icons/selected2.png);
+    background-color: rgba(17, 222, 48, 150);
+}
+.QCheckBox::indicator:unchecked:pressed, .CheckedCheckBox::indicator:unchecked:pressed{
+    margin: 6px;
+    background-color: rgba(17, 222, 48, 150);
+    background-image: url(:/textures/Common/icons/selected2.png);
+    background-position: bottom right;
+}

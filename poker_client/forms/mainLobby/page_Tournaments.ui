@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tournaments</class>
+ <widget class="QFrame" name="Tournaments">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>964</width>
+    <height>524</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>964</width>
+    <height>524</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>964</width>
+    <height>524</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Tournaments {
+    background-color: transparent;
+}
+
+QAbstractButton {
+    color: #fafafa;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,1">
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="top" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>960</width>
+       <height>48</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#top {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #222a30, stop:0 #37474f);
+    border: 1px solid #455a64;
+}
+QLabel {
+    color: #b0bec5;
+	font: 11px &quot;Open Sans&quot;;
+}
+QLabel:disabled {
+    color: rgba(176, 190, 197, 100);
+}
+ QAbstractButton {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 rgba(62, 81, 90, 255), stop:0 rgba(34, 42, 48, 255));
+border: 1px solid #191919;
+border-radius: 3px;
+    color: #fafafa;
+font: 11px &quot;Open Sans&quot;;
+border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #455a64, stop:0.498 #455a64, stop:0.502 #191919, stop:1 #191919);
+}
+
+QComboBox  {
+font: 600 11px &quot;Open Sans&quot;;
+}
+
+QComboBox:disabled {
+    color: rgba(25, 25, 25, 100);
+}
+
+QComboBox QAbstractItemView {
+    width: 268px;
+  height: 145px;
+  border-radius: 3px;
+  background-color: #889aa3;
+  border: 1px solid #191919;
+  padding-bottom: 6px;	
+  outline: 0;
+}
+QComboBox QAbstractItemView::indicator {
+width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: 1px solid #191919;
+    margin-left: 10px;
+padding: -1px;
+}
+
+QComboBox QAbstractItemView::indicator:indeterminate {
+    width: 12px;
+height: 12px;
+border: 2px inset #191919;
+border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+padding: -1px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(121, 121, 121, 255), stop:0.954802 rgba(199, 199, 199, 255), stop:1 rgba(250, 250, 250, 255));
+background-clip: padding;
+background-origin: padding;
+}
+
+QComboBox QAbstractItemView::indicator:checked {
+  background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 42, 48, 255), stop:0.502 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+	image: url(:/textures/Common/icons/icon_check_filters.png);
+}
+</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>4</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <item alignment="Qt::AlignBottom">
+       <widget class="QFrame" name="filters">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    padding-left: 8px;
+}</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout" rowstretch="0,1" columnstretch="1,1,1,1,1">
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>8</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>2</number>
+         </property>
+         <item row="0" column="0" alignment="Qt::AlignTop">
+          <widget class="QLabel" name="msg_filterGame">
+           <property name="text">
+            <string>@msg_filter&amp;Game</string>
+           </property>
+           <property name="buddy">
+            <cstring>filter_game</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" alignment="Qt::AlignTop">
+          <widget class="QLabel" name="msg_filterBuyIn">
+           <property name="text">
+            <string>@msg_filter&amp;BuyIn</string>
+           </property>
+           <property name="buddy">
+            <cstring>filter_buyin</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2" alignment="Qt::AlignTop">
+          <widget class="QLabel" name="msg_filterSpeed">
+           <property name="text">
+            <string>@msg_filter&amp;Speed</string>
+           </property>
+           <property name="buddy">
+            <cstring>filter_speed</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3" alignment="Qt::AlignTop">
+          <widget class="QLabel" name="msg_filterType">
+           <property name="text">
+            <string>@msg_filter&amp;Type</string>
+           </property>
+           <property name="buddy">
+            <cstring>filter_type</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4" alignment="Qt::AlignTop">
+          <widget class="QLabel" name="msg_filterStatus">
+           <property name="text">
+            <string>@msg_filter&amp;Status</string>
+           </property>
+           <property name="buddy">
+            <cstring>filter_status</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" alignment="Qt::AlignTop">
+          <widget class="QComboBox" name="filter_game">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>@Tooltip_Main_Tourney_Filter_Game_34A</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" alignment="Qt::AlignTop">
+          <widget class="QComboBox" name="filter_buyin">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>@Tooltip_Main_Tourney_Filter_Buyin_34B</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2" alignment="Qt::AlignTop">
+          <widget class="QComboBox" name="filter_speed">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>@Tooltip_Main_Tourney_Filter_Speed_34C</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3" alignment="Qt::AlignTop">
+          <widget class="QComboBox" name="filter_type">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>@Tooltip_Main_Tourney_Filter_type_34</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4" alignment="Qt::AlignTop">
+          <widget class="QComboBox" name="filter_status">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>@Tooltip_Main_Tourney_Filter_Status_33</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignBottom">
+       <widget class="QPushButton" name="bttn_enableFilters">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>34</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>34</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string>@Tooltip_Tourney_Enable_Filters_13</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QAbstractButton {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(:/textures/Common/icons/bttn1x2_switch_on_off_filter.png);
+    border: none;
+    min-width: 34px;
+    max-width: 34px;
+    min-height: 20px;
+    max-height: 20px;
+	border-bottom: 1px solid #455a64;
+}
+
+QAbstractButton:checked {
+        background-position: bottom center;
+}
+
+QAbstractButton:!checked {
+        background-position: top center;
+}</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="TournDescription" name="descriptionPanel" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>960</width>
+       <height>170</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>960</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="TableView" name="tableView">
+     <property name="minimumSize">
+      <size>
+       <width>960</width>
+       <height>300</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>960</width>
+       <height>300</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustToContents</enum>
+     </property>
+     <property name="autoScrollMargin">
+      <number>0</number>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>64</height>
+      </size>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+     <property name="cornerButtonEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>120</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>100</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>16</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>16</number>
+     </attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TableView</class>
+   <extends>QTableView</extends>
+   <header>pages/mainLobby/page_MainLobbyBase.h</header>
+   <slots>
+    <signal>currentChanged(QModelIndex)</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>TournDescription</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/panel_TournDescription.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>tableView</sender>
+   <signal>activated(QModelIndex)</signal>
+   <receiver>Tournaments</receiver>
+   <slot>onItemActivated(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>906</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1034</x>
+     <y>282</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_enableFilters</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Tournaments</receiver>
+   <slot>disableFilters(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>947</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1012</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableView</sender>
+   <signal>currentChanged(QModelIndex)</signal>
+   <receiver>Tournaments</receiver>
+   <slot>onCurrentChanged(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>776</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1023</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onItemActivated(QModelIndex)</slot>
+  <slot>disableFilters(bool)</slot>
+  <slot>onCurrentChanged(QModelIndex)</slot>
+ </slots>
+</ui>

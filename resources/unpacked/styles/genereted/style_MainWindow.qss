@@ -1,0 +1,67 @@
+#centralwidget  {
+	background-color: #191919;
+}
+
+QTableView
+{
+    background-color: #222a30;
+    alternate-background-color: #37474f;
+    gridline-color: rgba(0, 220, 0, 10);
+    border-top: none;
+}
+QTableView::item:selected
+{
+    
+    background-color: #cfd8dc;
+    color: #191919;
+}
+QTableView::item
+{
+    min-height: 16px;
+    max-height: 16px;
+    font: 11px "Open Sans";
+    border-left: 1px hidden;
+}
+
+QHeaderView {
+    min-height: 24px;
+font: 11px "Open Sans Semibold";
+}
+
+QHeaderView::section
+{
+     border-top: 1px solid #455a64;
+border-left: 1px solid #455a64;
+border-bottom: 1px solid #191919;
+border-right: 1px solid #191919;
+border-bottom-left-radius: 0px 1px;
+
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+}
+
+QHeaderView::section:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(38, 50, 56 255), stop:0.965 rgba(38, 50, 56, 255), stop:1 rgba(133, 144, 161, 255));
+}
+
+QHeaderView::section:pressed {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(59, 72, 78, 255), stop:0.75 rgba(24, 28, 34, 255), stop:1 rgba(24, 32, 38, 255));
+padding-top: 2px;
+color:  rgba(176, 190, 197, 150);
+} *{outline: 0;}
+
+QHeaderView::down-arrow {
+height: 6px;
+width: 8px;
+image: url(:/textures/tmp_down.png);
+margin-right: 6px;
+}
+QHeaderView::up-arrow {
+height: 6px;
+width: 8px;
+image: url(:/textures/tmp_up.png);
+margin-right: 6px;
+}
+
+QHeaderView::down-arrow:pressed, QHeaderView::up-arrow:pressed {
+padding-top: 2px;
+}

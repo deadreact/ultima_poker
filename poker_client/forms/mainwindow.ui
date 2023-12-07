@@ -1,0 +1,2271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>1024</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>@application_name</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget  {
+	background-color: #191919;
+}
+</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>16</width>
+    <height>16</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QComboBox::drop-down {
+
+	background-image: url(:/textures/Common/icons/arrow_down.png);
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-origin: margin;
+    min-height: 20px;
+    max-height: 20px;
+    min-width: 20px;
+    max-width: 20px;
+}
+
+QComboBox::drop-down:disabled {
+background-image: url(:/textures/game/icon_check.png);
+}
+
+QComboBox::drop-down:open {
+    /*background-position:right;*/
+    top: 1px;
+}
+
+QComboBox {
+    padding:2px;
+    border: 1px solid #191919;
+    border-radius: 3px;
+	font: 12px &quot;Open Sans&quot;;
+	color: rgba(220, 231, 237, 220);
+
+}
+ QComboBox:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(84, 122, 120, 255), stop:0.380682 rgba(64, 113, 95, 255), stop:1 rgba(76, 94, 108, 25));
+color: rgba(255, 255, 255, 155);
+}
+
+QComboBox:!open {    
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+}
+QComboBox::drop-down {
+    width: 20px;
+}
+QComboBox:open {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(69, 89, 99, 255), stop:1 rgba(34, 43, 49, 255));
+
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 1px;
+    padding-left: 2px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #536f7a;
+color: #191919;
+    border: 2px solid #191919;
+border-radius: 3px;
+    selection-background-color: #cbd6da;
+min-width: 276px;
+	selection-color: black;
+margin: -1px;
+}
+
+QComboBox:disabled {
+ border: 1px solid rgba(25, 25, 25, 100);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 100), stop:1 rgba(69, 89, 99, 100));
+}
+</string>
+   </property>
+   <widget class="QWidget" name="bar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>94</width>
+      <height>680</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>94</width>
+      <height>680</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>94</width>
+      <height>680</height>
+     </size>
+    </property>
+    <property name="toolTipDuration">
+     <number>2</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#bar {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(67, 87, 97, 255));
+    image-position: right;
+    margin-right: 11px;
+}
+
+QAbstractButton {
+    
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+color: #90a4ae;
+font: 580 10px &quot;Open Sans&quot;;
+padding-left: 2px;
+border-left: none;
+}
+
+
+QAbstractButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(151, 191, 218, 25), stop:1 rgba(69, 89, 99, 25));
+}
+QAbstractButton:pressed {
+color: rgba(25, 25, 25, 248);
+padding-top: 2.5px;
+}
+
+QAbstractButton:checked{
+color: rgba(25, 25, 25, 180);
+padding-top: 1px;
+}
+
+QAbstractButton, QLabel {
+    border-top-right-radius: 1px 0px;
+    border-bottom-right-radius: 4px 0px;
+    padding: 0px 6px 12px 2px;
+    text-align: bottom;
+}
+
+QAbstractButton:disabled {
+    background-color: rgba(25, 25, 25, 100);
+    color: rgba(144, 164, 174, 100);
+border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 100), stop:1 rgba(69, 90, 100, 100));
+}
+
+QLabel {
+    color: #90a4ae;
+font:  550 10px &quot;Open Sans&quot;;
+}
+</string>
+    </property>
+    <property name="mask" stdset="0">
+     <pixmap>:/textures/menubarMask.png</pixmap>
+    </property>
+    <widget class="FramedButton" name="bttn_settings">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>353</y>
+       <width>67</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>67</width>
+       <height>66</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>67</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_Settings_LP</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 2px 0px;
+    padding-top: 30px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>@bttn_settings</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+     <widget class="FramedEntity" name="icon_settings" native="true">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>9</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="respondable" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="pixmap" stdset="0">
+       <pixmap>:/textures/Common/icons/icon3x7_menubar.png</pixmap>
+      </property>
+      <property name="frameIndex" stdset="0">
+       <number>12</number>
+      </property>
+      <property name="sizeOfFrame" stdset="0">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="FramedButton" name="bttn_tournaments">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>155</y>
+       <width>67</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>67</width>
+       <height>66</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>67</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_my_tournaments_LP</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 2px 0px;
+}</string>
+     </property>
+     <property name="text">
+      <string>@bttn_tournament</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+     <widget class="FramedEntity" name="icon_tournaments" native="true">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>9</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="respondable" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="pixmap" stdset="0">
+       <pixmap>:/textures/Common/icons/icon3x7_menubar.png</pixmap>
+      </property>
+      <property name="frameIndex" stdset="0">
+       <number>3</number>
+      </property>
+      <property name="sizeOfFrame" stdset="0">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="FramedButton" name="bttn_support">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>419</y>
+       <width>68</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>68</width>
+       <height>66</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>68</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_support_LP</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 2px 0px;
+}</string>
+     </property>
+     <property name="text">
+      <string>@bttn_support</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+     <widget class="FramedEntity" name="icon_support" native="true">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>9</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="respondable" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="pixmap" stdset="0">
+       <pixmap>:/textures/Common/icons/icon3x7_menubar.png</pixmap>
+      </property>
+      <property name="frameIndex" stdset="0">
+       <number>15</number>
+      </property>
+      <property name="sizeOfFrame" stdset="0">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="FramedButton" name="bttn_account">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>89</y>
+       <width>71</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>71</width>
+       <height>66</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>71</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>1</width>
+       <height>1</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_account_LP</string>
+     </property>
+     <property name="text">
+      <string>@bttn_account</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <property name="textRegion" stdset="0">
+      <rect>
+       <x>1</x>
+       <y>25</y>
+       <width>70</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+     <widget class="FramedEntity" name="icon_account" native="true">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>9</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="respondable" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="pixmap" stdset="0">
+       <pixmap>:/textures/Common/icons/icon3x7_menubar.png</pixmap>
+      </property>
+      <property name="sizeOfFrame" stdset="0">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="FramedButton" name="bttn_promotions">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>221</y>
+       <width>67</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>67</width>
+       <height>66</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>67</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_promotions_LP</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 2px 0px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>@bttn_zamanuha</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+     <widget class="FramedEntity" name="icon_promotions" native="true">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>9</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="respondable" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="pixmap" stdset="0">
+       <pixmap>:/textures/Common/icons/icon3x7_menubar.png</pixmap>
+      </property>
+      <property name="frameIndex" stdset="0">
+       <number>6</number>
+      </property>
+      <property name="sizeOfFrame" stdset="0">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="FramedEntity" name="icon_unreadNews" native="true">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>8</y>
+        <width>12</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>12</width>
+        <height>12</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>12</width>
+        <height>12</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="respondable" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="pixmap" stdset="0">
+       <pixmap>:/textures/Common/icons/icon_attention.png</pixmap>
+      </property>
+      <property name="sizeOfFrame" stdset="0">
+       <size>
+        <width>12</width>
+        <height>12</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="FramedButton" name="bttn_vip_system">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>287</y>
+       <width>67</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>67</width>
+       <height>66</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>67</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_VIP-System_LP</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 2px 0px;
+}</string>
+     </property>
+     <property name="text">
+      <string>@bttn_vip_system</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+     <widget class="FramedEntity" name="icon_vip_system" native="true">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>9</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="respondable" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="pixmap" stdset="0">
+       <pixmap>:/textures/Common/icons/icon3x7_menubar.png</pixmap>
+      </property>
+      <property name="frameIndex" stdset="0">
+       <number>9</number>
+      </property>
+      <property name="sizeOfFrame" stdset="0">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="FramedButton" name="bttn_news">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>485</y>
+       <width>70</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>66</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_News_LP</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 2px 0px;
+}</string>
+     </property>
+     <property name="text">
+      <string>@bttn_news</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+     <widget class="FramedEntity" name="icon_news" native="true">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>9</y>
+        <width>32</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="respondable" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="rendering" stdset="0">
+       <bool>true</bool>
+      </property>
+      <property name="pixmap" stdset="0">
+       <pixmap>:/textures/Common/icons/icon3x7_menubar.png</pixmap>
+      </property>
+      <property name="frameIndex" stdset="0">
+       <number>18</number>
+      </property>
+      <property name="sizeOfFrame" stdset="0">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="ClockWidget" name="clock_widget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>1</y>
+       <width>77</width>
+       <height>89</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>77</width>
+       <height>89</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>94</width>
+       <height>89</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_Main_Screen_time_settings_2</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+font: 24px &quot;Open Sans Semibold&quot;;
+border-bottom-right-radius: 7px 0px;
+color: #fafafa;
+text-align: center;
+}
+</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="format" stdset="0">
+      <string notr="true">hh:mm</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+    </widget>
+    <widget class="QPushButton" name="bttn_language">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>587</y>
+       <width>77</width>
+       <height>93</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>77</width>
+       <height>93</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>77</width>
+       <height>93</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>@Tooltip_language_settings_1</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+    border-top-right-radius: 7px 0px;
+    border-bottom: none;
+    padding: 1px;
+}</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/textures/Common/icons/ico/Unknown.ico</normaloff>:/textures/Common/icons/ico/Unknown.ico</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+    </widget>
+    <widget class="QPushButton" name="bttn_cap">
+     <property name="geometry">
+      <rect>
+       <x>-90</x>
+       <y>0</y>
+       <width>81</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>68</width>
+       <height>10</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QAbstractButton {
+    border: 1px hidden;
+    
+	background-color: transparent;
+}</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">bttnGroup_menubar</string>
+     </attribute>
+    </widget>
+    <widget class="QLabel" name="short_date">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 540 10px&quot;Open Sans&quot;;
+}</string>
+     </property>
+     <property name="text">
+      <string notr="true">Dd, # MON.</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="short_date_shadow">
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>52</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	
+	color: rgba(34, 34, 34, 222);
+}</string>
+     </property>
+     <property name="text">
+      <string notr="true">Dd, # MON.</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>clock_widget</zorder>
+    <zorder>bttn_tournaments</zorder>
+    <zorder>bttn_language</zorder>
+    <zorder>bttn_account</zorder>
+    <zorder>bttn_news</zorder>
+    <zorder>bttn_support</zorder>
+    <zorder>bttn_settings</zorder>
+    <zorder>bttn_vip_system</zorder>
+    <zorder>bttn_promotions</zorder>
+    <zorder>bttn_cap</zorder>
+    <zorder>short_date_shadow</zorder>
+    <zorder>short_date</zorder>
+   </widget>
+   <widget class="ns_page::MainScreen" name="main_window" native="true">
+    <property name="geometry">
+     <rect>
+      <x>62</x>
+      <y>0</y>
+      <width>964</width>
+      <height>680</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>964</width>
+      <height>680</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>964</width>
+      <height>680</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="curveLine">
+    <property name="geometry">
+     <rect>
+      <x>62</x>
+      <y>0</y>
+      <width>64</width>
+      <height>680</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>64</width>
+      <height>680</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>64</width>
+      <height>680</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="pixmap">
+     <pixmap>:/textures/menu_line_shadow.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QWidget" name="status_bar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>58</x>
+      <y>656</y>
+      <width>968</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>968</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>968</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: #191919;
+}
+QLabel {
+color: #fafafa;
+    border-radius: 3px;
+	font: 550 11px&quot;Open Sans&quot;;
+}
+
+</string>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <property name="leftMargin">
+      <number>30</number>
+     </property>
+     <property name="topMargin">
+      <number>2</number>
+     </property>
+     <property name="rightMargin">
+      <number>2</number>
+     </property>
+     <property name="bottomMargin">
+      <number>2</number>
+     </property>
+     <item alignment="Qt::AlignLeft">
+      <widget class="QLabel" name="icon_2">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel
+ {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(49, 27, 146, 255), stop:1 rgba(149, 117, 205, 255));
+}</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_2.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="icon_3">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_3.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="icon_5">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_5.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="icon_6">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_6.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="icon_8">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_8.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignVCenter">
+      <widget class="QLabel" name="icon_9">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_9.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+      <widget class="QLabel" name="desc_players">
+       <property name="text">
+        <string>@desc_players</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="icon_rebuy">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_rebuy.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignVCenter">
+      <widget class="QLabel" name="desc_rebuy">
+       <property name="text">
+        <string>@desc_rebuy</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="icon_private">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_private.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignVCenter">
+      <widget class="QLabel" name="desc_private">
+       <property name="text">
+        <string>@desc_private</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="icon_turbo">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_turbo.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignVCenter">
+      <widget class="QLabel" name="desc_turbo">
+       <property name="text">
+        <string>@desc_turbo</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="icon_knokout">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>12</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/textures/Common/Tournament/icon_description_target.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignVCenter">
+      <widget class="QLabel" name="desc_knokout">
+       <property name="text">
+        <string>@desc_knockout</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="EntityWidget" name="popup_space" native="true">
+    <property name="geometry">
+     <rect>
+      <x>59</x>
+      <y>0</y>
+      <width>964</width>
+      <height>680</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>964</width>
+      <height>680</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>964</width>
+      <height>680</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="languagePopUp" native="true">
+     <property name="geometry">
+      <rect>
+       <x>-290</x>
+       <y>0</y>
+       <width>250</width>
+       <height>680</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>680</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>680</height>
+      </size>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+    outline: 0;
+}</string>
+     </property>
+     <widget class="QLabel" name="curveLine_language">
+      <property name="geometry">
+       <rect>
+        <x>218</x>
+        <y>0</y>
+        <width>22</width>
+        <height>680</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>22</width>
+        <height>680</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>22</width>
+        <height>456456</height>
+       </size>
+      </property>
+      <property name="pixmap">
+       <pixmap>:/textures/panelBorder.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QWidget" name="languageBG" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>250</width>
+        <height>680</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>680</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>680</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#languageBG {
+	background-color: rgba(55, 71, 79, 242);
+}</string>
+      </property>
+      <widget class="QLabel" name="lang_header">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>250</width>
+         <height>89</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>89</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>89</height>
+        </size>
+       </property>
+       <property name="sizeIncrement">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#lang_header
+{
+    background-color: rgba(46, 59, 65, 242);
+	color: #ffffff;
+	
+	font: 550 16px &quot;Open Sans&quot;;
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #191919, stop:0.495#191919, stop:0.505 #455a64, stop:1 #455a64);
+}</string>
+       </property>
+       <property name="text">
+        <string>@Title_language</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea_lang">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>90</y>
+         <width>250</width>
+         <height>591</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QScrollArea,QScrollArea QWidget {
+    background-color: transparent;
+    border: 1px hidden;
+    outline: 0;
+}</string>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <widget class="QWidget" name="scrollContent_lang">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>251</width>
+          <height>195</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QVBoxLayout" name="layoutLanguageItems">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <spacer name="zzz_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <spacer name="zzz_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <zorder>languageBG</zorder>
+     <zorder>curveLine_language</zorder>
+    </widget>
+    <widget class="QWidget" name="timezonePopUp" native="true">
+     <property name="geometry">
+      <rect>
+       <x>-290</x>
+       <y>0</y>
+       <width>250</width>
+       <height>680</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>680</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>680</height>
+      </size>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+    outline: 0;
+}</string>
+     </property>
+     <widget class="QLabel" name="curveLine_timezone">
+      <property name="geometry">
+       <rect>
+        <x>218</x>
+        <y>0</y>
+        <width>22</width>
+        <height>680</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>22</width>
+        <height>680</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>22</width>
+        <height>456456</height>
+       </size>
+      </property>
+      <property name="pixmap">
+       <pixmap>:/textures/panelBorder.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QWidget" name="timezoneBG" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>250</width>
+        <height>680</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>680</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>680</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+#timezoneBG{
+	background-color: rgba(55, 71, 79, 242);
+}
+QLabel {
+    color: #ffffff;
+	font: 12px &quot;Open Sans&quot;;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>20</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="timezone_header">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>89</height>
+          </size>
+         </property>
+         <property name="sizeIncrement">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#timezone_header
+{
+    background-color: rgba(46, 59, 65, 242);
+	color: #ffffff;
+	
+	font: 550 16px &quot;Open Sans&quot;;
+	border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #191919, stop:0.495#191919, stop:0.505 #455a64, stop:1 #455a64);
+    padding-left: 26px;
+}</string>
+         </property>
+         <property name="text">
+          <string>@Title_timezone</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="margin">
+          <number>20</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>115</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="msg_1">
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>@msg_timezone_1:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="TimeZoneBox" name="comboBox">
+         <property name="minimumSize">
+          <size>
+           <width>164</width>
+           <height>22</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>164</width>
+           <height>22</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="maxVisibleItems">
+          <number>23</number>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="msg_2">
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font-size: 16px;
+}</string>
+         </property>
+         <property name="text">
+          <string>@msg_timezone_2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="msg_time">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>65</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>240</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    
+	font: 550 40px &quot;Open Sans&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string notr="true">HH:MM:SS</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+        <widget class="QLabel" name="msg_date">
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>230</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>180</width>
+           <height>230</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #8a9ea8;
+	font:  17px &quot;Open Sans&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string notr="true">%0, DD mm YY</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <zorder>timezoneBG</zorder>
+     <zorder>curveLine_timezone</zorder>
+    </widget>
+   </widget>
+   <zorder>status_bar</zorder>
+   <zorder>main_window</zorder>
+   <zorder>popup_space</zorder>
+   <zorder>bar</zorder>
+   <zorder>curveLine</zorder>
+  </widget>
+ </widget>
+ <pixmapfunction>ns_utildb::cached</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>FramedButton</class>
+   <extends>QPushButton</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FramedEntity</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ClockWidget</class>
+   <extends>QPushButton</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TimeZoneBox</class>
+   <extends>QComboBox</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::MainScreen</class>
+   <extends>QWidget</extends>
+   <header location="global">pages/page_MainScreen.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>clock_widget</sender>
+   <signal>timeChanged(QTime)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateTimeDate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>8</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>848</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_promotions</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>requestDebug()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>-86</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_vip_system</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openVipSystemDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>335</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1111</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_tournaments</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openMyTournamentsDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1337</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_settings</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openSettingsDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>381</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1290</x>
+     <y>394</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>comboBox</receiver>
+   <slot>acceptCurrentTimezone()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-149</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-149</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_account</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openAccountDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <slot>updateTimeDate()</slot>
+  <slot>openAccountDialog()</slot>
+  <slot>openGameTable()</slot>
+  <slot>requestDebug()</slot>
+  <slot>doBarLayout()</slot>
+  <slot>triggerLanguageChanged()</slot>
+  <slot>openVipSystemDialog()</slot>
+  <slot>openSettingsDialog()</slot>
+  <slot>openMyTournamentsDialog()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bttnGroup_menubar"/>
+ </buttongroups>
+</ui>

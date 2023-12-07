@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VipSystem</class>
+ <widget class="QDialog" name="VipSystem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>592</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>592</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>592</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #191919;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame_header">
+     <property name="minimumSize">
+      <size>
+       <width>9630</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>960</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#frame_header {
+    border-top: 1px solid #83abbe;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(34, 42, 48, 255), stop:1 rgba(69, 90, 100, 255));
+	image: url(:/textures/Common/icons/icon_crystall.psd);
+    image-position: left;
+    padding-left: 40px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="header">
+      <property name="geometry">
+       <rect>
+        <x>64</x>
+        <y>9</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#header {   
+    font: 550 16px &quot;Open Sans&quot;;
+    color: #fafafa;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>@Title_vipSystem</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bttn_close">
+      <property name="geometry">
+       <rect>
+        <x>926</x>
+        <y>12</y>
+        <width>14</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>14</width>
+        <height>14</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>14</width>
+        <height>14</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QAbstractButton {
+    border: none;
+
+    background-position:top;
+	background-image: url(:/textures/Common/buttons/bttn_close.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-clip: margin;
+    background-origin: border;
+}
+
+QAbstractButton:hover {
+    padding-top: 14px;
+    margin-top: -14px;
+}
+QAbstractButton:pressed {
+    padding-top: 28px;
+    margin-top: -28px;
+}</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="pages">
+     <property name="styleSheet">
+      <string notr="true">QTabWidget {
+    background-color: #455a64;
+    border: none;
+}
+QTabWidget::pane {
+border-top: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+/*border-left: 1px solid #455a64;
+border-right: 1px solid #191919;
+*/
+}
+
+QTabBar {
+   background-color: #191919;
+}
+
+QTabBar::tab {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+border: none;
+	border-top: 1px solid #83abbe;
+    border-right: 1px solid #191919;
+    border-left: 1px solid #455a64;
+height: 31px;
+width: 478px;
+font: 600 13px &quot;Open Sans&quot;;
+color: #fafafa;
+margin-left: 0px;
+border-top-right-radius: 1px 0px;
+}
+
+QTabBar::tab:selected {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(13, 71, 161, 255), stop:1 rgba(66, 165, 245, 253));
+	border-top: 1px solid rgb(126, 246, 254);
+}
+QTabBar::tab:selected:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(13, 71, 181, 255), stop:1 rgba(66, 165, 255, 253));
+}
+QTabBar::tab:!selected:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(31, 30, 39, 255), stop:1 rgba(75, 125, 145, 255));
+}
+
+QTabBar::tab:disabled {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 100), stop:1 rgba(69, 89, 99, 100));
+    color: rgba(250, 250, 250, 100);
+    border-top: 1px solid rgba(131, 171, 190, 100);
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="ns_page::VipStatusDescription" name="tab_vipStatusDesc">
+      <attribute name="title">
+       <string>@vipStatusInfo</string>
+      </attribute>
+     </widget>
+     <widget class="ns_page::VipSystemDescription" name="tab_vipSystemDesc">
+      <attribute name="title">
+       <string>@vipSystemInfo</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ns_page::VipSystemDescription</class>
+   <extends>QWidget</extends>
+   <header>src/pages/vipSystem/page_VipSystemDescription.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_page::VipStatusDescription</class>
+   <extends>QWidget</extends>
+   <header>src/pages/vipSystem/page_VipStatusDescription.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>bttn_close</sender>
+   <signal>clicked()</signal>
+   <receiver>VipSystem</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>937</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>962</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

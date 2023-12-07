@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsHistory</class>
+ <widget class="QWidget" name="SettingsHistory">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>516</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>516</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>516</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">.QFrame {
+    background-color: #37474f;
+border-top: none;
+}
+QLabel {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+    border: none;
+    border-bottom: 1px solid #191919;
+    color: #b0bec5;
+    font: 600 16px &quot;Open Sans&quot;;
+}
+
+QSpinBox {
+    border-radius: 2px;
+}
+
+EntityWidget  {
+  background-color: #37474f;
+  border: none;
+}
+QComboBox::drop-down {
+	background-image: url(:/textures/Common/icons/arrow_down.png);
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-origin: margin;
+    min-height: 20px;
+    max-height: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    padding-right: 2px;
+    top: -1px;
+}
+
+QComboBox::drop-down:disabled {
+background: none;
+border: none;
+}
+
+QComboBox::drop-down:open {
+    /*background-position:right;*/
+    top: 0px;
+}
+
+QComboBox {
+    padding:2px;
+    border: 1px solid #191919;
+    border-radius: 3px;
+	font: 12px &quot;Open Sans&quot;;
+	color: rgba(220, 231, 237, 220);
+
+}
+ QComboBox:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #222a30, stop:0.38 #37474f, stop:1 #455a64);
+color: rgba(255, 255, 255, 155);
+}
+
+QComboBox {    
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+}
+QComboBox::drop-down {
+    width: 20px;
+}
+QComboBox:open {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(69, 89, 99, 255), stop:1 rgba(34, 43, 49, 255));
+
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 1px;
+    padding-left: 2px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #536f7a;
+color: #191919;
+    border: 2px solid #191919;
+border-radius: 3px;
+    selection-background-color: #cbd6da;
+min-width: 276px;
+	selection-color: black;
+margin: -1px;
+}
+
+QComboBox:disabled {
+color: rgba(176, 190, 197, 100);
+ border: 1px solid rgba(25, 25, 25, 100);
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 100), stop:1 rgba(69, 89, 99, 100));
+}
+QAbstractButton {
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+}
+
+QCheckBox::indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    border: 1px solid #191919;
+    padding: -1px;
+    subcontrol-position: left;
+top: 1px;
+}
+
+QAbstractButton::indicator:!checked {
+    background-color: rgba(250, 250, 250, 225);
+
+}
+QCheckBox::indicator:checked {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 42, 48, 255), stop:0.5 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+	image: url(:/textures/Common/icons/icon_check_shadowed.png);
+}
+QCheckBox::indicator:!checked:hover {
+    background-color: rgba(250, 250, 250, 155);
+}
+QCheckBox::indicator:!checked:pressed {
+border: 1px solid #191919;
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(132, 136, 148, 122), stop:0.5 rgba(150, 160, 165, 122), stop:1 rgba(150, 160, 165, 122));
+	image: url(:/textures/Common/icons/icon_check_shadowed_transparent.png);
+}
+QCheckBox::indicator:checked:hover {
+     background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 42, 48, 200), stop:0.5 rgba(69, 90, 100, 200), stop:1 rgba(69, 90, 100, 200));
+image: url(:/textures/Common/icons/icon_check_shadowed_transparent.png);
+}
+QCheckBox::indicator:checked:pressed {
+border: 1px solid #191919;
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(132, 136, 148, 122), stop:0.5 rgba(150, 160, 165, 122), stop:1 rgba(150, 160, 165, 122));
+	image: url(:/textures/Common/icons/icon_check_shadowed_transparent.png);
+}
+QAbstractButton::indicator:indeterminate {
+    width: 12px;
+height: 12px;
+border: 2px inset #191919;
+border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+padding: -1px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(121, 121, 121, 255), stop:0.95 rgba(199, 199, 199, 255), stop:1 rgba(250, 250, 250, 255));
+background-clip: padding;
+background-origin: padding;
+}
+QAbstractButton {spacing: 4px;}
+QRadioButton {spacing: 2px;}
+QRadioButton::indicator {
+    width: 12px;
+    height: 12px;
+
+    border: 1px solid #37474f;;
+	background-image: url(:/textures/Common/buttons/bttn_radio.png);
+	background-origin: margin;
+}
+
+QRadioButton::indicator:checked {
+background-position: bottom left;
+}
+QRadioButton::indicator:checked:hover {
+background-position: bottom center;
+}
+QRadioButton::indicator:checked:pressed {
+background-position: bottom right;
+}
+QRadioButton::indicator:!checked:hover {
+background-position: top center;
+}
+QRadioButton::indicator:!checked:pressed {
+background-position: top right;
+}
+QRadioButton::indicator:checked:disabled  {
+    background-position: center;
+}
+QRadioButton::indicator:!checked:disabled  {
+    background-position: center left;
+}
+QAbstractButton:disabled {
+    color: rgba(250, 250, 250, 100);
+}
+QSpinBox:disabled {
+    background-color: rgba(255, 255, 255, 100);
+    color: rgba(25, 25, 25, 100);
+}</string>
+  </property>
+  <widget class="QFrame" name="footer">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>451</y>
+     <width>960</width>
+     <height>65</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>65</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>65</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QFrame {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+    border: none;
+    border-top: 1px solid #455a64;
+}
+
+QPushButton {
+   padding-bottom: 3px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>40</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>24</number>
+    </property>
+    <property name="bottomMargin">
+     <number>14</number>
+    </property>
+    <item alignment="Qt::AlignLeft|Qt::AlignBottom">
+     <widget class="QWidget" name="container_bttn_apply" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#container_bttn_apply {
+    background-color: #455a64;
+    border-radius: 4px;
+border-bottom: 1px solid #445862;
+}
+QAbstractButton {
+    border: 1px solid #191919;
+border-radius: 3px;
+font: 14px &quot;Open Sans Semibold&quot;;
+color: #fafafa;
+}</string>
+      </property>
+      <widget class="QPushButton" name="bttn_apply">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>150</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>34</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>34</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 #007828, stop:1 #00c853);
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(8, 140, 48, 255), stop:1 rgba(10, 222, 92, 255));
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(18, 57, 31, 255), stop:1 rgba(43, 106, 69, 255));
+}
+
+QPushButton:disabled {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 120, 40, 100), stop:1 rgba(0, 200, 83, 100));
+color: rgba(250, 250, 250, 100);
+}
+
+EntityWidget {
+	background-color: rgba(255, 255, 255, 250);
+}
+EntityWidget:disabled {
+	background-color: rgba(255, 255, 255, 100);
+}</string>
+       </property>
+       <property name="text">
+        <string>@bttn_apply</string>
+       </property>
+       <widget class="EntityWidget" name="solid_5">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>146</width>
+          <height>1</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>146</width>
+          <height>1</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>146</width>
+          <height>1</height>
+         </size>
+        </property>
+        <property name="blending">
+         <enum>E::Overlay</enum>
+        </property>
+        <property name="parentPainting">
+         <enum>E::PaintParentBefore</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignRight|Qt::AlignBottom">
+     <widget class="QWidget" name="container_bttn_cancel" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    background-color: #455a64;
+    border-radius: 4px;
+border-bottom: 1px solid #445862;
+}
+QAbstractButton {
+    border: 1px solid #191919;
+border-radius: 3px;
+font: 14px &quot;Open Sans Semibold&quot;;
+color: #fafafa;
+}</string>
+      </property>
+      <widget class="QPushButton" name="bttn_cancel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>150</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>34</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>34</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:1 rgba(69, 89, 99, 255));
+border: 1px solid #191919;
+border-radius: 3px;
+}
+
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(205, 55, 33, 215), stop:0.33 rgba(69, 34, 32, 225), stop:1 rgba(69, 89, 99, 255));
+}
+
+QPushButton:pressed {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(41, 51, 54, 255), stop:0.5 rgba(18, 20, 26, 255), stop:1 rgba(24, 25, 32, 255));
+}
+QPushButton:disabled {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 100), stop:1 rgba(69, 89, 99, 100));
+color: rgba(250, 250, 250, 100);
+}
+EntityWidget {
+	background-color: rgba(255, 255, 255, 250);
+}
+EntityWidget:disabled {
+	background-color: rgba(255, 255, 255, 100);
+}</string>
+       </property>
+       <property name="text">
+        <string>@bttn_cancel</string>
+       </property>
+       <widget class="EntityWidget" name="solid_7">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>146</width>
+          <height>1</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>146</width>
+          <height>1</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>146</width>
+          <height>1</height>
+         </size>
+        </property>
+        <property name="blending">
+         <enum>E::Overlay</enum>
+        </property>
+        <property name="parentPainting">
+         <enum>E::PaintParentBefore</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="EntityWidget" name="subpage_cashTables">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>69</y>
+     <width>960</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>191</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>191</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="shape">
+    <bool>false</bool>
+   </property>
+   <property name="parentPainting">
+    <enum>E::PaintParentAfter</enum>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+     <widget class="QLabel" name="filter_byTime">
+      <property name="minimumSize">
+       <size>
+        <width>320</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>320</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #37474f;
+    border: 1px solid #191919;
+    border-left: none; 
+    border-top: 1px solid #455a64;
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+    padding-left: 21px;
+}</string>
+      </property>
+      <property name="text">
+       <string>@filter_byTime:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" alignment="Qt::AlignLeft|Qt::AlignTop">
+     <widget class="QLabel" name="filter_byLastDistributions">
+      <property name="minimumSize">
+       <size>
+        <width>320</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>320</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #37474f;
+    border: 1px solid #455a64;
+    border-right: 1px solid #191919; 
+    border-bottom: 1px solid #191919;
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+    padding-left: 21px;
+}</string>
+      </property>
+      <property name="text">
+       <string>@filter_byLastDistributions:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" alignment="Qt::AlignLeft">
+     <widget class="QWidget" name="body_byTime" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>320</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>320</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    background-color: #37474f;
+    border: 1px solid #191919;
+    border-left: none; 
+    border-top: 1px solid #455a64;
+}
+
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>23</number>
+       </property>
+       <property name="topMargin">
+        <number>7</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>7</number>
+       </property>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_hour">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_hour</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_day">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_day</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_3days">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_3days</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_week">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_week</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="1" alignment="Qt::AlignLeft">
+     <widget class="QWidget" name="body_byLastDistributions" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>320</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>320</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    background-color: #37474f;
+    border: 1px solid #455a64;
+    border-right: 1px solid #191919;; 
+    border-bottom: 1px solid #191919;
+}
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>23</number>
+       </property>
+       <property name="topMargin">
+        <number>7</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>7</number>
+       </property>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_numberLastDistributions_1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_numberLastDistributions_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_numberLastDistributions_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_numberLastDistributions_4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="filter_concreteDistribution">
+      <property name="minimumSize">
+       <size>
+        <width>320</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>320</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #37474f;
+    border: 1px solid #455a64;
+    border-right: none; 
+    border-bottom: 1px solid #191919;
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+    padding-left: 21px;
+}</string>
+      </property>
+      <property name="text">
+       <string>@filter_concreteDistribution:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QLabel" name="title_cashTables">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>34</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>34</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    border-top: 1px solid #455a64;
+}</string>
+      </property>
+      <property name="text">
+       <string>@title_cashTables</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QWidget" name="body_concreteDistribution" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>320</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>320</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    background-color: #37474f;
+    border: 1px solid #455a64;
+    border-right: 1px solid #191919;; 
+    border-bottom: 1px solid #191919;
+}
+</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="leftMargin">
+        <number>23</number>
+       </property>
+       <property name="topMargin">
+        <number>7</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>7</number>
+       </property>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_concreteDistribution">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_cashTablesSelection</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QSpinBox" name="spinBox_concreteDistribution">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>104</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>999999999</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="text_historyDescription">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>480</width>
+     <height>69</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>69</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #37474f;
+    border: none;
+    border-bottom: 1px solid #191919;
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+    padding: 2px 60px 2px 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>@text_historyDescription.</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="EntityWidget" name="subpage_tournaments">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>260</y>
+     <width>960</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>191</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>191</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="shape">
+    <bool>false</bool>
+   </property>
+   <property name="parentPainting">
+    <enum>E::PaintParentAfter</enum>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+     <widget class="QLabel" name="msg_tournDistributions">
+      <property name="minimumSize">
+       <size>
+        <width>480</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>480</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #37474f;
+    border: 1px solid #191919;
+    border-left: none; 
+    border-top: 1px solid #455a64;
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+    padding-left: 21px;
+}</string>
+      </property>
+      <property name="text">
+       <string>@msg_tournDistributions.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" alignment="Qt::AlignLeft">
+     <widget class="QWidget" name="body_tournDistributions" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>480</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>480</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    background-color: #37474f;
+    border: 1px solid #191919;
+    border-left: none; 
+    border-top: 1px solid #455a64;
+}
+
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,0,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>23</number>
+       </property>
+       <property name="topMargin">
+        <number>7</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>7</number>
+       </property>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QWidget" name="widget" native="true">
+         <property name="styleSheet">
+          <string notr="true">.QWidget {
+    border: none;
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QRadioButton" name="bttn_tournamentNumber">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>@bttn_tournamentNumber</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">bttnGrp_tournDistributions</string>
+            </attribute>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QSpinBox" name="spinBox_tournamentNumber">
+            <property name="minimumSize">
+             <size>
+              <width>104</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>104</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>999999999</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_lastDistributionsCount_1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_lastDistributionsCount_%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_tournDistributions</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_lastDistributionsCount_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_lastDistributionsCount_%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_tournDistributions</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_lastDistributionsCount_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_lastDistributionsCount_%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_tournDistributions</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QLabel" name="title_tournaments">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>34</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>34</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    border-right: 1px solid #191919;
+    border-top: 1px solid #455a64;
+}</string>
+      </property>
+      <property name="text">
+       <string>@title_tournaments</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1" colspan="2">
+     <widget class="QWidget" name="body_lastTournamentsCount" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>480</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>480</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QWidget {
+    background-color: #37474f;
+    border: 1px solid #455a64;
+    border-right: 1px solid #191919;; 
+    border-bottom: 1px solid #191919;
+}
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>23</number>
+       </property>
+       <property name="topMargin">
+        <number>7</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>7</number>
+       </property>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_lastTournamentsCount_1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_lastTournamentsCount_%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_tournResults</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_lastTournamentsCount_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_lastTournamentsCount_%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_tournResults</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_lastTournamentsCount_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_lastTournamentsCount_%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_tournResults</string>
+         </attribute>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QRadioButton" name="bttn_lastTournamentsCount_4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>@bttn_lastTournamentsCount_%0</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bttnGrp_tournResults</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="1" colspan="2">
+     <widget class="QLabel" name="msg_tournResults">
+      <property name="minimumSize">
+       <size>
+        <width>480</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>480</width>
+        <height>47</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #37474f;
+    border: 1px solid #455a64;
+    border-right: 1px solid #191919; 
+    border-bottom: 1px solid #191919;
+    font: 13px &quot;Open Sans Semibold&quot;;
+    color: #fafafa;
+    padding-left: 21px;
+}</string>
+      </property>
+      <property name="text">
+       <string>@msg_tournResults.</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>bttn_hour</tabstop>
+  <tabstop>bttn_day</tabstop>
+  <tabstop>bttn_3days</tabstop>
+  <tabstop>bttn_week</tabstop>
+  <tabstop>bttn_numberLastDistributions_1</tabstop>
+  <tabstop>bttn_numberLastDistributions_2</tabstop>
+  <tabstop>bttn_numberLastDistributions_3</tabstop>
+  <tabstop>bttn_numberLastDistributions_4</tabstop>
+  <tabstop>bttn_concreteDistribution</tabstop>
+  <tabstop>spinBox_concreteDistribution</tabstop>
+  <tabstop>bttn_tournamentNumber</tabstop>
+  <tabstop>spinBox_tournamentNumber</tabstop>
+  <tabstop>bttn_lastDistributionsCount_1</tabstop>
+  <tabstop>bttn_lastDistributionsCount_2</tabstop>
+  <tabstop>bttn_lastDistributionsCount_3</tabstop>
+  <tabstop>bttn_lastTournamentsCount_1</tabstop>
+  <tabstop>bttn_lastTournamentsCount_2</tabstop>
+  <tabstop>bttn_lastTournamentsCount_3</tabstop>
+  <tabstop>bttn_lastTournamentsCount_4</tabstop>
+  <tabstop>bttn_apply</tabstop>
+  <tabstop>bttn_cancel</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bttn_apply</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsHistory</receiver>
+   <slot>apply()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>142</x>
+     <y>489</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>136</x>
+     <y>530</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsHistory</receiver>
+   <slot>rollback()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>848</x>
+     <y>491</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>860</x>
+     <y>537</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_concreteDistribution</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_concreteDistribution</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>691</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bttn_tournamentNumber</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_tournamentNumber</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>201</x>
+     <y>359</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>229</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>applied()</signal>
+  <slot>apply()</slot>
+  <slot>updateIsModified()</slot>
+  <slot>rollback()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bttnGrp_tournDistributions"/>
+  <buttongroup name="bttnGrp_tournResults"/>
+  <buttongroup name="bttnGrp_cashTablesSelection"/>
+ </buttongroups>
+</ui>

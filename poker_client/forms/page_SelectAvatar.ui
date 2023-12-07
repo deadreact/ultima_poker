@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SelectAvatar</class>
+ <widget class="QWidget" name="SelectAvatar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>309</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>309</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>309</height>
+   </size>
+  </property>
+  <widget class="QPushButton" name="bttn_prev">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>212</y>
+     <width>24</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>24</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>24</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="toolTip">
+    <string>@Tooltip_Avatar_choose_left_94</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QAbstractButton {
+    border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/textures/Common/buttons/bttn_arrow_left.png</normaloff>:/textures/Common/buttons/bttn_arrow_left.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>14</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Left</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bttn_next">
+   <property name="geometry">
+    <rect>
+     <x>607</x>
+     <y>212</y>
+     <width>24</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>24</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>24</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="toolTip">
+    <string>@Tooltip_Avatar_choose_right_95</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QAbstractButton {
+    border: none;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/textures/Common/buttons/bttn_arrow_right.png</normaloff>:/textures/Common/buttons/bttn_arrow_right.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>14</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Right</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QFrame" name="avatarsListViewport">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>164</y>
+     <width>600</width>
+     <height>146</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>600</width>
+     <height>146</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>600</width>
+     <height>146</height>
+    </size>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="AvatarsListWidget" name="avatarsLstPage" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-120</x>
+      <y>0</y>
+      <width>840</width>
+      <height>146</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>840</width>
+      <height>146</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>840</width>
+      <height>146</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">.QWidget {
+    border: 1px solid red;
+	image: url(:/textures/Common/icons/icon_avatar_cap.png);
+    margin: 21px 16px 21px 16px;
+}</string>
+    </property>
+    <widget class="ns_widget::ProfilePicture" name="item_1" native="true">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>0</y>
+       <width>120</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+    </widget>
+    <widget class="ns_widget::ProfilePicture" name="item_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>0</y>
+       <width>120</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+    </widget>
+    <widget class="ns_widget::ProfilePicture" name="item_4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>0</y>
+       <width>120</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+    </widget>
+    <widget class="ns_widget::ProfilePicture" name="item_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>0</y>
+       <width>120</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame {
+    margin:  6px 1px 6px 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="ns_widget::ProfilePicture" name="item_6" native="true">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>0</y>
+       <width>120</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+    </widget>
+    <widget class="ns_widget::ProfilePicture" name="item_0" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>120</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+    </widget>
+    <widget class="ns_widget::ProfilePicture" name="item_5" native="true">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>0</y>
+       <width>120</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+    </widget>
+    <zorder>item_4</zorder>
+    <zorder>item_5</zorder>
+    <zorder>item_6</zorder>
+    <zorder>item_3</zorder>
+    <zorder>item_1</zorder>
+    <zorder>item_0</zorder>
+    <zorder>item_2</zorder>
+   </widget>
+  </widget>
+  <widget class="QScrollBar" name="hScroll">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>142</y>
+     <width>600</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>1</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>1</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QScrollBar {
+	background-color: transparent;
+}
+
+::sub-line, ::add-line, ::sub-page, ::add-page, ::handle {
+    border: none;
+background-color: transparent;
+}
+
+QScrollBar::left-arrow, QScrollBar::right-arrow {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	border: none;
+}
+/*QScrollBar::left-arrow {
+	background-image: url(:/textures/Common/buttons/bttn_arrow_left.png);
+}
+QScrollBar::right-arrow {
+	background-image: url(:/textures/Common/buttons/bttn_arrow_right.png);
+}
+*/</string>
+   </property>
+   <property name="singleStep">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="header_common_avatars">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>144</y>
+     <width>300</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>300</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+   
+	font: 550 18px &quot;Open Sans&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>@Header_select_common</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="ns_widget::ProfilePicture" name="profile_picture_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>7</y>
+     <width>120</width>
+     <height>140</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>140</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>134</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QWidget#profile_picture_2
+{
+	background-repeat: no-repeat;
+    background-clip: margin;
+	background-position: top;
+	background-attachment: fixed;
+    background-origin: content;
+    border: 1px solid ;
+    border-radius: 60px;
+	margin: 7px 10px 7px 10px;
+}</string>
+   </property>
+   <property name="shape" stdset="0">
+    <bool>false</bool>
+   </property>
+   <property name="alphaMask" stdset="0">
+    <pixmap resource="../resources.qrc">:/textures/Common/icons/icon_avatar_cap.png</pixmap>
+   </property>
+   <property name="viewport" stdset="0">
+    <rect>
+     <x>0</x>
+     <y>5</y>
+     <width>120</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,1">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>44</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item alignment="Qt::AlignBottom">
+     <widget class="QPushButton" name="bttn_browse">
+      <property name="minimumSize">
+       <size>
+        <width>26</width>
+        <height>26</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>26</width>
+        <height>26</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>@Tooltip_Avatar_Download_bttn_93</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QAbstractButton {
+	border: 1px solid rgba(25, 25, 25, 155);
+    background-color: rgba(255, 255, 255, 222);
+    border-radius: 13px;
+}
+
+QAbstractButton:hover {
+    background-color: #ffffff;
+}
+
+QAbstractButton:pressed {
+    background-color: rgba(255, 255, 255, 80);
+}</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../resources.qrc">
+        <normaloff>:/textures/Common/icons/icon_upload_avatar.png</normaloff>:/textures/Common/icons/icon_upload_avatar.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>44</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <zorder>avatarsListViewport</zorder>
+  <zorder>hScroll</zorder>
+  <zorder>header_common_avatars</zorder>
+  <zorder>profile_picture_2</zorder>
+  <zorder>bttn_next</zorder>
+  <zorder>bttn_prev</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_widget::ProfilePicture</class>
+   <extends>EntityWidget</extends>
+   <header>widgets/widget_ProfilePicture.h</header>
+   <container>1</container>
+   <slots>
+    <signal>iconChanged(QIcon)</signal>
+    <signal>avatarChanged(Avatar)</signal>
+    <signal>avatarChanged(Avatar*)</signal>
+    <signal>iconChange(QIcon)</signal>
+    <signal>sourceChanged(QPixmap)</signal>
+    <slot>setIcon(QIcon)</slot>
+    <slot>setViewport(QRect)</slot>
+    <slot>setAvatar(Avatar*)</slot>
+    <slot>setSource(QPixmap)</slot>
+    <slot>setAlphaMask(QPixmap)</slot>
+    <slot>updateStyle()</slot>
+    <slot>setPixImage(QPixmap)</slot>
+    <slot>setAvatar(Avatar)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>AvatarsListWidget</class>
+   <extends>QWidget</extends>
+   <header>views/AvatarsListWidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>avatarClicked(Avatar)</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bttn_browse</sender>
+   <signal>clicked()</signal>
+   <receiver>SelectAvatar</receiver>
+   <slot>browse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>332</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>469</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>avatarsLstPage</sender>
+   <signal>avatarClicked(Avatar)</signal>
+   <receiver>profile_picture_2</receiver>
+   <slot>setAvatar(Avatar)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>browse()</slot>
+ </slots>
+</ui>

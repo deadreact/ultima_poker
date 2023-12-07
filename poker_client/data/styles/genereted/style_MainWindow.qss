@@ -1,0 +1,6 @@
+QAbstractButton {
+font: 16px "Times New Roman";
+border-bottom-right-radius: 7px 0px;
+color: #fafafa;
+text-align: center;
+}

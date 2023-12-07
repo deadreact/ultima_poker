@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UploadAvatar</class>
+ <widget class="QWidget" name="UploadAvatar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>309</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>309</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>309</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="msg_your_avatar">
+   <property name="geometry">
+    <rect>
+     <x>448</x>
+     <y>36</y>
+     <width>140</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>140</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+	font: 12px &quot;Open Sans&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>@msg_your_avatar</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_your_avatar">
+   <property name="geometry">
+    <rect>
+     <x>352</x>
+     <y>160</y>
+     <width>231</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+	font: 12px &quot;Open Sans&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>@text_your_avatar</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="PixmapEditor" name="pictureEditor" native="true">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>36</y>
+     <width>244</width>
+     <height>244</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>244</width>
+     <height>244</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>244</width>
+     <height>244</height>
+    </size>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QPushButton {
+    background-color: #cfd8dc;
+    border: none;
+    min-width: 8px;
+    min-height: 8px;
+    max-width: 8px;
+    max-height: 8px;
+}</string>
+   </property>
+   <property name="pixmap" stdset="0">
+    <pixmap resource="../resources.qrc">:/textures/ddswg.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="FramedEntity" name="icon_attention">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>160</y>
+     <width>12</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="respondable">
+    <bool>false</bool>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/textures/Common/icons/icon_attention.png</pixmap>
+   </property>
+   <property name="sizeOfFrame">
+    <size>
+     <width>12</width>
+     <height>12</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="ns_widget::ProfilePicture" name="pictureEditorResult">
+   <property name="geometry">
+    <rect>
+     <x>324</x>
+     <y>36</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="viewport" stdset="0">
+    <rect>
+     <x>0</x>
+     <y>-1</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EntityWidget</class>
+   <extends>QWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FramedEntity</class>
+   <extends>EntityWidget</extends>
+   <header>plugins.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns_widget::ProfilePicture</class>
+   <extends>EntityWidget</extends>
+   <header>widgets/widget_ProfilePicture.h</header>
+   <container>1</container>
+   <slots>
+    <signal>iconChanged(QIcon)</signal>
+    <signal>avatarChanged(Avatar)</signal>
+    <signal>avatarChanged(Avatar*)</signal>
+    <signal>iconChange(QIcon)</signal>
+    <slot>setIcon(QIcon)</slot>
+    <slot>setViewport(QRect)</slot>
+    <slot>setAvatar(Avatar*)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>PixmapEditor</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/PixmapEditor.h</header>
+   <container>1</container>
+   <slots>
+    <signal>selectionChanged(QRectF)</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+  <include location="../../../../../../../Users/deadreact/.designer/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

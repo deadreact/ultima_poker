@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PendingWithdrawals</class>
+ <widget class="QFrame" name="PendingWithdrawals">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">.QFrame {
+    background-color: #191919;
+}
+
+QLabel {
+    color: #fafafa;
+    font: 13px &quot;Open Sans&quot;;
+}</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <widget class="QLabel" name="title_pendingWithdrawals">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>1</y>
+     <width>800</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>33</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>33</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font: 600 18px &quot;Open Sans&quot;;
+color: #b0bec5;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+    border: none;
+    border-bottom: 1px solid #191919;
+}</string>
+   </property>
+   <property name="text">
+    <string>@title_pendingWithdrawals</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>116</y>
+     <width>800</width>
+     <height>358</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>358</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>358</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView
+{
+    background-color: #222a30;
+    alternate-background-color: #37474f;
+   border: none;
+}
+QTableView::item:selected
+{
+    
+    background-color: #cfd8dc;
+    color: #191919;
+}
+QTableView::item
+{
+    min-height: 16px;
+    max-height: 16px;
+    font: 11px &quot;Open Sans&quot;;
+    border-left: 1px hidden;
+}
+
+QHeaderView {
+    min-height: 24px;
+font: 11px &quot;Open Sans Semibold&quot;;
+}
+
+QHeaderView::section
+{
+     border-top: 1px solid #455a64;
+border-left: 1px solid #455a64;
+border-bottom: 1px solid #191919;
+border-right: 1px solid #191919;
+border-bottom-left-radius: 0px 1px;
+
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+}
+
+QHeaderView::section:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 43, 49, 255), stop:0.95 rgba(131, 171, 190, 255), stop:1 rgba(131, 171, 190, 255));
+}
+
+QHeaderView::section:pressed{
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(1, 1, 1, 255), stop:0.162011 rgba(45, 45, 45, 255), stop:0.49162 rgba(19, 19, 19, 255), stop:1 rgba(37, 37, 37, 255));
+} *{outline: 0;}
+</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::NoSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <property name="showGrid">
+    <bool>false</bool>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>150</number>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>16</number>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>16</number>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="text_pendingWithdrawals">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>34</y>
+     <width>800</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>82</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>82</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font: 13px &quot;Open Sans&quot;;
+    color: #fafafa;
+    background-color: #37474f;
+    border: none;
+    border-bottom: 1px solid #191919;
+    padding: 13px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>@text_pendingWithdrawals</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_rules">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>441</y>
+     <width>800</width>
+     <height>204</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>204</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>204</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">.QFrame {
+    background-color: #222a30;
+}
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item alignment="Qt::AlignTop">
+     <widget class="QLabel" name="title_statusInfo">
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>33</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>800</width>
+        <height>33</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    border-top: 1px solid #455a64;
+    border-bottom: 2px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(25, 25, 25, 255), stop:0.495 rgba(25, 25, 25, 255), stop:0.505 rgba(69, 90, 100, 255), stop:1 rgba(69, 90, 100, 255));
+
+    font: 600 18px &quot;Open Sans&quot;;
+color: #b0bec5;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(55, 71, 79, 255), stop:0.5 rgba(38, 50, 56, 255), stop:1 rgba(34, 42, 48, 255));
+}</string>
+      </property>
+      <property name="text">
+       <string>@title_statusInfo</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QToolButton" name="bttn_popup">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>10</y>
+         <width>16</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>16</width>
+         <height>14</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16</width>
+         <height>14</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QAbstractButton {
+    background-color: #37474f;
+    font: 11px &quot;Open Sans&quot;;
+    color: #b0bec5;
+    border: none;
+    subcontrol-position: right;
+    background-clip: margin;
+	background-position: center bottom;
+	background-attachment: fixed;
+    background-origin: content;
+    background-repeat: no-repeat;
+    background-image: url(:/textures/Common/Tournament/bttn1x2_satellite_arrow.png);
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+QAbstractButton:!checked:pressed {
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+QAbstractButton:checked:pressed {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+QAbstractButton {
+    background-color: transparent;
+    color: transparent;
+}
+QAbstractButton:checked {
+    background-position: center top;
+    margin-top: 1px;
+    margin-bottom: 3px;
+}
+</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    padding: 17px 15px 13px 25px;
+    font: 11px &quot;Open Sans&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>@richtext_statusinfo</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../../poker_client/data/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bttn_popup</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>PendingWithdrawals</receiver>
+   <slot>popupInfo(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>783</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>808</x>
+     <y>410</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>popupInfo(bool)</slot>
+ </slots>
+</ui>
